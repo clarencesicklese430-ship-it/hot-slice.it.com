@@ -553,6 +553,11 @@
     }
     .act-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
     .act-btn .cnt { color: #ccc; }
+    .act-btn.voted-like { background: rgba(90,170,0,0.15); }
+    .act-btn.voted-like .ico-like { color: #5aaa00; filter: drop-shadow(0 0 4px #5aaa00); }
+    .act-btn.voted-like .cnt { color: #5aaa00; }
+    .act-btn.voted-dislike { background: rgba(229,57,53,0.12); }
+    .act-btn.voted-dislike .ico-dislike { color: #e53935; filter: drop-shadow(0 0 4px #e53935); }
     .act-btn .ico-like  { color: #5aaa00; font-size: 15px; }
     .act-btn .ico-dislike { color: #e53935; font-size: 15px; }
     .act-btn .ico-comment { color: #4a9eff; font-size: 15px; }
@@ -1931,8 +1936,8 @@
 <div class="action-bar">
   <button class="act-btn"><span class="ico-add">&#10010;</span> My list</button>
   <div class="act-sep"></div>
-  <button class="act-btn"><span class="ico-like">&#128077;</span> <span class="cnt">5</span></button>
-  <button class="act-btn"><span class="ico-dislike">&#128078;</span></button>
+  <button class="act-btn" id="btn-like" onclick="toggleVote('like')"><span class="ico-like">&#128077;</span> <span class="cnt" id="like-count">5</span></button>
+  <button class="act-btn" id="btn-dislike" onclick="toggleVote('dislike')"><span class="ico-dislike">&#128078;</span></button>
   <div class="act-sep"></div>
   <button class="act-btn" onclick="document.getElementById('discussion').scrollIntoView({behavior:'smooth'})"><span class="ico-comment">&#128172;</span> <span class="cnt">1 comment</span></button>
   <div class="act-sep"></div>
@@ -2659,6 +2664,29 @@ if ('scrollRestoration' in history) {
 window.addEventListener('load', function() {
   window.scrollTo(0, 0);
 });
+
+var userVote = null;
+var baseCount = 5;
+
+function toggleVote(type) {
+  var btnLike    = document.getElementById('btn-like');
+  var btnDislike = document.getElementById('btn-dislike');
+  var countEl    = document.getElementById('like-count');
+
+  if (userVote === type) {
+    // deselect
+    userVote = null;
+    btnLike.classList.remove('voted-like');
+    btnDislike.classList.remove('voted-dislike');
+  } else {
+    userVote = type;
+    btnLike.classList.remove('voted-like');
+    btnDislike.classList.remove('voted-dislike');
+    if (type === 'like')    btnLike.classList.add('voted-like');
+    if (type === 'dislike') btnDislike.classList.add('voted-dislike');
+  }
+  countEl.textContent = (userVote === 'like') ? baseCount + 1 : baseCount;
+}
 
 function updateCounter(el) {
   const n = Math.min(el.value.length, 5000);
