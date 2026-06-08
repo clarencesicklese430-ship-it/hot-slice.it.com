@@ -2647,6 +2647,14 @@
 </footer>
 
 <script>
+// Disable browser scroll restoration so pull-to-refresh always lands at top
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.addEventListener('load', function() {
+  window.scrollTo(0, 0);
+});
+
 function updateCounter(el) {
   const n = Math.min(el.value.length, 5000);
   document.getElementById('disc-counter').textContent = n + '/5000';
