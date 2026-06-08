@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <title>Hot Slice Free Demo — Play Now | Mari</title>
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    html, body { height: 100%; overflow: hidden; }
+    body { background: #0d1117; }
+
+    .play-outer {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      height: 100dvh;
+    }
+
+    /* Header override: remove bottom shadow/border bleed */
+    .sticky-top { position: relative; box-shadow: none; flex-shrink: 0; }
+
+    /* Compact game bar */
+    .play-bar {
+      background: #0d1117;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 16px;
+      height: 42px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      flex-shrink: 0;
+    }
+    .play-bar-back {
+      color: #aaa;
+      font-size: 13px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .play-bar-back:hover { color: #fff; }
+    .play-bar-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
+    .play-bar-title { color: #fff; font-size: 14px; font-weight: bold; white-space: nowrap; }
+    .play-bar-by { color: #5aaa00; font-size: 12px; white-space: nowrap; }
+    .play-bar-real {
+      margin-left: auto;
+      background: #6b3fa0;
+      color: #fff;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .play-bar-real:hover { background: #5a2e90; }
+
+    /* Game fills remaining height */
+    .play-fill {
+      flex: 1;
+      overflow: hidden;
+      background: #000;
+      min-height: 0;
+    }
+    .play-fill iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .search-bar { display: none; }
+      .lang-btn { display: none; }
+      .btn-login { display: none; }
+      .btn-signup { padding: 7px 12px; font-size: 12px; }
+      .play-bar-by { display: none; }
+      .play-bar-sep { display: none; }
+      .play-bar-real { padding: 8px 12px; font-size: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="play-outer">
+
+  <div class="sticky-top">
+    <header class="header">
+      <div class="header-inner">
+        <a href="/" class="logo">
+          <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+          <div class="logo-text"><span class="brand-name">Mari</span></div>
+        </a>
+        <div class="search-bar">
+          <input type="text" placeholder="Search for casinos, games, and more">
+          <button>&#128269;</button>
+        </div>
+        <div class="header-right">
+          <button class="lang-btn">EN &nbsp;&#127463;&#127479;</button>
+          <button class="btn-login">Login</button>
+          <button class="btn-signup">Sign up</button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="play-bar">
+    <a href="/" class="play-bar-back">&#8592; Hot Slice</a>
+    <div class="play-bar-sep"></div>
+    <span class="play-bar-title">Free Demo</span>
+    <span class="play-bar-by">by Evoplay</span>
+    <a href="/go/" class="play-bar-real" rel="nofollow noopener noreferrer" target="_blank">&#9654; Play Real Money</a>
+  </div>
+
+  <div class="play-fill">
+    <iframe
+      src="https://slotslaunch.com/iframe/34792?token=lkKmnvQWzKXGn6g1tCpzLWLzvIjjRTlSkidVjGVLhKQgz0xfzG"
+      allowfullscreen
+      allow="autoplay; fullscreen"
+      scrolling="no"
+      frameborder="0"
+    ></iframe>
+  </div>
+
+</div>
+
+</body>
+</html>
