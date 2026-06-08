@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
   <title>Hot Slice Free Demo — Play Now | Mari</title>
-  <link rel="stylesheet" href="/shared.css">
   <style>
-    html, body { height: 100%; overflow: hidden; }
-    body { background: #0d1117; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { height: 100%; overflow: hidden; background: #000; font-family: Arial, Helvetica, sans-serif; }
+    a { text-decoration: none; color: inherit; }
 
+    /* Full-height flex container */
     .play-outer {
       display: flex;
       flex-direction: column;
@@ -17,56 +18,128 @@
       height: 100dvh;
     }
 
-    /* Header override: remove bottom shadow/border bleed */
-    .sticky-top { position: relative; box-shadow: none; flex-shrink: 0; }
-
-    /* Compact game bar */
-    .play-bar {
+    /* ── Top header strip ── */
+    .play-header {
       background: #0d1117;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      flex-shrink: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .play-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .play-logo-img {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .play-logo-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .play-logo-name {
+      color: #fff;
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* Toggle button (chevron) */
+    .play-toggle {
+      margin-left: auto;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: #ccc;
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+      transition: background 0.15s;
+    }
+    .play-toggle:hover { background: rgba(255,255,255,0.14); color: #fff; }
+    .play-toggle .chevron {
+      display: inline-block;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .play-toggle.open .chevron { transform: rotate(180deg); }
+
+    /* ── Main area below header ── */
+    .play-main {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    /* ── Sliding panel ── */
+    .play-panel {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 20;
+      background: #141b24;
+      transform: translateY(-100%);
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .play-panel.open { transform: translateY(0); }
+
+    .panel-content {
+      padding: 14px 16px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .panel-exit {
       display: flex;
       align-items: center;
       gap: 10px;
-      padding: 0 16px;
-      height: 42px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      flex-shrink: 0;
-    }
-    .play-bar-back {
-      color: #aaa;
-      font-size: 13px;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-      white-space: nowrap;
-    }
-    .play-bar-back:hover { color: #fff; }
-    .play-bar-sep { width: 1px; height: 16px; background: rgba(255,255,255,0.15); flex-shrink: 0; }
-    .play-bar-title { color: #fff; font-size: 14px; font-weight: bold; white-space: nowrap; }
-    .play-bar-by { color: #5aaa00; font-size: 12px; white-space: nowrap; }
-    .play-bar-real {
-      margin-left: auto;
-      background: #6b3fa0;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
       color: #fff;
-      padding: 8px 18px;
-      font-size: 13px;
+      padding: 12px 18px;
+      font-size: 14px;
       font-weight: bold;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
-      white-space: nowrap;
+      cursor: pointer;
       transition: background 0.15s;
     }
-    .play-bar-real:hover { background: #5a2e90; }
+    .panel-exit:hover { background: rgba(255,255,255,0.13); }
+    .panel-real {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: #6b3fa0;
+      color: #fff;
+      padding: 15px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: background 0.15s;
+    }
+    .panel-real:hover { background: #5a2e90; }
 
-    /* Game fills remaining height */
+    /* ── Backdrop (tap to close) ── */
+    .play-backdrop {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      background: rgba(0,0,0,0.55);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .play-backdrop.open { opacity: 1; pointer-events: auto; }
+
+    /* ── Game iframe ── */
     .play-fill {
-      flex: 1;
-      overflow: hidden;
-      background: #000;
-      min-height: 0;
+      width: 100%;
+      height: 100%;
     }
     .play-fill iframe {
       width: 100%;
@@ -74,61 +147,76 @@
       border: none;
       display: block;
     }
-
-    @media (max-width: 600px) {
-      .search-bar { display: none; }
-      .lang-btn { display: none; }
-      .btn-login { display: none; }
-      .btn-signup { padding: 7px 12px; font-size: 12px; }
-      .play-bar-by { display: none; }
-      .play-bar-sep { display: none; }
-      .play-bar-real { padding: 8px 12px; font-size: 12px; }
-    }
   </style>
 </head>
 <body>
 
 <div class="play-outer">
 
-  <div class="sticky-top">
-    <header class="header">
-      <div class="header-inner">
-        <a href="/" class="logo">
-          <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
-          <div class="logo-text"><span class="brand-name">Mari</span></div>
-        </a>
-        <div class="search-bar">
-          <input type="text" placeholder="Search for casinos, games, and more">
-          <button>&#128269;</button>
-        </div>
-        <div class="header-right">
-          <button class="lang-btn">EN &nbsp;&#127463;&#127479;</button>
-          <button class="btn-login">Login</button>
-          <button class="btn-signup">Sign up</button>
-        </div>
+  <!-- Header strip: logo + toggle -->
+  <div class="play-header">
+    <a href="/" class="play-logo">
+      <div class="play-logo-img">
+        <img src="/img/mascot.webp" alt="Mari">
       </div>
-    </header>
+      <span class="play-logo-name">Mari</span>
+    </a>
+    <button class="play-toggle" id="play-toggle" onclick="togglePanel()">
+      <span class="chevron">&#8964;</span>
+    </button>
   </div>
 
-  <div class="play-bar">
-    <a href="/" class="play-bar-back">&#8592; Hot Slice</a>
-    <div class="play-bar-sep"></div>
-    <span class="play-bar-title">Free Demo</span>
-    <span class="play-bar-by">by Evoplay</span>
-    <a href="/go/" class="play-bar-real" rel="nofollow noopener noreferrer" target="_blank">&#9654; Play Real Money</a>
-  </div>
+  <!-- Main: game + sliding panel on top -->
+  <div class="play-main">
 
-  <div class="play-fill">
-    <iframe
-      src="https://slotslaunch.com/iframe/34792?token=lkKmnvQWzKXGn6g1tCpzLWLzvIjjRTlSkidVjGVLhKQgz0xfzG"
-      allowfullscreen
-      allow="autoplay; fullscreen"
-      scrolling="no"
-      frameborder="0"
-    ></iframe>
-  </div>
+    <!-- Game iframe (always behind panel) -->
+    <div class="play-fill">
+      <iframe
+        src="https://slotslaunch.com/iframe/34792?token=lkKmnvQWzKXGn6g1tCpzLWLzvIjjRTlSkidVjGVLhKQgz0xfzG"
+        allowfullscreen
+        allow="autoplay; fullscreen"
+        scrolling="no"
+        frameborder="0"
+      ></iframe>
+    </div>
 
+    <!-- Backdrop: tap to close panel -->
+    <div class="play-backdrop" id="play-backdrop" onclick="closePanel()"></div>
+
+    <!-- Sliding menu panel -->
+    <div class="play-panel" id="play-panel">
+      <div class="panel-content">
+        <a href="/" class="panel-exit">&#8592; Exit game</a>
+        <a href="/go/" class="panel-real" rel="nofollow noopener noreferrer" target="_blank">
+          &#9654;&nbsp; Play for Real Money
+        </a>
+      </div>
+    </div>
+
+  </div>
 </div>
+
+<script>
+  var panelOpen = false;
+
+  function togglePanel() {
+    panelOpen ? closePanel() : openPanel();
+  }
+
+  function openPanel() {
+    panelOpen = true;
+    document.getElementById('play-panel').classList.add('open');
+    document.getElementById('play-backdrop').classList.add('open');
+    document.getElementById('play-toggle').classList.add('open');
+  }
+
+  function closePanel() {
+    panelOpen = false;
+    document.getElementById('play-panel').classList.remove('open');
+    document.getElementById('play-backdrop').classList.remove('open');
+    document.getElementById('play-toggle').classList.remove('open');
+  }
+</script>
 
 </body>
 </html>
