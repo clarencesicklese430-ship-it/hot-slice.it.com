@@ -138,3 +138,64 @@ a { text-decoration: none; color: inherit; }
 .btn-show-more-casinos:hover { background: #4a9400; }
 .casino-tc { font-size: 10px; color: #888; margin-top: 8px; text-align: center; }
 .casino-tc a { color: #5aaa00; }
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .casino-meta { display: none; }
+}
+
+@media (max-width: 768px) {
+  .search-bar { display: none; }
+
+  /* Casino cards: logo left, body+actions right */
+  .casino-card { flex-wrap: wrap; align-items: stretch; }
+  .casino-logo-box { width: 110px; min-width: 110px; height: 80px; }
+  .casino-body { padding: 10px 12px 6px; }
+  .casino-actions { width: calc(100% - 110px); padding: 0 12px 10px 0; flex-direction: column; gap: 6px; }
+  .btn-quick-info, .btn-play-casino { width: 100%; justify-content: center; }
+
+  /* Footer 2-column */
+  .footer-links-grid { grid-template-columns: 1fr 1fr; }
+  .footer-links-col:nth-child(2) { border-right: none; }
+  .footer-links-col:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.18); padding-left: 0 !important; }
+  .footer-bottom { grid-template-columns: 1fr; gap: 16px; }
+  .footer-lang-select { min-width: unset; }
+}
+
+@media (max-width: 600px) {
+  /* Header */
+  .lang-btn { display: none; }
+  .btn-login { display: none; }
+  .logo-text .brand-name { font-size: 18px; }
+  .btn-signup { padding: 8px 14px; font-size: 12px; }
+
+  /* Casino cards: full stack */
+  .casino-card { flex-direction: column; }
+  .casino-logo-box { width: 100%; min-width: unset; height: 64px; border-bottom: 1px solid #eee; }
+  .casino-meta { display: none; }
+  .casino-actions { width: 100%; padding: 6px 12px 12px; flex-direction: row; gap: 8px; }
+  .btn-quick-info, .btn-play-casino { flex: 1; justify-content: center; }
+
+  /* Newsletter */
+  .newsletter-form { flex-direction: column; align-items: stretch; }
+  .newsletter-input { width: 100%; }
+  .btn-newsletter { width: 100%; }
+
+  /* Article */
+  .article-inner { padding: 24px 16px 40px; }
+  .article-inner h1 { font-size: 22px; }
+  .article-inner h2 { font-size: 17px; }
+
+  /* Footer */
+  .footer-top { flex-wrap: wrap; gap: 12px; }
+  .footer-promo-grid { grid-template-columns: 1fr; }
+  .footer-promo-block { border-right: none !important; }
+  .footer-promo-block:nth-child(3) { border-bottom: 1px solid rgba(255,255,255,0.18) !important; }
+}
+
+@media (max-width: 480px) {
+  .footer-links-grid { grid-template-columns: 1fr; }
+  .footer-links-col { border-right: none !important; padding-left: 0 !important; padding-right: 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .footer-links-col:last-child { border-bottom: none; }
+}

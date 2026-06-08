@@ -1738,6 +1738,95 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media (max-width: 900px) {
+      .leaderboard-panel { display: none; }
+      .tournaments-grid { grid-template-columns: repeat(2, 1fr); }
+      .casino-meta { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      .search-bar { display: none; }
+
+      /* Two-column layout: sidebar stacks below */
+      .content-wrap { flex-direction: column; padding: 12px; gap: 12px; }
+      .left-sidebar { width: 100%; display: flex; gap: 12px; }
+      .game-artwork { flex: 0 0 140px; width: 140px; height: 140px; margin-bottom: 0; }
+      .info-card { flex: 1; margin-bottom: 0; }
+      .embed-card { display: none; }
+      .main-content { width: 100%; }
+
+      /* Game cover buttons */
+      .gcov-btn { width: 290px; padding: 12px 18px; }
+
+      /* Tournaments 2-col */
+      .tournaments-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      /* Header */
+      .lang-btn { display: none; }
+      .btn-login { display: none; }
+      .logo-text .brand-name { font-size: 18px; }
+      .btn-signup { padding: 8px 14px; font-size: 12px; }
+
+      /* Sidebar: stack vertically */
+      .left-sidebar { flex-direction: column; }
+      .game-artwork { flex: none; width: 100%; height: 130px; }
+      .info-card { flex: none; }
+
+      /* Tournaments: single column */
+      .tournaments-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+
+      /* Carousels: 2 cards visible */
+      .g-card { flex: 0 0 calc(50% - 6px); }
+
+      /* Action bar */
+      .action-bar { padding: 4px 8px; gap: 0; }
+      .act-btn { padding: 5px 7px; font-size: 11px; gap: 4px; }
+
+      /* Game cover buttons */
+      .gcov-btn { width: calc(100% - 40px); padding: 11px 16px; gap: 10px; }
+      .gcov-btn-title { font-size: 16px; }
+
+      /* Page title bar */
+      .page-title-bar { flex-wrap: wrap; gap: 6px; }
+      .btn-play-real-title { width: 100%; justify-content: center; }
+
+      /* Discussion cards: stack */
+      .disc-card { flex-direction: column; gap: 10px; padding: 16px; }
+      .disc-avatar { width: 100%; display: flex; align-items: center; gap: 10px; text-align: left; }
+      .disc-avatar-img { margin: 0; width: 52px; height: 52px; font-size: 28px; }
+
+      /* Casino cards: full stack */
+      .casino-card { flex-direction: column; }
+      .casino-logo-box { width: 100%; min-width: unset; height: 64px; border-bottom: 1px solid #eee; }
+      .casino-meta { display: none; }
+      .casino-actions { width: 100%; padding: 6px 12px 12px; flex-direction: row; gap: 8px; }
+      .btn-quick-info, .btn-play-casino { flex: 1; justify-content: center; }
+
+      /* Newsletter */
+      .newsletter-form { flex-direction: column; align-items: stretch; }
+      .newsletter-input { width: 100%; }
+      .btn-newsletter { width: 100%; }
+
+      /* Footer */
+      .footer-top { flex-wrap: wrap; gap: 12px; }
+      .footer-promo-grid { grid-template-columns: 1fr; }
+      .footer-promo-block { border-right: none !important; }
+      .footer-promo-block:nth-child(3) { border-bottom: 1px solid rgba(255,255,255,0.18) !important; }
+      .footer-links-grid { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { grid-template-columns: 1fr; gap: 16px; }
+      .footer-lang-select { min-width: unset; }
+    }
+
+    @media (max-width: 480px) {
+      .footer-links-grid { grid-template-columns: 1fr; }
+      .footer-links-col { border-right: none !important; padding-left: 0 !important; padding-right: 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+      .footer-links-col:last-child { border-bottom: none; }
+    }
   </style>
   <link rel="canonical" href="https://hot-slice.it.com/">
   <meta property="og:type" content="website">
