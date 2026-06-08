@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /embed/
+Disallow: /forum/
+
+Sitemap: https://hot-slice.it.com/sitemap.xml

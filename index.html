@@ -1,0 +1,2664 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Hot Slice Slot — Free Demo by Evoplay | Mari</title>
+  <meta name="description" content="Play Hot Slice slot by Evoplay in free demo mode. No registration needed. RTP 96.07%, game mechanics, strategies and best casino bonuses for 2026.">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; border-radius: 0 !important; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; background: #f0f0f0; color: #333; font-size: 14px; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== STICKY TOP ===== */
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.6);
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      background: #161d24;
+      padding: 7px 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+    .logo-mascot {
+      width: 38px; height: 38px;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text .casino { color: #8bc34a; font-size: 9px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; }
+    .logo-text .brand-name { color: #ffffff; font-size: 22px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; }
+    .search-bar {
+      flex: 1;
+      display: flex;
+      background: #2a2a3a;
+      border-radius: 3px;
+      overflow: hidden;
+      max-width: 520px;
+      border: 1px solid #3a3a50;
+    }
+    .search-bar input {
+      flex: 1;
+      border: none;
+      padding: 7px 14px;
+      font-size: 13px;
+      outline: none;
+      color: #ccc;
+      background: transparent;
+    }
+    .search-bar input::placeholder { color: #777; }
+    .search-bar button {
+      background: transparent;
+      border: none;
+      padding: 0 14px;
+      cursor: pointer;
+      color: #888;
+      font-size: 15px;
+    }
+    .search-bar button:hover { color: #fff; }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+    .lang-btn {
+      background: transparent;
+      color: #ccc;
+      border: 1px solid #3a3a50;
+      padding: 5px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .lang-btn:hover { border-color: #666; color: #fff; }
+    .btn-login {
+      background: transparent;
+      color: #fff;
+      border: 1px solid #777;
+      padding: 6px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .btn-login:hover { border-color: #fff; color: #fff; }
+    .btn-signup {
+      background: #5fb300;
+      color: #fff;
+      border: none;
+      padding: 6px 18px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .btn-signup:hover { background: #4ea000; }
+
+    /* ===== MAIN NAV ===== */
+    .main-nav {
+      background: #212b3a;
+      display: flex;
+      padding: 0 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      overflow-x: auto;
+    }
+    .main-nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 13px;
+      font-size: 12.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: background 0.15s, color 0.15s;
+    }
+    .main-nav a .nav-icon { color: #6abf00; font-size: 13px; }
+    .main-nav a:hover { color: #fff; background: #2a2a3e; }
+    .main-nav a:hover .nav-icon { color: #8cd400; }
+    .main-nav a.active {
+      background: #5fb300;
+      color: #fff;
+      font-weight: bold;
+    }
+    .main-nav a.active .nav-icon { color: #fff; }
+
+    /* ===== GAME PAGE TITLE BAR ===== */
+    .page-title-bar {
+      background: #1b2128;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #111;
+    }
+    .page-title-bar .title-right {
+      margin-left: auto;
+    }
+    .btn-play-real-title {
+      background: #6b3fa0;
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .btn-play-real-title:hover { background: #5a2e90; }
+    .game-tabs-bar {
+      background: #1b2128;
+      padding: 0 16px;
+      border-bottom: 1px solid #111;
+      display: flex;
+      align-items: center;
+    }
+    .game-tab {
+      color: #8bc34a;
+      font-size: 12px;
+      padding: 6px 14px 6px 0;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .game-tab.active {
+      color: #8bc34a;
+      border-bottom: 2px solid #8bc34a;
+    }
+    .provider-icon {
+      width: 36px; height: 36px;
+      border-radius: 6px;
+      overflow: hidden;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #c0392b;
+      font-size: 18px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .page-title-info .title { color: #fff; font-size: 14px; font-weight: bold; }
+    .page-title-info .by { color: #8bc34a; font-size: 11px; }
+
+    /* ===== EMBED BLOCK ===== */
+    .embed-block {
+      background: #212b3a;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 8px !important;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+    .embed-block-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px;
+    }
+    .embed-thumb {
+      width: 54px;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 6px !important;
+      flex-shrink: 0;
+    }
+    .embed-block-text {
+      color: #ccc;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .btn-copy-embed {
+      width: 100%;
+      background: #5aaa00;
+      color: #fff;
+      border: none;
+      padding: 13px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.15s;
+    }
+    .btn-copy-embed:hover { background: #4a9400; }
+    .btn-copy-embed.copied { background: #2a7a00; }
+    .embed-btn-icon { font-size: 16px; }
+
+    /* ===== GAME FRAME AREA ===== */
+    .game-outer {
+      background: #000;
+      position: relative;
+      line-height: 0;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+    }
+    .game-iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      border: none;
+      display: block;
+    }
+    .game-cover {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      overflow: hidden;
+    }
+    .game-cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .game-cover:hover img { transform: scale(1.02); }
+    .game-cover-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.18) 50%, rgba(0,0,0,0.75) 100%);
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .gcov-btn {
+      width: 340px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 24px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.35s ease, transform 0.15s;
+    }
+    .gcov-btn:hover { transform: scale(1.02); }
+    .gcov-btn-free {
+      background: linear-gradient(90deg, #2a9e1a 0%, #5fd94a 100%);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 0 0 2px rgba(90,220,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .gcov-btn-free:hover {
+      background: linear-gradient(90deg, #5fd94a 0%, #2a9e1a 100%);
+    }
+    .gcov-btn-real {
+      background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%);
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
+    .gcov-btn-real:hover {
+      background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%);
+    }
+    .gcov-btn-icon {
+      width: 38px; height: 38px;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 50% !important;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: #fff; flex-shrink: 0;
+    }
+    .gcov-btn-text { display: flex; flex-direction: column; align-items: flex-start; }
+    .gcov-btn-title { color: #fff; font-size: 18px; font-weight: 900; line-height: 1.2; }
+    .gcov-btn-sub { color: rgba(255,255,255,0.75); font-size: 12px; margin-top: 2px; }
+
+    /* Leaderboard panel */
+    .leaderboard-panel {
+      width: 160px;
+      background: rgba(10, 4, 20, 0.72);
+      padding: 8px 6px;
+      flex-shrink: 0;
+      border-right: 1px solid rgba(100,40,80,0.3);
+      backdrop-filter: blur(4px);
+    }
+    .lb-title {
+      color: #ffd700;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 6px;
+    }
+    .lb-tabs {
+      display: flex;
+      margin-bottom: 5px;
+    }
+    .lb-tab {
+      flex: 1;
+      text-align: center;
+      padding: 3px 0;
+      font-size: 10px;
+      cursor: pointer;
+      background: rgba(40,15,30,0.7);
+      color: #888;
+    }
+    .lb-tab.active { background: #ffd700; color: #000; font-weight: bold; }
+    .lb-sub {
+      color: #888;
+      font-size: 8px;
+      margin-bottom: 3px;
+      padding-left: 2px;
+    }
+    .lb-header-row {
+      display: grid;
+      grid-template-columns: 28px 1fr 32px;
+      color: #666;
+      font-size: 8px;
+      padding: 2px 0;
+      border-bottom: 1px solid #2a1010;
+      margin-bottom: 2px;
+    }
+    .lb-empty { height: 200px; }
+
+    /* Game frame */
+    .game-frame-area {
+      flex: 1;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 60% 40%, rgba(160,60,100,0.55) 0%, transparent 65%),
+        radial-gradient(ellipse at 30% 70%, rgba(120,30,60,0.4) 0%, transparent 55%),
+        linear-gradient(170deg, #3d1228 0%, #2a0a18 35%, #1a0510 65%, #0d0308 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .game-jackpots {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      display: flex;
+      gap: 5px;
+      z-index: 2;
+    }
+    .jp-badge {
+      background: rgba(0,0,0,0.55);
+      border: 1px solid #555;
+      border-radius: 3px;
+      padding: 2px 7px;
+      font-size: 9px;
+      color: #ccc;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+    .jp-badge.grand  { color: #ffd700; border-color: #ffd700; }
+    .jp-badge.major  { color: #c0c0c0; border-color: #999; }
+    .jp-badge.minor  { color: #cd853f; border-color: #cd853f; }
+
+    .game-fruits {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      font-size: 90px;
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+      pointer-events: none;
+    }
+    .play-overlay {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      z-index: 3;
+    }
+    .btn-play-free {
+      background: #5aaa00;
+      color: #fff;
+      border: none;
+      padding: 13px 36px;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 230px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      transition: background 0.15s;
+    }
+    .btn-play-free:hover { background: #4a9400; }
+    .btn-play-free .btn-icon { margin-right: 6px; }
+    .btn-play-free .sub { font-size: 11px; font-weight: normal; opacity: 0.85; margin-top: 2px; }
+    .btn-play-real {
+      background: #6b3fa0;
+      color: #fff;
+      border: none;
+      padding: 11px 36px;
+      border-radius: 5px;
+      font-size: 13px;
+      cursor: pointer;
+      min-width: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.4);
+      transition: background 0.15s;
+    }
+    .btn-play-real:hover { background: #5a2e90; }
+
+    /* Right side icons — overlaid on game frame */
+    .game-side-icons {
+      position: absolute;
+      right: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      color: rgba(200,200,200,0.5);
+      z-index: 4;
+    }
+    .game-side-icons span { cursor: pointer; font-size: 16px; transition: color 0.15s; }
+    .game-side-icons span:hover { color: rgba(255,255,255,0.9); }
+
+    /* Bottom bet/balance bar */
+    .game-bottom-bar {
+      background: rgba(10,3,18,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 7px 20px;
+      border-top: 1px solid rgba(100,40,80,0.3);
+    }
+    .bet-col, .bal-col { text-align: center; }
+    .amount-pill {
+      display: inline-block;
+      background: rgba(80,20,40,0.75);
+      color: #fff;
+      padding: 4px 22px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      border: 1px solid rgba(150,60,90,0.5);
+      letter-spacing: 0.5px;
+    }
+    .amount-label {
+      color: #666;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 3px;
+    }
+    .center-icon { color: #555; font-size: 16px; padding: 0 6px; }
+
+    /* ===== ACTION BAR ===== */
+    .action-bar {
+      background: #0d1117;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .act-btn {
+      color: #ccc;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 5px 12px;
+      transition: color 0.15s, background 0.15s;
+      white-space: nowrap;
+    }
+    .act-btn:hover { color: #fff; background: rgba(255,255,255,0.06); }
+    .act-btn .cnt { color: #ccc; }
+    .act-btn .ico-like  { color: #5aaa00; font-size: 15px; }
+    .act-btn .ico-dislike { color: #e53935; font-size: 15px; }
+    .act-btn .ico-comment { color: #4a9eff; font-size: 15px; }
+    .act-btn .ico-report  { color: #f5a623; font-size: 14px; }
+    .act-btn .ico-share   { color: #ccc; font-size: 14px; }
+    .act-btn .ico-add     { color: #5aaa00; font-size: 16px; }
+    .act-sep { width: 1px; height: 18px; background: rgba(255,255,255,0.12); margin: 0 4px; }
+    .act-expand { margin-left: auto; color: #555; cursor: pointer; font-size: 18px; padding: 5px 8px; transition: color 0.15s; }
+    .act-expand:hover { color: #aaa; }
+
+    /* ===== TWO-COLUMN SECTION ===== */
+    .content-wrap {
+      display: flex;
+      background: #1b2128;
+      padding: 18px 16px;
+      gap: 18px;
+      align-items: flex-start;
+    }
+
+    /* ===== LEFT SIDEBAR ===== */
+    .left-sidebar { width: 240px; flex-shrink: 0; }
+
+    .game-artwork {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #1a0a2e 0%, #4a1a10 40%, #2a0818 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .game-logo-text { text-align: center; }
+    .game-logo-text .hot {
+      font-size: 52px;
+      font-weight: 900;
+      color: #ffd700;
+      display: block;
+      font-style: italic;
+      text-shadow: 0 2px 6px #000, 0 0 20px #ff6600;
+      line-height: 1;
+    }
+    .game-logo-text .slice {
+      font-size: 38px;
+      font-weight: 900;
+      color: #ff4444;
+      display: block;
+      font-style: italic;
+      text-shadow: 0 2px 6px #000;
+      line-height: 1;
+    }
+    .game-logo-text .cherries { font-size: 32px; }
+
+    .info-card {
+      background: #212b3a;
+      overflow: hidden;
+      margin-bottom: 12px;
+      border: 1px solid #555577;
+    }
+    .info-card-head {
+      background: transparent;
+      color: #fff;
+      padding: 13px 14px 8px;
+      font-size: 14px;
+      font-weight: bold;
+      font-style: normal;
+    }
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 14px;
+      border-bottom: 1px solid #555577;
+      font-size: 13px;
+    }
+    .info-row:last-child { border-bottom: none; }
+    .info-lbl { color: #ccc; }
+    .info-val { color: #fff; font-weight: 500; }
+    .info-val a { color: #5aaa00; }
+    .ico-check {
+      width: 20px; height: 20px;
+      background: #5aaa00;
+      border-radius: 50% !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+    .ico-cross {
+      width: 20px; height: 20px;
+      background: #e53935;
+      border-radius: 50% !important;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .embed-card {
+      background: #212b3a;
+      padding: 0 14px 0;
+      border: 1px solid #555577;
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .embed-inner {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      margin-bottom: 14px;
+      flex: 1;
+      padding-top: 14px;
+    }
+    .embed-mascot-box {
+      width: 90px;
+      height: 110px;
+      background: transparent;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .embed-right { flex: 1; }
+    .html5-badge {
+      background: #e44d26;
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 2px 6px;
+      display: inline-block;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+    .embed-text { font-size: 13px; color: #fff; line-height: 1.5; }
+    .btn-embed {
+      background: #5aaa00;
+      color: #fff;
+      border: none;
+      padding: 11px;
+      width: 100%;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .btn-embed:hover { background: #4a9400; }
+
+    /* ===== MAIN CONTENT ===== */
+    .main-content { flex: 1; min-width: 0; }
+
+    .game-title-main {
+      font-size: 26px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .game-desc {
+      font-size: 13px;
+      color: #bbb;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .stat-box {
+      background: #1b2128;
+      border: 1px solid #555577;
+      padding: 16px 18px;
+      color: #fff;
+    }
+    .stat-lbl {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .stat-lbl .s-icon { color: #5aaa00; font-size: 15px; }
+    .stat-val {
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .stat-val.sm { font-size: 18px; padding-top: 4px; }
+
+    /* Quick verdict */
+    .verdict-box {
+      background: #212b3a;
+      border: 1px solid #555577;
+      padding: 20px;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+    .verdict-left { text-align: center; flex-shrink: 0; }
+    .verdict-mascot {
+      width: 90px;
+      height: 90px;
+      background: transparent;
+      margin: 0 auto 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 62px;
+    }
+    .verdict-score { font-size: 32px; font-weight: 900; color: #fff; line-height: 1; }
+    .verdict-score-lbl { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; }
+    .verdict-right { flex: 1; }
+    .verdict-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 8px; }
+    .verdict-text { font-size: 13px; color: #ccc; line-height: 1.6; margin-bottom: 14px; }
+    .btn-review {
+      background: #6b3fa0;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 13px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .btn-review:hover { background: #5a2e90; }
+
+    /* Expandable rows */
+    .expand-row {
+      background: #1b2128;
+      border-bottom: 1px solid #555577;
+      padding: 13px 4px;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .expand-row:hover { background: #222238; }
+    .expand-icon { color: #5aaa00; font-size: 15px; }
+    .expand-title { font-size: 13px; font-weight: bold; color: #fff; flex: 1; }
+    .expand-arrow { color: #666; font-size: 16px; }
+
+    /* Provider block */
+    .provider-block {
+      background: #212b3a;
+      border: 1px solid #555577;
+      margin-top: 12px;
+      display: flex;
+      align-items: stretch;
+      overflow: hidden;
+    }
+    .prov-logo-img {
+      width: 130px;
+      min-width: 130px;
+      background: #12181e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px 12px;
+      border-right: 1px solid #555577;
+      flex-shrink: 0;
+    }
+    .prov-logo-icon {
+      font-size: 32px;
+      color: #4a9eff;
+    }
+    .prov-logo-text-box {
+      color: #fff;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .prov-content {
+      flex: 1;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .prov-name { font-size: 16px; font-weight: bold; color: #fff; }
+    .prov-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .prov-link {
+      background: #1b2128;
+      border: 1px solid #555577;
+      padding: 10px 12px;
+      font-size: 12px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.15s;
+    }
+    .prov-link:hover { background: #222240; }
+    .prov-link-icon { color: #5aaa00; margin-right: 5px; }
+    .prov-arrow { color: #5aaa00; font-size: 13px; }
+
+    /* ===== REVIEW ARTICLE ===== */
+    .review-wrap {
+      background: #f5f5f5;
+      padding: 28px 16px 40px;
+    }
+    .review-inner {
+      max-width: 740px;
+      margin: 0 auto;
+    }
+    .review-inner h1 {
+      font-size: 21px;
+      font-weight: 900;
+      color: #1b2128;
+      margin-bottom: 22px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    .review-inner h2 {
+      font-size: 17px;
+      font-weight: bold;
+      color: #1b2128;
+      margin: 22px 0 10px;
+    }
+    .review-inner p {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.65;
+      margin-bottom: 10px;
+    }
+    .hl  { color: #5aaa00; font-weight: bold; }
+    .hlb { font-weight: bold; }
+    .hll { color: #5aaa00; text-decoration: underline; cursor: pointer; }
+    .hlr { color: #e53935; font-weight: bold; }
+
+    .review-inner ul {
+      margin: 6px 0 12px 22px;
+    }
+    .review-inner ul li {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.7;
+      list-style-type: disc;
+    }
+
+    /* In-article screenshots */
+    .r-screenshot {
+      border-radius: 6px;
+      overflow: hidden;
+      margin: 14px 0 4px;
+      border: 1px solid #2a0a0a;
+    }
+    .rs-top {
+      background: #160606;
+      padding: 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .rs-name { color: #ffd700; font-size: 11px; font-weight: bold; }
+    .rs-jps  { color: #ffd700; font-size: 9px; }
+    .rs-time { color: #777; font-size: 10px; }
+    .rs-body {
+      display: flex;
+      height: 200px;
+    }
+    .rs-lb {
+      width: 125px;
+      background: #160606;
+      padding: 8px 6px;
+      flex-shrink: 0;
+      border-right: 1px solid #2a0a0a;
+    }
+    .rs-lb-title { color: #ffd700; font-size: 9px; font-weight: bold; text-transform: uppercase; margin-bottom: 5px; }
+    .rs-lb-tabs { display: flex; margin-bottom: 4px; }
+    .rs-lb-tab { flex: 1; text-align: center; padding: 2px 0; font-size: 9px; }
+    .rs-lb-tab.a { background: #ffd700; color: #000; font-weight: bold; }
+    .rs-lb-tab.i { background: #2a1010; color: #777; }
+    .rs-lb-hdr { display: grid; grid-template-columns: 24px 1fr 28px; color: #666; font-size: 7px; padding: 2px 0; border-bottom: 1px solid #2a0a0a; }
+    .rs-main {
+      flex: 1;
+      background: linear-gradient(135deg, #3a0c0c 0%, #1a0408 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+      gap: 24px;
+    }
+    .rs-side {
+      width: 32px;
+      background: #160606;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #444;
+      font-size: 13px;
+      border-left: 1px solid #2a0a0a;
+    }
+    .rs-bottom {
+      background: #160606;
+      display: flex;
+      justify-content: space-around;
+      padding: 5px 14px;
+      gap: 10px;
+    }
+    .rs-amount-col { text-align: center; }
+    .rs-pill {
+      display: inline-block;
+      background: #3a1010;
+      color: #fff;
+      padding: 3px 14px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid #4a2020;
+    }
+    .rs-lbl { color: #666; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+    .r-caption {
+      text-align: center;
+      color: #5aaa00;
+      font-size: 11px;
+      margin: 5px 0 14px;
+    }
+
+    .review-author {
+      color: #999;
+      font-size: 11px;
+      margin-top: 24px;
+      padding-top: 12px;
+      border-top: 1px solid #ddd;
+    }
+    .review-author a { color: #5aaa00; }
+
+    /* ===== TOURNAMENTS ===== */
+    .extra-sections {
+      background: #1b2128;
+      padding: 24px 0 0;
+    }
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .section-heading .sh-icon { color: #ffd700; font-size: 17px; }
+    .section-heading .sh-icon-green { color: #5aaa00; font-size: 17px; }
+
+    .tournaments-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 300px));
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+    .t-card {
+      background: #212b3a;
+      border: 1px solid #555577;
+      overflow: hidden;
+    }
+    .t-badge {
+      text-align: center;
+      padding: 6px;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .t-badge.weekly  { background: #6b3fa0; }
+    .t-badge.monthly { background: #d47000; }
+    .t-img {
+      position: relative;
+      width: 100%;
+      height: 145px;
+      overflow: hidden;
+      background: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .t-img img { width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0; }
+    .t-img-label {
+      font-size: 22px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.25);
+      text-align: center;
+      padding: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+    .t-timer {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 3px 8px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .t-info { padding: 10px 12px 0; }
+    .t-name { font-size: 14px; font-weight: bold; color: #fff; margin-bottom: 2px; }
+    .t-provider { font-size: 11px; color: #aaa; margin-bottom: 10px; }
+    .t-prize {
+      background: #e6a800;
+      color: #000;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin: 0 12px 10px;
+    }
+    .t-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 0 12px 12px;
+    }
+    .t-btn-info {
+      background: transparent;
+      border: 1px solid #555577;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .t-btn-info:hover { background: #2a2a3e; }
+    .t-btn-play {
+      text-decoration: none;
+      background: #5aaa00;
+      border: none;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .t-btn-play:hover { background: #4a9400; }
+
+    /* ===== TOURNAMENT CARD FLIP ===== */
+    .t-card { perspective: 900px; }
+    .t-inner {
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 0.45s ease;
+    }
+    .t-card.flipped .t-inner { transform: rotateY(180deg); }
+    .t-front, .t-back {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .t-back {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      transform: rotateY(180deg);
+      background: #212b3a;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .t-section-hdr {
+      background: #111122;
+      color: #999;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 6px 12px;
+    }
+    .t-prize-big {
+      text-align: center;
+      padding: 14px 12px 10px;
+      font-size: 30px;
+      font-weight: 900;
+      color: #e6a800;
+      line-height: 1;
+    }
+    .t-prize-row {
+      display: flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-bottom: 1px solid #33334a;
+      font-size: 12px;
+      gap: 6px;
+    }
+    .t-prize-row .pr-place { color: #aaa; min-width: 14px; }
+    .t-prize-row .pr-dots { flex: 1; border-bottom: 1px dotted #444; height: 0; }
+    .t-prize-row .pr-amt { color: #fff; font-weight: bold; }
+    .t-info-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 12px;
+      font-size: 11px;
+      border-bottom: 1px solid #33334a;
+    }
+    .t-info-row .ir-lbl { color: #999; }
+    .t-info-row .ir-val { color: #fff; font-weight: 500; }
+    .t-back-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 10px 12px 12px;
+      margin-top: auto;
+    }
+    .t-btn-close {
+      background: transparent;
+      border: 1px solid #555577;
+      color: #fff;
+      padding: 8px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .t-btn-close:hover { background: #2a2a3e; }
+
+    /* ===== CAROUSELS ===== */
+    .carousel-section { margin-bottom: 30px; }
+    .carousel-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .carousel-header .ch-title {
+      font-size: 15px;
+      font-weight: bold;
+      color: #fff;
+      flex: 1;
+    }
+    .carousel-arrows { display: flex; gap: 6px; }
+    .c-arrow {
+      width: 30px; height: 30px;
+      background: #212b3a;
+      border: 1px solid #555577;
+      color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.15s;
+      user-select: none;
+    }
+    .c-arrow:hover { background: #2e2e48; }
+
+    .carousel-outer {
+      overflow: hidden;
+      cursor: grab;
+    }
+    .carousel-outer.dragging { cursor: grabbing; }
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+    .carousel-track.no-transition { transition: none; }
+
+    .g-card {
+      flex: 0 0 calc(20% - 10px);
+      min-width: 0;
+    }
+    .g-card-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: #111;
+      overflow: hidden;
+      margin-bottom: 6px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .g-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; position: absolute; top:0; left:0; }
+    .g-card-img-label {
+      font-size: 11px;
+      font-weight: bold;
+      color: rgba(255,255,255,0.2);
+      text-align: center;
+      padding: 6px;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+    .g-card-name {
+      font-size: 12px;
+      color: #fff;
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .g-card-provider {
+      font-size: 11px;
+      color: #aaa;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .g-card-provider a { color: #5aaa00; text-decoration: none; }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+    .c-dot {
+      width: 8px; height: 8px;
+      background: #444;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .c-dot.active { background: #888; }
+
+    /* ===== TOP CASINOS SECTION ===== */
+    .casinos-section { margin-bottom: 30px; }
+    .casino-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .casino-card { background: #fff; display: flex; align-items: center; gap: 0; overflow: hidden; border: 1px solid #ddd; }
+    .casino-logo-box { width: 138px; min-width: 138px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 10px; text-align: center; }
+    .casino-body { flex: 1; padding: 12px 16px; min-width: 0; }
+    .casino-name-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .casino-name-text { font-size: 16px; font-weight: bold; color: #1b2128; }
+    .casino-verified { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #5aaa00; border-radius: 50% !important; color: #fff; font-size: 9px; font-weight: bold; flex-shrink: 0; }
+    .casino-tags { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .casino-tag { font-size: 11px; color: #5aaa00; font-weight: bold; letter-spacing: 0.5px; display: flex; align-items: center; gap: 3px; }
+    .casino-tag.show-all { color: #5aaa00; text-decoration: underline; cursor: pointer; }
+    .casino-meta { text-align: center; padding: 0 20px; flex-shrink: 0; }
+    .safety-label { font-size: 10px; color: #777; margin-bottom: 4px; }
+    .safety-badge { background: #5aaa00; color: #fff; font-size: 22px; font-weight: 900; width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; }
+    .safety-level { font-size: 11px; color: #333; font-weight: bold; }
+    .casino-actions { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
+    .btn-quick-info { background: transparent; border: 1px solid #ccc; color: #333; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-quick-info:hover { background: #f5f5f5; }
+    .btn-play-casino { background: #5aaa00; border: none; color: #fff; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; text-decoration: none; }
+    .btn-play-casino:hover { background: #4a9400; }
+    .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .btn-show-more-casinos:hover { background: #4a9400; }
+
+    /* ===== DISCUSSION SECTION ===== */
+    .discussion-wrap {
+      background: #eef0f3;
+      padding: 36px 16px 48px;
+    }
+    .discussion-inner {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .discussion-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      color: #1b2128;
+      margin-bottom: 8px;
+    }
+    .discussion-sub {
+      text-align: center;
+      font-size: 13px;
+      color: #5aaa00;
+      margin-bottom: 28px;
+    }
+    .disc-card {
+      background: #fff;
+      border: 1px solid #dde0e6;
+      padding: 24px;
+      margin-bottom: 16px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .disc-avatar {
+      flex-shrink: 0;
+      text-align: center;
+      width: 80px;
+    }
+    .disc-avatar-img {
+      width: 68px; height: 68px;
+      border-radius: 50% !important;
+      border: 3px solid #5aaa00;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      margin: 0 auto 6px;
+      overflow: hidden;
+      background: #e8f4d8;
+    }
+    .disc-avatar-img.grey {
+      border-color: #ccc;
+      background: #e8e8e8;
+    }
+    .disc-user-name {
+      font-size: 12px;
+      font-weight: bold;
+      color: #1b2128;
+    }
+    .disc-user-role {
+      font-size: 11px;
+      color: #777;
+      line-height: 1.3;
+    }
+    .disc-body { flex: 1; min-width: 0; }
+    .disc-intro-text {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.7;
+      padding-top: 6px;
+    }
+    .disc-intro-text a { color: #5aaa00; text-decoration: underline; }
+    /* Editor toolbar */
+    .editor-toolbar {
+      display: flex;
+      gap: 2px;
+      padding: 8px 10px;
+      border: 1px solid #dde0e6;
+      border-bottom: none;
+      background: #fff;
+    }
+    .editor-tool-btn {
+      width: 28px; height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: bold;
+      color: #555;
+      cursor: pointer;
+      background: none;
+      border: none;
+      transition: background 0.15s;
+    }
+    .editor-tool-btn:hover { background: #f0f0f0; }
+    .editor-tool-sep { width: 1px; background: #dde; margin: 4px 4px; }
+    .editor-textarea {
+      width: 100%;
+      height: 140px;
+      border: 1px solid #dde0e6;
+      border-top: none;
+      padding: 12px;
+      font-size: 13px;
+      color: #444;
+      resize: vertical;
+      outline: none;
+      font-family: Arial, sans-serif;
+      background: #fff;
+    }
+    .editor-textarea:focus { border-color: #aaa; }
+    .editor-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .editor-counter { font-size: 11px; color: #999; }
+    .btn-submit-comment {
+      background: #5aaa00;
+      color: #fff;
+      border: none;
+      padding: 10px 32px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-submit-comment:hover { background: #4a9400; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #161d24;
+      color: #ccc;
+      font-size: 13px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+
+    /* Logo + social row */
+    .footer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .footer-logo { display: flex; align-items: center; gap: 8px; }
+    .footer-logo-mascot {
+      width: 34px; height: 34px;
+      background: linear-gradient(135deg,#4a8a00,#7dc200);
+      border-radius: 50% !important;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .footer-logo-text .fl-casino { color: #8bc34a; font-size: 8px; font-weight: 900; letter-spacing: 1.5px; text-transform: uppercase; display: block; }
+    .footer-logo-text .fl-brand { color: #fff; font-size: 20px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; display: block; line-height: 1; }
+    .footer-follow { display: flex; align-items: center; gap: 10px; }
+    .footer-follow-lbl { font-size: 11px; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+    .social-icons { display: flex; gap: 8px; }
+    .social-icon {
+      width: 42px; height: 42px;
+      border-radius: 6px !important;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .social-icon:hover { opacity: 0.8; }
+    .si-fb, .si-tw, .si-ig, .si-yt, .si-li { background: transparent; }
+
+    /* 4-column links grid */
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .footer-links-col {
+      padding: 20px 16px 20px 0;
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+    .footer-links-col:last-child { border-right: none; padding-right: 0; }
+    .footer-links-col:not(:first-child) { padding-left: 16px; }
+    .footer-col-title {
+      font-size: 11px;
+      font-weight: bold;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 12px;
+      padding: 3px 0;
+      transition: color 0.15s;
+    }
+    .footer-link:hover { color: #fff; }
+    .footer-link .fl-icon { color: #5aaa00; font-size: 12px; }
+
+    /* 2x2 promo blocks */
+    .footer-promo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .footer-promo-block {
+      padding: 18px 16px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      cursor: pointer;
+      transition: background 0.15s;
+      position: relative;
+      text-decoration: none;
+      display: block;
+    }
+    .footer-promo-block:hover { background: rgba(255,255,255,0.03); }
+    .footer-promo-block:nth-child(2n) { border-right: none; }
+    .footer-promo-block:nth-child(3),
+    .footer-promo-block:nth-child(4) { border-bottom: none; }
+    .fp-label {
+      font-size: 10px;
+      font-weight: bold;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .fp-logo {
+      font-size: 16px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .fp-logo .fp-badge {
+      background: #5aaa00;
+      color: #fff;
+      font-size: 9px;
+      font-weight: bold;
+      padding: 2px 6px;
+      letter-spacing: 0.5px;
+    }
+    .fp-logo .fp-global-badge {
+      background: #fff;
+      color: #000;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 3px 8px;
+      letter-spacing: 0.5px;
+    }
+    .fp-desc {
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+    .fp-arrow {
+      position: absolute;
+      top: 18px; right: 14px;
+      color: #555;
+      font-size: 16px;
+    }
+    .fp-awards-logo { display: flex; align-items: center; gap: 6px; }
+    .fp-awards-text { font-weight: 900; }
+    .fp-awards-text .aw1 { color: #e6a800; }
+    .fp-awards-text .aw2 { color: #5aaa00; }
+
+    /* Newsletter */
+    .footer-newsletter {
+      padding: 28px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      text-align: center;
+    }
+    .newsletter-label {
+      font-size: 11px;
+      font-weight: bold;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 10px;
+    }
+    .newsletter-input {
+      width: 320px;
+      padding: 10px 14px;
+      border: 1px solid #3a3a50;
+      background: #12181e;
+      color: #ccc;
+      font-size: 13px;
+      outline: none;
+    }
+    .newsletter-input::placeholder { color: #555; }
+    .newsletter-input:focus { border-color: #5aaa00; }
+    .btn-newsletter {
+      background: #5aaa00;
+      color: #fff;
+      border: none;
+      padding: 10px 24px;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-newsletter:hover { background: #4a9400; }
+    .newsletter-check {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #888;
+      cursor: pointer;
+    }
+    .newsletter-check input[type=checkbox] { accent-color: #5aaa00; cursor: pointer; }
+
+    /* Responsible gambling */
+    .footer-responsible {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .resp-label {
+      font-size: 11px;
+      color: #777;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .resp-logos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .resp-badge {
+      background: #2a2a3e;
+      border: 1px solid #3a3a50;
+      color: #bbb;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: border-color 0.15s;
+      min-height: 52px;
+    }
+    .resp-badge:hover { border-color: #666; }
+    .resp-badge .rb-icon { color: #aaa; font-size: 13px; }
+    .resp-badge.age18 { font-size: 13px; font-weight: 900; color: #fff; }
+
+    /* Footer bottom */
+    .footer-bottom {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      padding: 20px 0 28px;
+      align-items: start;
+    }
+    .footer-disclaimer {
+      font-size: 11px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .footer-disclaimer a { color: #5aaa00; }
+    .footer-lang-col { flex-shrink: 0; }
+    .footer-lang-title {
+      font-size: 10px;
+      font-weight: bold;
+      color: #888;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .footer-lang-select {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid #3a3a50;
+      background: #12181e;
+      color: #ccc;
+      padding: 9px 14px;
+      font-size: 13px;
+      cursor: pointer;
+      justify-content: space-between;
+      min-width: 200px;
+    }
+    .footer-lang-select span { color: #777; font-size: 12px; }
+
+    /* ===== HEADER full-width inner container ===== */
+    .header-inner, .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+    }
+    .nav-inner { gap: 0; }
+
+    /* ===== SITE CONTAINER ===== */
+    .site-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/">
+  <meta property="og:title" content="Hot Slice Slot — Free Demo by Evoplay | Mari">
+  <meta property="og:description" content="Play Hot Slice slot by Evoplay in free demo mode. No registration needed. RTP 96.07%, game mechanics, strategies and best casino bonuses for 2026.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hot Slice Slot — Free Demo by Evoplay | Mari">
+  <meta name="twitter:description" content="Play Hot Slice slot by Evoplay in free demo mode. No registration needed. RTP 96.07%, game mechanics, strategies and best casino bonuses for 2026.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<!-- STICKY TOP BAR -->
+<div class="sticky-top">
+
+<!-- HEADER — full width -->
+<header class="header" style="padding:7px 0;">
+<div class="header-inner" style="width:100%;padding:0 16px;gap:14px;">
+  <a href="#" class="logo">
+    <div class="logo-mascot"><img src="img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text">
+      <span class="brand-name">Mari</span>
+    </div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for casinos, games, and more">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">EN &nbsp;&#127463;&#127479;</button>
+    <button class="btn-login">Login</button>
+    <button class="btn-signup">Sign up</button>
+  </div>
+</div><!-- /header-inner -->
+</header>
+
+<!-- MAIN NAV — full width -->
+<nav class="main-nav" style="padding:0;">
+<div class="nav-inner" style="width:100%;padding:0 4px;">
+  <a href="/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="#casinos"><span class="nav-icon">&#127963;</span> Online Casinos</a>
+  <a href="#game" class="active"><span class="nav-icon">&#127918;</span> Games</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Guide</a>
+  <a href="/complaints/"><span class="nav-icon">&#9888;</span> Complaints</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="#review"><span class="nav-icon">&#11088;</span> Reviews</a>
+  <a href="#tournaments"><span class="nav-icon">&#127942;</span> Tournaments</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div><!-- /nav-inner -->
+</nav>
+
+</div><!-- /sticky-top -->
+
+<div class="site-wrap">
+<!-- PAGE TITLE BAR -->
+<div class="page-title-bar">
+  <div class="provider-icon"><img src="img/hot-slice-icon.webp" alt="Hot Slice" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+  <div class="page-title-info">
+    <div class="title">Hot Slice Free Play in Demo Mode</div>
+    <div class="by">by Evoplay</div>
+  </div>
+  <div class="title-right">
+    <a href="/go/" class="btn-play-real-title">&#9881; Play for Real Money</a>
+  </div>
+</div>
+
+<!-- GAME FRAME -->
+<div class="game-outer" id="game">
+  <div class="game-cover" id="game-cover">
+    <img src="img/screenshots/hot-slice-gameplay-fruit-ninja-evoplay.png" alt="Hot Slice — play free demo by Evoplay">
+    <div class="game-cover-overlay">
+      <button class="gcov-btn gcov-btn-free" onclick="loadGameIframe()">
+        <div class="gcov-btn-icon">&#9654;</div>
+        <div class="gcov-btn-text">
+          <span class="gcov-btn-title">Play for Free</span>
+          <span class="gcov-btn-sub">100% free / No limits</span>
+        </div>
+      </button>
+      <a href="/go/" class="gcov-btn gcov-btn-real">
+        <div class="gcov-btn-icon">&#127920;</div>
+        <div class="gcov-btn-text">
+          <span class="gcov-btn-title">Play for Real Money</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ACTION BAR -->
+<div class="action-bar">
+  <button class="act-btn"><span class="ico-add">&#10010;</span> My list</button>
+  <div class="act-sep"></div>
+  <button class="act-btn"><span class="ico-like">&#128077;</span> <span class="cnt">5</span></button>
+  <button class="act-btn"><span class="ico-dislike">&#128078;</span></button>
+  <div class="act-sep"></div>
+  <button class="act-btn" onclick="document.getElementById('discussion').scrollIntoView({behavior:'smooth'})"><span class="ico-comment">&#128172;</span> <span class="cnt">1 comment</span></button>
+  <div class="act-sep"></div>
+  <button class="act-btn"><span class="ico-report">&#9873;</span> Report</button>
+  <button class="act-btn"><span class="ico-share">&#8599;</span> Share</button>
+  <span class="act-expand">&#10697;</span>
+</div>
+
+<!-- TWO-COLUMN SECTION -->
+<div class="content-wrap">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="left-sidebar">
+    <div class="game-artwork">
+      <img src="img/hot-slice-cover.webp" alt="Hot Slice" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+
+    <div class="info-card">
+      <div class="info-card-head">Game Information</div>
+      <div class="info-row">
+        <span class="info-lbl">Game provider</span>
+        <span class="info-val"><a href="#">Evoplay</a></span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Progressive Jackpot</span>
+        <span class="ico-cross">&#10005;</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Configurable winlines</span>
+        <span class="ico-check">&#10003;</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Gamble feature</span>
+        <span class="ico-cross">&#10005;</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Min bet &#9432;</span>
+        <span class="info-val">$0.1</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Max bet &#9432;</span>
+        <span class="info-val">$20,000</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Release date</span>
+        <span class="info-val">March 2025</span>
+      </div>
+      <div class="info-row">
+        <span class="info-lbl">Last update</span>
+        <span class="info-val">22 May 2026</span>
+      </div>
+    </div>
+
+    <div class="embed-card">
+      <div class="embed-inner">
+        <div class="embed-mascot-box"><img src="img/mascot-embed.webp" alt="Mari" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="embed-right">
+          <span class="html5-badge">HTML5</span>
+          <p class="embed-text">Feel free to add this game to your website.</p>
+        </div>
+      </div>
+      <button class="btn-embed" onclick="copyEmbedCode(this)">&#128203; Copy Embed Code</button>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="main-content">
+    <h1 class="game-title-main">Hot Slice</h1>
+    <p class="game-desc">Play Hot Slice demo game online for fun. Enjoy free casino games in demo mode on Mari. No download required.</p>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <a href="/rtp/" class="stat-box" style="text-decoration:none;display:block;">
+        <div class="stat-lbl"><span class="s-icon">&#8617;</span> Return to player <span style="color:#5aaa00;font-size:12px;">&#9432;</span></div>
+        <div class="stat-val">96.05%</div>
+      </a>
+      <div class="stat-box">
+        <div class="stat-lbl"><span class="s-icon">&#127918;</span> Game Type</div>
+        <div class="stat-val sm">Other games</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-lbl"><span class="s-icon">&#127942;</span> Max win</div>
+        <div class="stat-val">3,500x</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-lbl"><span class="s-icon">&#127942;</span> Payout system</div>
+        <div class="stat-val sm" style="color:#666;">—</div>
+      </div>
+    </div>
+
+    <!-- Quick verdict -->
+    <div class="verdict-box">
+      <div class="verdict-left">
+        <div class="verdict-mascot"><img src="img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:contain;display:block;"></div>
+        <div class="verdict-score">7.17</div>
+        <div class="verdict-score-lbl">MARI SCORE</div>
+      </div>
+      <div class="verdict-right">
+        <div class="verdict-title">Quick verdict</div>
+        <p class="verdict-text">Hot Slice is a fruit-themed slot, with an above-average RTP (96.05%), offering a maximum win of 3500x your wager.</p>
+        <button class="btn-review">&#8595; Read full review</button>
+      </div>
+    </div>
+
+    <!-- Expandable sections -->
+    <div class="expand-row">
+      <span class="expand-icon">&#127942;</span>
+      <span class="expand-title">About game</span>
+      <span class="expand-arrow">&#8250;</span>
+    </div>
+
+    <div class="expand-row">
+      <span class="expand-icon">&#127942;</span>
+      <span class="expand-title">About game provider</span>
+      <span class="expand-arrow">&#8250;</span>
+    </div>
+
+    <a href="/how-to-play/" class="expand-row" style="text-decoration:none;">
+      <span class="expand-icon">&#128214;</span>
+      <span class="expand-title">How to Play Hot Slice</span>
+      <span class="expand-arrow">&#8250;</span>
+    </a>
+
+    <a href="/strategy/" class="expand-row" style="text-decoration:none;">
+      <span class="expand-icon">&#127919;</span>
+      <span class="expand-title">Strategy &amp; Tips</span>
+      <span class="expand-arrow">&#8250;</span>
+    </a>
+
+    <a href="/mobile/" class="expand-row" style="text-decoration:none;">
+      <span class="expand-icon">&#128241;</span>
+      <span class="expand-title">Hot Slice on Mobile</span>
+      <span class="expand-arrow">&#8250;</span>
+    </a>
+
+    <!-- Provider block -->
+    <div class="provider-block">
+      <div class="prov-logo-img">
+        <span class="prov-logo-icon">&#9889;</span>
+        <span class="prov-logo-text-box">EVOPLAY</span>
+      </div>
+      <div class="prov-content">
+        <span class="prov-name">Evoplay</span>
+        <div class="prov-links">
+          <a href="#evoplay-games" class="prov-link">
+            <span><span class="prov-link-icon">&#127918;</span>Evoplay games</span>
+            <span class="prov-arrow">&#8594;</span>
+          </a>
+          <a href="#casinos" class="prov-link">
+            <span><span class="prov-link-icon">&#127963;</span>Evoplay casinos</span>
+            <span class="prov-arrow">&#8594;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</div><!-- /site-wrap -->
+
+<!-- REVIEW ARTICLE -->
+<div class="review-wrap" id="review">
+  <div class="review-inner">
+    <h1>Hot Slice Slot Review</h1>
+
+    <h2>Theme and Concept</h2>
+    <p>If you have ever played Fruit Ninja on your phone, <span class="hll">Hot Slice</span> by Evoplay will feel instantly familiar. The idea is the same: fruit flies across the screen and your job is to slice through it, earning a cash reward for every precise cut.</p>
+    <p>This is not a traditional slot with spinning reels and paylines. Evoplay built what they call an instant game — an arcade-style experience with real-money stakes, where your reaction speed and accuracy directly affect how much you win each round.</p>
+    <p>The theme is cheerful and uncomplicated: a fiery background, juicy fruit symbols and a light summer energy. The game runs equally well on desktop and mobile, and touch controls feel especially natural on smartphones and tablets.</p>
+
+    <!-- Screenshot 1 -->
+    <div class="r-screenshot">
+      <img src="img/screenshots/hot-slice-gameplay-fruit-ninja-evoplay.png" alt="Hot Slice gameplay — Fruit Ninja-style slot by Evoplay" style="width:100%;height:auto;display:block;">
+    </div>
+    <div class="r-caption">Hot Slice — a Fruit Ninja-style slot by Evoplay</div>
+
+    <h2>Graphics, Sound and Animations</h2>
+    <p>Visually <span class="hll">Hot Slice</span> is clean and dynamic. A dark red background with rising flames sets the right mood — intense, hot and a little frantic.</p>
+    <p>The fruit symbols are drawn with care: strawberries, oranges, grapes, watermelons — each one reads clearly even on smaller screens. The slicing animations are satisfying and detailed, with each fruit splitting apart and splashing colourful juice.</p>
+    <p>The soundtrack is upbeat without being annoying — it keeps the pace without wearing you down during longer sessions. The sound effect on every successful cut gives a pleasing sense of impact that adds to the overall enjoyment.</p>
+
+    <h2>How to Play</h2>
+    <!-- Screenshot 2 -->
+    <div class="r-screenshot">
+      <img src="img/screenshots/hot-slice-no-paylines-every-slice-wins.png" alt="Hot Slice — no paylines, no reels, every slice is a potential win" style="width:100%;height:auto;display:block;">
+    </div>
+    <div class="r-caption">No paylines, no reels — every slice is a potential win</div>
+
+    <p><span class="hll">Hot Slice</span> has no classic reel structure or fixed betways. Each round puts a wave of fruit on screen and you slice through them — every successful cut pays out directly based on which fruit you hit.</p>
+    <p>Golden symbols are the most valuable. The golden grape, for example, can pay up to 30x your bet. Standard fruits like lemons and oranges offer smaller but more frequent payouts of 1.5x and 3x respectively.</p>
+    <p>The game also features a live leaderboard showing the top 15 players of the day and month. Competing for a spot on the board adds a social and competitive dimension that you rarely find in regular slots.</p>
+
+    <h2>Bonuses, Jackpots and Special Features</h2>
+    <p>There are no Wilds or Free Spins in <span class="hll">Hot Slice</span>, but the game makes up for it with a three-tier jackpot system. Any slice can potentially trigger one of the following prizes:</p>
+    <ul>
+      <li>Grand Jackpot – 3,000x the bet</li>
+      <li>Major Jackpot – 2,000x the bet</li>
+      <li>Minor Jackpot – 1,500x the bet</li>
+    </ul>
+    <p>The Golden symbol is a rare but highly rewarding feature. Once it appears, it takes a few rounds before it can be sliced open — but the guaranteed payout is worth the wait. Check the paytable for the exact multipliers tied to each golden fruit.</p>
+    <p>The maximum win cap in this title is <span class="hlr">3,500x your bet</span>.</p>
+
+    <h2>Bet Sizes, RTP and Volatility</h2>
+    <p><span class="hll">Hot Slice</span> carries an RTP of 96.05%, sitting just above the 96% industry benchmark. This means the game theoretically returns more to players over time compared to many competing titles.</p>
+    <p>Bets start at just €0.10 per round and go up to €75, making this accessible for casual players while still offering enough range for higher-stakes sessions.</p>
+    <p>The game has no official volatility classification, but the presence of large jackpots and rare golden multipliers points toward medium-high volatility — bigger wins come less often, but they can be substantial when they do.</p>
+
+    <h2>Conclusion</h2>
+    <p>Hot Slice is a strong choice for anyone looking for something different from traditional slot machines. Its arcade-style Fruit Ninja mechanics make it easy to pick up and genuinely fun to play, even for those new to instant games.</p>
+    <p>With a solid RTP of 96.05%, a three-tier jackpot system and a competitive leaderboard, <span class="hll">Hot Slice</span> has more depth than it first appears. We recommend trying the free demo to get comfortable with the slicing mechanics before playing for real money.</p>
+
+    <div class="review-author">
+      Author: <a href="#">Charles Parrin</a> &nbsp;|&nbsp; Last updated: 22 May 2026
+    </div>
+  </div>
+</div>
+
+<!-- ===== EXTRA SECTIONS ===== -->
+<div class="extra-sections">
+<div style="max-width:1200px;margin:0 auto;padding:0 16px;">
+
+  <!-- TOURNAMENTS -->
+  <div class="section-heading" id="tournaments"><span class="sh-icon">&#127942;</span> Tournaments</div>
+  <div class="tournaments-grid">
+
+    <!-- Card 1 -->
+    <div class="t-card">
+      <div class="t-inner">
+        <!-- FRONT -->
+        <div class="t-front">
+          <div class="t-badge weekly">Weekly Tournament</div>
+          <div class="t-img" style="background:linear-gradient(135deg,#2a1a0a 0%,#4a3010 50%,#1a0a04 100%);">
+            <img src="/img/games/guitar-quest.webp" alt="Guitar Quest slot by Relax Gaming" loading="lazy">
+            <div class="t-img-label">Guitar Quest</div>
+            <div class="t-timer">&#9873; 00:21:15</div>
+          </div>
+          <div class="t-info">
+            <div class="t-name">Guitar Quest</div>
+            <div class="t-provider">by Relax Gaming</div>
+          </div>
+          <div class="t-prize">$100 &#129689;&#129689;</div>
+          <div class="t-actions">
+            <button class="t-btn-info" onclick="flipCard(this)">More info</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+        <!-- BACK -->
+        <div class="t-back">
+          <div class="t-badge weekly">Weekly Tournament</div>
+          <div class="t-section-hdr">PRIZE POOL</div>
+          <div class="t-prize-big">$100</div>
+          <div class="t-prize-row"><span class="pr-place">1</span><span class="pr-dots"></span><span class="pr-amt">$50</span></div>
+          <div class="t-prize-row"><span class="pr-place">2</span><span class="pr-dots"></span><span class="pr-amt">$30</span></div>
+          <div class="t-prize-row"><span class="pr-place">3</span><span class="pr-dots"></span><span class="pr-amt">$20</span></div>
+          <div class="t-section-hdr">OTHER INFORMATION</div>
+          <div class="t-info-row"><span class="ir-lbl">Total free spins</span><span class="ir-val">300</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Game Provider</span><span class="ir-val">Relax Gaming</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Entry</span><span class="ir-val">FREE</span></div>
+          <div class="t-back-actions">
+            <button class="t-btn-close" onclick="flipCard(this)">Close</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="t-card">
+      <div class="t-inner">
+        <!-- FRONT -->
+        <div class="t-front">
+          <div class="t-badge monthly">Monthly Tournament</div>
+          <div class="t-img" style="background:linear-gradient(135deg,#1a0a2e 0%,#3a1060 50%,#0a0418 100%);">
+            <img src="/img/games/candy-rush.webp" alt="Candy Rush slot by Pragmatic Play" loading="lazy">
+            <div class="t-img-label">Candy Rush</div>
+            <div class="t-timer">&#9873; 00:21:15</div>
+          </div>
+          <div class="t-info">
+            <div class="t-name">Candy Rush</div>
+            <div class="t-provider">by Pragmatic Play</div>
+          </div>
+          <div class="t-prize">$1,000 &#129689;&#129689;</div>
+          <div class="t-actions">
+            <button class="t-btn-info" onclick="flipCard(this)">More info</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+        <!-- BACK -->
+        <div class="t-back">
+          <div class="t-badge monthly">Monthly Tournament</div>
+          <div class="t-section-hdr">PRIZE POOL</div>
+          <div class="t-prize-big">$1,000</div>
+          <div class="t-prize-row"><span class="pr-place">1</span><span class="pr-dots"></span><span class="pr-amt">$500</span></div>
+          <div class="t-prize-row"><span class="pr-place">2</span><span class="pr-dots"></span><span class="pr-amt">$300</span></div>
+          <div class="t-prize-row"><span class="pr-place">3</span><span class="pr-dots"></span><span class="pr-amt">$200</span></div>
+          <div class="t-section-hdr">OTHER INFORMATION</div>
+          <div class="t-info-row"><span class="ir-lbl">Total free spins</span><span class="ir-val">1,000</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Game Provider</span><span class="ir-val">Pragmatic Play</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Entry</span><span class="ir-val">FREE</span></div>
+          <div class="t-back-actions">
+            <button class="t-btn-close" onclick="flipCard(this)">Close</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="t-card">
+      <div class="t-inner">
+        <!-- FRONT -->
+        <div class="t-front">
+          <div class="t-badge weekly">Weekly Tournament</div>
+          <div class="t-img" style="background:linear-gradient(135deg,#0a1a0a 0%,#142814 50%,#041004 100%);">
+            <img src="/img/games/sanatorium-secrets.webp" alt="Sanatorium Secrets slot by Pragmatic Play" loading="lazy">
+            <div class="t-img-label">Sanatorium Secrets</div>
+            <div class="t-timer">&#9873; 03:21:15</div>
+          </div>
+          <div class="t-info">
+            <div class="t-name">Sanatorium Secrets</div>
+            <div class="t-provider">by Pragmatic Play</div>
+          </div>
+          <div class="t-prize">$100 &#129689;&#129689;</div>
+          <div class="t-actions">
+            <button class="t-btn-info" onclick="flipCard(this)">More info</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+        <!-- BACK -->
+        <div class="t-back">
+          <div class="t-badge weekly">Weekly Tournament</div>
+          <div class="t-section-hdr">PRIZE POOL</div>
+          <div class="t-prize-big">$100</div>
+          <div class="t-prize-row"><span class="pr-place">1</span><span class="pr-dots"></span><span class="pr-amt">$50</span></div>
+          <div class="t-prize-row"><span class="pr-place">2</span><span class="pr-dots"></span><span class="pr-amt">$30</span></div>
+          <div class="t-prize-row"><span class="pr-place">3</span><span class="pr-dots"></span><span class="pr-amt">$20</span></div>
+          <div class="t-section-hdr">OTHER INFORMATION</div>
+          <div class="t-info-row"><span class="ir-lbl">Total free spins</span><span class="ir-val">300</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Game Provider</span><span class="ir-val">Pragmatic Play</span></div>
+          <div class="t-info-row"><span class="ir-lbl">Entry</span><span class="ir-val">FREE</span></div>
+          <div class="t-back-actions">
+            <button class="t-btn-close" onclick="flipCard(this)">Close</button>
+            <a href="/go/" class="t-btn-play" rel="nofollow noopener noreferrer" target="_blank">Play</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SIMILAR GAMES -->
+  <div class="carousel-section" id="similar-games">
+    <div class="carousel-header">
+      <span class="sh-icon-green">&#9881;</span>
+      <span class="ch-title">Similar games to Hot Slice</span>
+      <div class="carousel-arrows">
+        <button class="c-arrow" data-dir="-1">&#8249;</button>
+        <button class="c-arrow" data-dir="1">&#8250;</button>
+      </div>
+    </div>
+    <div class="carousel-outer">
+      <div class="carousel-track">
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a2005,#6a4010);"><img src="/img/games/slap-it-slot.webp" alt="Slap It Slot by Ka Gaming" loading="lazy"><div class="g-card-img-label">Slap It Slot</div></div><div class="g-card-name">Slap It Slot</div><div class="g-card-provider"><a href="#">Ka Gaming</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a1a05,#704010);"><img src="/img/games/circus-hunting.webp" alt="Circus Hunting slot by Ka Gaming" loading="lazy"><div class="g-card-img-label">Circus Hunting</div></div><div class="g-card-name">Circus Hunting</div><div class="g-card-provider"><a href="#">Ka Gaming</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#0a3010,#206030);"><img src="/img/games/fruity-carnival.webp" alt="Fruity Carnival slot by CQ9 Gaming" loading="lazy"><div class="g-card-img-label">Fruity Carnival</div></div><div class="g-card-name">Fruity Carnival</div><div class="g-card-provider"><a href="#">CQ9 Gaming</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#051a3a,#103060);"><img src="/img/games/turbo-plinko.webp" alt="Turbo Plinko game by Turbo Games" loading="lazy"><div class="g-card-img-label">Turbo Plinko</div></div><div class="g-card-name">Turbo Plinko</div><div class="g-card-provider"><a href="#">Turbo Games</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a0510,#601020);"><img src="/img/games/romance-of-the-three-kingdoms.webp" alt="Romance of the Three Kingdoms slot by Ka Gaming" loading="lazy"><div class="g-card-img-label">Romance of the Three Kingdoms</div></div><div class="g-card-name">Romance of the Three Kingdoms</div><div class="g-card-provider"><a href="#">Ka Gaming</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a0a05,#702010);"><img src="/img/games/hot-fruits-deluxe.webp" alt="Hot Fruits Deluxe slot by Evoplay" loading="lazy"><div class="g-card-img-label">Hot Fruits Deluxe</div></div><div class="g-card-name">Hot Fruits Deluxe</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#1a3a05,#386010);"><img src="/img/games/fruit-super-nova.webp" alt="Fruit Super Nova slot by Evoplay" loading="lazy"><div class="g-card-img-label">Fruit Super Nova</div></div><div class="g-card-name">Fruit Super Nova</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#051a3a,#0a3060);"><img src="/img/games/lucky-fruits.webp" alt="Lucky Fruits slot by Pragmatic Play" loading="lazy"><div class="g-card-img-label">Lucky Fruits</div></div><div class="g-card-name">Lucky Fruits</div><div class="g-card-provider"><a href="#">Pragmatic Play</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a0505,#601010);"><img src="/img/games/fire-joker.webp" alt="Fire Joker slot by Play'n GO" loading="lazy"><div class="g-card-img-label">Fire Joker</div></div><div class="g-card-name">Fire Joker</div><div class="g-card-provider"><a href="#">Play'n GO</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#1a1a05,#303010);"><img src="/img/games/book-of-dead.webp" alt="Book of Dead slot by Play'n GO" loading="lazy"><div class="g-card-img-label">Book of Dead</div></div><div class="g-card-name">Book of Dead</div><div class="g-card-provider"><a href="#">Play'n GO</a></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots"></div>
+  </div>
+
+  <!-- MORE GAMES FROM EVOPLAY -->
+  <div class="carousel-section" id="evoplay-games">
+    <div class="carousel-header">
+      <span class="sh-icon-green">&#9881;</span>
+      <span class="ch-title">More games from Evoplay</span>
+      <div class="carousel-arrows">
+        <button class="c-arrow" data-dir="-1">&#8249;</button>
+        <button class="c-arrow" data-dir="1">&#8250;</button>
+      </div>
+    </div>
+    <div class="carousel-outer">
+      <div class="carousel-track">
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a053a,#601060);"><img src="/img/games/mystic-totems.webp" alt="Mystic Totems slot by Evoplay" loading="lazy"><div class="g-card-img-label">Mystic Totems</div></div><div class="g-card-name">Mystic Totems</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#051a3a,#104060);"><img src="/img/games/mystic-alaska.webp" alt="Mystic Alaska slot by Evoplay" loading="lazy"><div class="g-card-img-label">Mystic Alaska</div></div><div class="g-card-name">Mystic Alaska</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#1a2a2a,#305050);"><img src="/img/games/europe-transit-snowdrift.webp" alt="Europe Transit Snowdrift slot by Evoplay" loading="lazy"><div class="g-card-img-label">Europe Transit Snowdrift</div></div><div class="g-card-name">Europe Transit Snowdrift</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a1a05,#604010);"><img src="/img/games/big-catch-game.webp" alt="Big Catch Game slot by Evoplay" loading="lazy"><div class="g-card-img-label">Big Catch Game</div></div><div class="g-card-name">Big Catch Game</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#1a0a3a,#302060);"><img src="/img/games/tree-of-light-fabled-fruits.webp" alt="Tree of Light Fabled Fruits slot by Evoplay" loading="lazy"><div class="g-card-img-label">Tree of Light Fabled Fruits</div></div><div class="g-card-name">Tree of Light Fabled Fruits</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a1005,#703010);"><img src="/img/games/hot-fruits-deluxe.webp" alt="Hot Fruits Deluxe slot by Evoplay" loading="lazy"><div class="g-card-img-label">Hot Fruits Deluxe</div></div><div class="g-card-name">Hot Fruits Deluxe</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#1a3a05,#306010);"><img src="/img/games/fruit-super-nova-80.webp" alt="Fruit Super Nova 80 slot by Evoplay" loading="lazy"><div class="g-card-img-label">Fruit Super Nova 80</div></div><div class="g-card-name">Fruit Super Nova 80</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#05053a,#101060);"><img src="/img/games/neon-keno.webp" alt="Neon Keno game by Evoplay" loading="lazy"><div class="g-card-img-label">Neon Keno</div></div><div class="g-card-name">Neon Keno</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#3a0505,#601010);"><img src="/img/games/gold-of-sirens.webp" alt="Gold of Sirens slot by Evoplay" loading="lazy"><div class="g-card-img-label">Gold of Sirens</div></div><div class="g-card-name">Gold of Sirens</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+        <div class="g-card"><div class="g-card-img" style="background:linear-gradient(135deg,#051a1a,#104040);"><img src="/img/games/basketball-explosive.webp" alt="Basketball Explosive game by Evoplay" loading="lazy"><div class="g-card-img-label">Basketball Explosive</div></div><div class="g-card-name">Basketball Explosive</div><div class="g-card-provider"><a href="#">Evoplay</a></div></div>
+      </div>
+    </div>
+    <div class="carousel-dots"></div>
+  </div>
+
+
+  <!-- TOP CASINOS -->
+  <div class="casinos-section" id="casinos">
+    <div class="section-heading"><span class="sh-icon-green">&#9881;</span> Top real money casinos with Hot Slice</div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <a href="/bonus/" style="background:#6b3fa0;display:flex;align-items:center;gap:14px;padding:14px 18px;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#5a2e90'" onmouseout="this.style.background='#6b3fa0'">
+        <span style="font-size:28px;">&#127873;</span>
+        <div>
+          <div style="color:#fff;font-weight:bold;font-size:14px;margin-bottom:2px;">Casino Bonuses</div>
+          <div style="color:#c9a0f0;font-size:12px;">Best bonuses to play Hot Slice</div>
+        </div>
+        <span style="margin-left:auto;color:#c9a0f0;font-size:18px;">&#8250;</span>
+      </a>
+      <a href="/free-spins/" style="background:#1a6b2a;display:flex;align-items:center;gap:14px;padding:14px 18px;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#145520'" onmouseout="this.style.background='#1a6b2a'">
+        <span style="font-size:28px;">&#127920;</span>
+        <div>
+          <div style="color:#fff;font-weight:bold;font-size:14px;margin-bottom:2px;">Free Spins</div>
+          <div style="color:#90d4a0;font-size:12px;">No deposit free spins for Hot Slice</div>
+        </div>
+        <span style="margin-left:auto;color:#90d4a0;font-size:18px;">&#8250;</span>
+      </a>
+    </div>
+    <div class="casino-list">
+
+      <!-- Casino 1 -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#1a6b2a;color:#fff;">BRAZINO 777</div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">Brazino777 Casino BR</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag">&#127183; BINGO</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">9.1</div>
+          <div class="safety-level">Very high</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <button class="btn-play-casino">&#8594; Play in Casino</button>
+        </div>
+      </div>
+
+      <!-- Casino 2 -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0a0a0a;color:#e00;font-size:18px;">SUPERBET</div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">Superbet Casino</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag">&#127183; BINGO</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">9.2</div>
+          <div class="safety-level">Very high</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <button class="btn-play-casino">&#8594; Play in Casino</button>
+        </div>
+      </div>
+
+      <!-- Casino 3 -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#111;color:#ccc;font-size:11px;line-height:1.4;">Sorte<br><span style="color:#888;font-size:10px;">esportiva</span></div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">BateuBet Casino</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag">&#127183; BINGO</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">8.8</div>
+          <div class="safety-level">High</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <button class="btn-play-casino">&#8594; Play in Casino</button>
+        </div>
+      </div>
+
+    </div>
+    <button class="btn-show-more-casinos">Show more Evoplay casinos</button>
+  </div>
+
+</div><!-- /inner 1200px -->
+</div><!-- /extra-sections -->
+
+<!-- DISCUSSION SECTION -->
+<div class="discussion-wrap" id="discussion">
+  <div class="discussion-inner">
+    <div class="discussion-title">Hot Slice - general discussion</div>
+    <div class="discussion-sub">Discuss anything related to Hot Slice with other players, share your opinion, or get answers to your questions.</div>
+
+    <!-- Moderator intro card -->
+    <div class="disc-card">
+      <div class="disc-avatar">
+        <div class="disc-avatar-img"><img src="img/authors/juraj.webp" alt="Juraj" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="disc-user-name"><a href="/author/juraj/" style="color:#fff;text-decoration:none;">Juraj</a></div>
+        <div class="disc-user-role">Casino Games<br>Specialist</div>
+      </div>
+      <div class="disc-body">
+        <p class="disc-intro-text">Do you like this game? Did you hit a big win? Did you experience some technical issues? If there is anything you would like to discuss about <a href="#">Hot Slice</a>, you can do so here.</p>
+      </div>
+    </div>
+
+    <!-- Comment form card -->
+    <div class="disc-card">
+      <div class="disc-avatar">
+        <div class="disc-avatar-img grey">&#128100;</div>
+        <div class="disc-user-role">Unregistered user</div>
+      </div>
+      <div class="disc-body">
+        <div class="editor-toolbar">
+          <button class="editor-tool-btn"><b>B</b></button>
+          <button class="editor-tool-btn"><i>I</i></button>
+          <button class="editor-tool-btn" style="text-decoration:underline;">U</button>
+          <button class="editor-tool-btn" style="text-decoration:line-through;">S</button>
+          <div class="editor-tool-sep"></div>
+          <button class="editor-tool-btn">&#8220;</button>
+          <button class="editor-tool-btn">&#8801;</button>
+          <button class="editor-tool-btn">&#8226;</button>
+          <div class="editor-tool-sep"></div>
+          <button class="editor-tool-btn">&#128279;</button>
+          <button class="editor-tool-btn">&#128247;</button>
+          <button class="editor-tool-btn">&#9638;</button>
+        </div>
+        <textarea class="editor-textarea" id="disc-textarea" placeholder="" oninput="updateCounter(this)"></textarea>
+        <div class="editor-footer">
+          <span class="editor-counter" id="disc-counter">0/5000</span>
+          <button class="btn-submit-comment">Submit</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+
+    <!-- Logo + social -->
+    <div class="footer-top">
+      <a href="#" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">Casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Follow us</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Follow us on Facebook" aria-label="Follow us on Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Follow us on X (Twitter)" aria-label="Follow us on X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="img/social/twitter-x.webp" alt="X (Twitter)" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Follow us on Instagram" aria-label="Follow us on Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Subscribe on YouTube" aria-label="Subscribe on YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Follow us on LinkedIn" aria-label="Follow us on LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-column links -->
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Top Pages</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>PayPal casinos</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Rapid Transfer casinos</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Revolut casinos</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Trending Pages</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Pay by Phone casinos</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Mastercard casinos</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>POLi casinos</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Neosurf casinos</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="#game" class="footer-link"><span class="fl-icon">&#127918;</span>Play Demo</a>
+        <a href="/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Play for Real Money</a>
+        <a href="/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Casino Bonuses</a>
+        <a href="/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Free Spins</a>
+        <a href="/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>How to Play</a>
+        <a href="/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategy &amp; Tips</a>
+        <a href="/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP &amp; Variance</a>
+        <a href="/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Mobile Version</a>
+        <a href="#review" class="footer-link"><span class="fl-icon">&#11088;</span>Full Review</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">About Us</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>About us</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>History</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Contact</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Terms of use</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Sitemap</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Author</a>
+      </div>
+    </div>
+
+    <!-- 2x2 promo blocks -->
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Free professional educational courses for online casino employees aimed at industry best practices, improving player experience, and fair approach to gambling.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Global Self-Exclusion Initiative</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Self-exclusion<br><span style="font-size:13px;color:#aaa;">initiative</span></span></div>
+        <p class="fp-desc">An initiative we launched with the goal to create a global self-exclusion system, which will allow vulnerable players to block their access to all online gambling opportunities.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">A platform created to showcase all of our efforts aimed at bringing the vision of a safer and more transparent online gambling industry to reality.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;">
+            <div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div>
+            <div style="color:#e6a800;font-size:14px;">AWARDS</div>
+          </div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">An ambitious project whose goal is to celebrate the greatest and the most responsible companies in iGaming and give them the recognition they deserve.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Subscribe to our newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Insert your e-mail">
+        <button class="btn-newsletter">Subscribe</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> I am at least 18 years old and legally allowed to play in a casino
+      </label>
+    </div>
+
+    <!-- Responsible gambling -->
+    <div class="footer-responsible">
+      <div class="resp-label">Play responsibly and in moderation.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Created by godzilla-network.com &nbsp;|&nbsp; Mari is an independent source of information about online casinos and online casino games, not controlled by any gambling operator. All our reviews and guides are created honestly, according to the best knowledge and judgement of the members of our independent expert team; however, they are intended for informative purposes only and should not be construed as, nor relied upon as, legal advice. You should always make sure you meet all regulatory requirements before playing in any selected casino. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in other languages</div>
+        <div class="footer-lang-select">
+          <span>&#127760; Select language</span>
+          <span>&#8964;</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+function updateCounter(el) {
+  const n = Math.min(el.value.length, 5000);
+  document.getElementById('disc-counter').textContent = n + '/5000';
+  if (el.value.length > 5000) el.value = el.value.slice(0, 5000);
+}
+
+function copyEmbedCode(btn) {
+  var code = '<iframe src="https://hot-slice.it.com/embed/" width="900" height="506" frameborder="0" allowfullscreen allow="autoplay; fullscreen" scrolling="no"></iframe>';
+  navigator.clipboard.writeText(code).then(function() {
+    btn.innerHTML = '&#10003; Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.innerHTML = '&#128203; Copy Embed Code';
+      btn.classList.remove('copied');
+    }, 2500);
+  });
+}
+
+function loadGameIframe() {
+  var outer = document.getElementById('game');
+  outer.innerHTML = '<iframe src="https://slotslaunch.com/iframe/34792?token=lkKmnvQWzKXGn6g1tCpzLWLzvIjjRTlSkidVjGVLhKQgz0xfzG" class="game-iframe" allowfullscreen allow="autoplay; fullscreen" scrolling="no" frameborder="0"></iframe>';
+}
+
+function flipCard(btn) {
+  btn.closest('.t-card').classList.toggle('flipped');
+}
+
+document.querySelectorAll('.carousel-section').forEach(section => {
+  const outer  = section.querySelector('.carousel-outer');
+  const track  = section.querySelector('.carousel-track');
+  const cards  = track.querySelectorAll('.g-card');
+  const dots   = section.querySelector('.carousel-dots');
+  const arrows = section.querySelectorAll('.c-arrow');
+  const VISIBLE = 5;
+  const total  = cards.length;
+  const pages  = Math.ceil(total / VISIBLE);
+  let page     = 0;
+
+  // Build dots
+  for (let i = 0; i < pages; i++) {
+    const d = document.createElement('div');
+    d.className = 'c-dot' + (i === 0 ? ' active' : '');
+    d.addEventListener('click', () => goTo(i));
+    dots.appendChild(d);
+  }
+
+  function getCardWidth() {
+    return cards[0].getBoundingClientRect().width + 12; // gap=12
+  }
+
+  function goTo(p) {
+    page = Math.max(0, Math.min(pages - 1, p));
+    const offset = page * VISIBLE * getCardWidth();
+    track.style.transform = `translateX(-${offset}px)`;
+    dots.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === page));
+  }
+
+  // Arrow buttons: step by 5 cards (1 page)
+  arrows.forEach(btn => {
+    btn.addEventListener('click', () => goTo(page + parseInt(btn.dataset.dir)));
+  });
+
+  // Drag to scroll freely
+  let isDragging = false, startX = 0, startOffset = 0, currentOffset = 0;
+
+  function getOffset() {
+    const m = track.style.transform.match(/-?([\d.]+)/);
+    return m ? parseFloat(m[0]) : 0;
+  }
+
+  function dragStart(x) {
+    isDragging = true;
+    startX = x;
+    startOffset = getOffset();
+    track.classList.add('no-transition');
+    outer.classList.add('dragging');
+  }
+
+  function dragMove(x) {
+    if (!isDragging) return;
+    const delta = startX - x;
+    currentOffset = Math.max(0, startOffset + delta);
+    track.style.transform = `translateX(-${currentOffset}px)`;
+  }
+
+  function dragEnd() {
+    if (!isDragging) return;
+    isDragging = false;
+    outer.classList.remove('dragging');
+    track.classList.remove('no-transition');
+    // Snap to nearest page
+    const w = getCardWidth() * VISIBLE;
+    page = Math.round(currentOffset / w);
+    goTo(page);
+  }
+
+  outer.addEventListener('mousedown',  e => dragStart(e.pageX));
+  outer.addEventListener('mousemove',  e => dragMove(e.pageX));
+  outer.addEventListener('mouseup',    dragEnd);
+  outer.addEventListener('mouseleave', dragEnd);
+  outer.addEventListener('touchstart', e => dragStart(e.touches[0].pageX), {passive:true});
+  outer.addEventListener('touchmove',  e => dragMove(e.touches[0].pageX),  {passive:true});
+  outer.addEventListener('touchend',   dragEnd);
+});
+</script>
+
+</body>
+</html>

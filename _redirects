@@ -1,0 +1,48 @@
+# Casino affiliate outbound
+/go/                     /    302
+
+# Hot Slice content pages (live — redirects removed)
+# /real-money/             /    302
+# /bonus/                  /    302
+# /free-spins/             /    302
+# /rtp/                    /    302
+# /how-to-play/            /    302
+# /strategy/               /    302
+# /mobile/                 /    302
+
+# Author pages (live — redirects removed)
+# /author/juraj/           /    302
+
+# Other site pages (future)
+/casinos/                /    302
+
+# Site pages (live — redirects removed)
+# /forum/                  /    302
+# /complaints/             /    302
+# /news/                   /    302
+# /guide/                  /    302
+# /awards/                 /    302
+# /academy/                /    302
+# /about/                  /    302
+# /contact/                /    302
+# /terms/                  /    302
+# /self-exclusion/         /    302
+# /gamtegrity/             /    302
+
+# Social media (future)
+/social/facebook/        /    302
+/social/twitter/         /    302
+/social/instagram/       /    302
+/social/youtube/         /    302
+/social/linkedin/        /    302
+
+# Casino category pages (future)
+/paypal-casinos/         /    302
+/rapid-transfer-casinos/ /    302
+/revolut-casinos/        /    302
+/blackjack-casinos/      /    302
+/craps-casinos/          /    302
+/pay-by-phone-casinos/   /    302
+/mastercard-casinos/     /    302
+/poli-casinos/           /    302
+/neosurf-casinos/        /    302

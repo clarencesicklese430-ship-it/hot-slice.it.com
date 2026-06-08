@@ -1,0 +1,604 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Hot Slice RTP 96.05% — Variance &amp; Payouts Explained | Mari</title>
+  <meta name="description" content="Hot Slice RTP is 96.05%. Learn what this means, how variance affects your sessions, how jackpots factor into the maths, and what to expect per session.">
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    .hero-section { background: #1b2128; padding: 36px 0 40px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .hero-top h1 { color: #fff; font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; }
+    .hero-meta { font-size: 12px; color: #888; margin-bottom: 18px; }
+    .hero-meta strong { color: #aaa; }
+    .hero-meta a { color: #5aaa00; }
+    .hero-intro { font-size: 15px; color: #bbb; line-height: 1.75; margin-bottom: 24px; max-width: 820px; }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btn { display: flex; align-items: center; gap: 14px; padding: 14px 24px; text-decoration: none; min-width: 240px; border: 1px solid rgba(255,255,255,0.5); transition: background 0.25s; }
+    .hero-btn-primary { background: linear-gradient(90deg, #2a9e1a 0%, #5fd94a 100%); box-shadow: 0 0 0 2px rgba(90,220,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-primary:hover { background: linear-gradient(90deg, #5fd94a 0%, #2a9e1a 100%); }
+    .hero-btn-secondary { background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%); box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-secondary:hover { background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%); }
+    .hero-btn-icon { font-size: 22px; flex-shrink: 0; color: #fff; }
+    .hero-btn-text { display: flex; flex-direction: column; }
+    .hero-btn-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.2; }
+    .hero-btn-sub { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .facts-grid-wrap { border-top: 1px solid rgba(255,255,255,0.25); padding-top: 24px; margin-top: 8px; }
+    .facts-grid-label { font-size: 10px; font-weight: 900; color: #5aaa00; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    .facts-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.25); }
+    .facts-cell { background: #212b3a; padding: 16px 18px; }
+    .facts-cell-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .facts-cell-value { font-size: 15px; font-weight: 700; color: #fff; }
+    .facts-badge { display: inline-block; background: #5aaa00; color: #fff; font-size: 11px; font-weight: bold; padding: 2px 8px; }
+    .facts-badge-warn { background: #c07800; }
+    .extra-sections { background: #1b2128; padding: 24px 0 30px; }
+    .extra-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .casino-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .casino-card { background: #fff; display: flex; align-items: center; overflow: hidden; border: 1px solid #ddd; }
+    .casino-logo-box { width: 138px; min-width: 138px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 10px; text-align: center; }
+    .casino-body { flex: 1; padding: 12px 16px; min-width: 0; }
+    .casino-name-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .casino-name-text { font-size: 16px; font-weight: bold; color: #1b2128; }
+    .casino-verified { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #5aaa00; border-radius: 50% !important; color: #fff; font-size: 9px; font-weight: bold; flex-shrink: 0; }
+    .casino-tags { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .casino-tag { font-size: 11px; color: #5aaa00; font-weight: bold; letter-spacing: 0.5px; display: flex; align-items: center; gap: 3px; }
+    .casino-tag.show-all { text-decoration: underline; cursor: pointer; }
+    .casino-meta { text-align: center; padding: 0 20px; flex-shrink: 0; }
+    .safety-label { font-size: 10px; color: #777; margin-bottom: 4px; }
+    .safety-badge { background: #5aaa00; color: #fff; font-size: 22px; font-weight: 900; width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; }
+    .safety-level { font-size: 11px; color: #333; font-weight: bold; }
+    .casino-actions { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
+    .btn-quick-info { background: transparent; border: 1px solid #ccc; color: #333; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-quick-info:hover { background: #f5f5f5; }
+    .btn-play-casino { background: #5aaa00; border: none; color: #fff; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; text-decoration: none; }
+    .btn-play-casino:hover { background: #4a9400; }
+    .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .btn-show-more-casinos:hover { background: #4a9400; }
+    .casino-section-heading { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 16px; }
+    .casino-section-heading .sh-icon { color: #5aaa00; }
+    .casino-tc { font-size: 10px; color: #888; margin-top: 8px; text-align: center; }
+    .casino-tc a { color: #5aaa00; }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; }
+    .data-table th { background: #1b2128; color: #fff; font-size: 12px; font-weight: 700; padding: 10px 14px; text-align: left; letter-spacing: 0.5px; }
+    .data-table td { padding: 10px 14px; font-size: 14px; border-bottom: 1px solid #e8e8e8; color: #333; vertical-align: middle; }
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: #f8f8f8; }
+    .data-table .td-highlight { font-weight: 800; color: #1b7a00; }
+    .data-table .td-warn { font-weight: 800; color: #c07800; }
+    .data-table .td-muted { color: #888; font-size: 13px; }
+    .td-badge { display: inline-block; background: #5aaa00; color: #fff; font-size: 11px; font-weight: bold; padding: 2px 8px; }
+    .td-badge-gold { background: #c07800; }
+    .td-badge-gray { background: #888; }
+    .td-badge-green { background: #2e8b00; }
+    @media (max-width: 1000px) { .facts-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .facts-grid { grid-template-columns: repeat(2, 1fr); } .hero-top h1 { font-size: 24px; } .data-table { font-size: 12px; } .data-table td, .data-table th { padding: 8px 10px; } }
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/rtp/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/rtp/">
+  <meta property="og:title" content="Hot Slice RTP 96.05% — Variance &amp; Payouts Explained | Mari">
+  <meta property="og:description" content="Hot Slice RTP is 96.05%. Learn what this means, how variance affects your sessions, how jackpots factor into the maths, and what to expect per session.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hot Slice RTP 96.05% — Variance &amp; Payouts Explained | Mari">
+  <meta name="twitter:description" content="Hot Slice RTP is 96.05%. Learn what this means, how variance affects your sessions, how jackpots factor into the maths, and what to expect per session.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<div class="sticky-top">
+<header class="header">
+<div class="header-inner">
+  <a href="/" class="logo">
+    <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text"><span class="brand-name">Mari</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for casinos, games, and more">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">EN &nbsp;&#127463;&#127479;</button>
+    <button class="btn-login">Login</button>
+    <button class="btn-signup">Sign up</button>
+  </div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-inner">
+  <a href="/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="/casinos/"><span class="nav-icon">&#127963;</span> Online Casinos</a>
+  <a href="/" class="active"><span class="nav-icon">&#127918;</span> Games</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Guide</a>
+  <a href="/complaints/"><span class="nav-icon">&#9888;</span> Complaints</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="/reviews/"><span class="nav-icon">&#11088;</span> Reviews</a>
+  <a href="/tournaments/"><span class="nav-icon">&#127942;</span> Tournaments</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div>
+</nav>
+</div>
+
+<!-- HERO -->
+<div class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="breadcrumb" style="color:#888;margin-bottom:14px;"><a href="/" style="color:#5aaa00;">Mari</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/" style="color:#5aaa00;">Games</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/" style="color:#5aaa00;">Hot Slice</a><span style="color:#555;margin:0 5px;">&#8250;</span><span style="color:#777;">RTP &amp; Variance</span></div>
+      <h1>Hot Slice RTP &amp; Variance — 96.05% Return to Player Explained</h1>
+      <p class="hero-meta"><strong>Last updated:</strong> June 2026 &nbsp;|&nbsp; <strong>By:</strong> <a href="/author/juraj/">Juraj</a>, Casino Games Specialist</p>
+      <p class="hero-intro">Hot Slice has an RTP of 96.05% — above the industry average for online slots. But RTP is one of the most misunderstood statistics in gambling. This page explains what it actually means, how variance affects your individual results, how the three-tier jackpot system fits into the maths, and what realistic session returns look like.</p>
+      <div class="hero-cta-row">
+        <a href="/" class="hero-btn hero-btn-primary">
+          <span class="hero-btn-icon">&#9654;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Play Free Demo</span>
+            <span class="hero-btn-sub">No deposit needed</span>
+          </span>
+        </a>
+        <a href="/go/" class="hero-btn hero-btn-secondary" rel="nofollow noopener noreferrer" target="_blank">
+          <span class="hero-btn-icon">&#128176;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Play for Real Money</span>
+            <span class="hero-btn-sub">At a licensed casino</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="facts-grid-wrap">
+      <div class="facts-grid-label">&#9675; RTP &amp; Math Facts — Hot Slice by Evoplay</div>
+      <div class="facts-grid">
+        <div class="facts-cell"><div class="facts-cell-label">RTP</div><div class="facts-cell-value"><span class="facts-badge">96.05%</span></div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Variance</div><div class="facts-cell-value"><span class="facts-badge facts-badge-warn">High</span></div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Provider</div><div class="facts-cell-value">Evoplay</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Grand Jackpot</div><div class="facts-cell-value">3,000x</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Major Jackpot</div><div class="facts-cell-value">2,000x</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Minor Jackpot</div><div class="facts-cell-value">1,500x</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <h2>What is RTP?</h2>
+    <p>RTP stands for Return to Player. It is the percentage of all wagered money that a slot game returns to players over a very large number of rounds — typically millions of game cycles. Hot Slice has an RTP of 96.05%, which is above the industry average for online slots. This means that for every &euro;100 wagered across all players over time, the game theoretically returns &euro;96.05.</p>
+    <p>RTP is a mathematical model calculated over an enormous sample size. It does not predict what any single player will win or lose in a single session. Think of it as a long-run indicator of the game's generosity rather than a session-by-session guarantee. Two players can sit down with the same &euro;50 budget and have completely different results — one might triple their money while the other loses everything — yet both outcomes are consistent with the 96.05% RTP when viewed as part of the overall statistical picture.</p>
+
+    <h2>Hot Slice RTP: 96.05%</h2>
+    <p>The 96.05% RTP places Hot Slice firmly among the more player-friendly arcade slots available in 2026. For context, here is how it compares:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Game / Category</th>
+          <th>RTP</th>
+          <th>Rating</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Hot Slice</strong> (Evoplay)</td>
+          <td class="td-highlight">96.05%</td>
+          <td><span class="td-badge">Above average</span></td>
+          <td>Arcade slot, HTML5</td>
+        </tr>
+        <tr>
+          <td>Industry average (online slots)</td>
+          <td>95%–96%</td>
+          <td><span class="td-badge td-badge-gray">Average</span></td>
+          <td>Most Evoplay &amp; NetEnt titles</td>
+        </tr>
+        <tr>
+          <td>High-RTP online slots</td>
+          <td>97%–99%</td>
+          <td><span class="td-badge">Player-friendly</span></td>
+          <td>E.g. Mega Joker, Starburst</td>
+        </tr>
+        <tr>
+          <td>Low-RTP online slots</td>
+          <td>92%–94%</td>
+          <td><span class="td-badge td-badge-gray">Below average</span></td>
+          <td>Often jackpot-heavy titles</td>
+        </tr>
+        <tr>
+          <td>Land-based slot machines</td>
+          <td>85%–88%</td>
+          <td><span class="td-badge td-badge-gold">Much lower</span></td>
+          <td>Physical casinos, regulated differently</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>A higher RTP does not guarantee short-term wins, but it does indicate better expected value over extended, sustained play compared to games with lower RTP. Over a very long playing career, a game with 96.05% RTP will return more money to players collectively than a comparable game at 94% RTP.</p>
+
+    <h2>Variance and Hit Frequency</h2>
+    <p>Hot Slice has medium-to-high variance. Variance (also called volatility) describes how wins are distributed across a session. Low variance means frequent small wins. High variance means infrequent but larger wins.</p>
+    <p>In practical terms for Hot Slice players, medium-to-high variance means:</p>
+    <ul>
+      <li>You can experience extended sequences of low-value slices (strawberries and lemons) without hitting a major multiplier.</li>
+      <li>When large multipliers do land — particularly golden symbols or jackpots — they tend to significantly exceed the average payout.</li>
+      <li>Session bankrolls can swing dramatically in both directions within a short time frame.</li>
+      <li>Players with smaller bankrolls may exhaust their budget before the high-variance positive swings arrive.</li>
+    </ul>
+    <p>This variance profile makes Hot Slice more suitable for players with larger bankrolls or those comfortable with the psychological experience of dry spells followed by sudden recoveries. Players who find long losing streaks frustrating may prefer lower-variance games.</p>
+
+    <h2>Jackpot Multipliers</h2>
+    <p>The three-tier jackpot system in Hot Slice adds significant additional earning potential beyond regular fruit slicing. The jackpots contribute to the overall RTP figure and represent a meaningful portion of the game's total payout distribution:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Jackpot Tier</th>
+          <th>Multiplier</th>
+          <th>&euro;1 bet payout</th>
+          <th>&euro;5 bet payout</th>
+          <th>&euro;10 bet payout</th>
+          <th>Trigger</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="td-badge td-badge-gold">&#127942; GRAND</span></td>
+          <td class="td-highlight">3,000x</td>
+          <td>&euro;3,000</td>
+          <td>&euro;15,000</td>
+          <td>&euro;30,000</td>
+          <td class="td-muted">Random</td>
+        </tr>
+        <tr>
+          <td><span class="td-badge td-badge-gray">&#11088; MAJOR</span></td>
+          <td class="td-highlight">2,000x</td>
+          <td>&euro;2,000</td>
+          <td>&euro;10,000</td>
+          <td>&euro;20,000</td>
+          <td class="td-muted">Random</td>
+        </tr>
+        <tr>
+          <td><span class="td-badge td-badge-green">&#127807; MINOR</span></td>
+          <td class="td-highlight">1,500x</td>
+          <td>&euro;1,500</td>
+          <td>&euro;7,500</td>
+          <td>&euro;15,000</td>
+          <td class="td-muted">Random</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>These jackpots are triggered randomly, independent of which fruit you slice or your skill level. The multiplier is applied to your bet at the exact moment of triggering, so a higher active bet means a proportionally higher jackpot payout. Because jackpot events are random and relatively rare, they contribute to the game's high variance profile — when they hit, they create substantial positive spikes in a player's session balance.</p>
+
+    <h2>Expected Returns Per Session</h2>
+    <p>Understanding expected session returns helps you set realistic expectations before playing. Here are illustrative examples based on the 96.05% RTP — these are long-run theoretical averages, not session predictions:</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Rounds</th>
+          <th>Bet per round</th>
+          <th>Total wagered</th>
+          <th>Theoretical return (96.05%)</th>
+          <th>Theoretical loss</th>
+          <th>Cost per hour*</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>50</td>
+          <td>&euro;1</td>
+          <td>&euro;50</td>
+          <td>&euro;48.03</td>
+          <td class="td-warn">&euro;1.98</td>
+          <td class="td-muted">~&euro;4 / hr</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>&euro;1</td>
+          <td>&euro;100</td>
+          <td>&euro;96.05</td>
+          <td class="td-warn">&euro;3.95</td>
+          <td class="td-muted">~&euro;8 / hr</td>
+        </tr>
+        <tr>
+          <td>100</td>
+          <td>&euro;5</td>
+          <td>&euro;500</td>
+          <td>&euro;480.25</td>
+          <td class="td-warn">&euro;19.75</td>
+          <td class="td-muted">~&euro;40 / hr</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>&euro;1</td>
+          <td>&euro;500</td>
+          <td>&euro;480.25</td>
+          <td class="td-warn">&euro;19.75</td>
+          <td class="td-muted">~&euro;8 / hr</td>
+        </tr>
+        <tr>
+          <td>500</td>
+          <td>&euro;5</td>
+          <td>&euro;2,500</td>
+          <td>&euro;2,401.25</td>
+          <td class="td-warn">&euro;98.75</td>
+          <td class="td-muted">~&euro;40 / hr</td>
+        </tr>
+        <tr>
+          <td>1,000</td>
+          <td>&euro;2</td>
+          <td>&euro;2,000</td>
+          <td>&euro;1,921.00</td>
+          <td class="td-warn">&euro;79.00</td>
+          <td class="td-muted">~&euro;16 / hr</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#888;margin-top:-12px;margin-bottom:20px;">* Estimated at ~50 rounds per hour of play. Actual pace depends on session style.</p>
+    <p>Actual results in short sessions — especially in a medium-to-high variance game like Hot Slice — can deviate enormously from these theoretical figures. A player can win &euro;200 in 50 rounds or lose their entire &euro;100 budget in 30 rounds and both outcomes are statistically normal.</p>
+
+    <h2>RTP vs Actual Results</h2>
+    <p>RTP is calculated over millions of spins — not over a single session or even a single day of play. It is a population-level statistic, not an individual prediction. This is the most commonly misunderstood aspect of RTP, and understanding it correctly helps avoid the mistake of believing you are "owed" a win after a losing session.</p>
+    <p>Key points to internalise about RTP and real results:</p>
+    <ul>
+      <li>Two players can have radically different session outcomes while both contributing equally to the 96.05% long-run average.</li>
+      <li>Chasing losses based on the assumption that the RTP will "correct" in your favour during a session is a fallacy — each round is independent.</li>
+      <li>RTP is most meaningful as a game selection criterion: prefer games with higher RTP if your goal is maximising theoretical long-run value.</li>
+      <li>Always play with money you can afford to lose. Focus on entertainment value rather than treating RTP as a profit forecast.</li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- CASINO BLOCK -->
+<div class="extra-sections">
+  <div class="extra-inner">
+    <div class="casino-section-heading"><span class="sh-icon">&#9881;</span> Best casinos to play Hot Slice</div>
+    <div class="casino-list">
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#1a6b2a;color:#fff;">BRAZINO 777</div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">Brazino777 Casino BR</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">9.1</div>
+          <div class="safety-level">Very high</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <a href="/go/" class="btn-play-casino" rel="nofollow noopener noreferrer" target="_blank">&#8594; Play in Casino</a>
+        </div>
+      </div>
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0a0a0a;color:#e00;font-size:18px;">SUPERBET</div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">Superbet Casino</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">9.2</div>
+          <div class="safety-level">Very high</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <a href="/go/" class="btn-play-casino" rel="nofollow noopener noreferrer" target="_blank">&#8594; Play in Casino</a>
+        </div>
+      </div>
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#111;color:#ccc;font-size:11px;line-height:1.4;">Sorte<br><span style="color:#888;font-size:10px;">esportiva</span></div>
+        <div class="casino-body">
+          <div class="casino-name-row">
+            <span class="casino-name-text">BateuBet Casino</span>
+            <span class="casino-verified">&#10003;</span>
+          </div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; ROULETTE</span>
+            <span class="casino-tag">&#127183; BLACKJACK</span>
+            <span class="casino-tag">&#127934; BETTING</span>
+            <span class="casino-tag">&#127802; VIDEO POKER</span>
+            <span class="casino-tag show-all">SHOW ALL</span>
+          </div>
+        </div>
+        <div class="casino-meta">
+          <div class="safety-label">Safety Index</div>
+          <div class="safety-badge">8.8</div>
+          <div class="safety-level">High</div>
+        </div>
+        <div class="casino-actions">
+          <button class="btn-quick-info">&#8964; Quick Info</button>
+          <a href="/go/" class="btn-play-casino" rel="nofollow noopener noreferrer" target="_blank">&#8594; Play in Casino</a>
+        </div>
+      </div>
+    </div>
+    <button class="btn-show-more-casinos">Show more Evoplay casinos</button>
+    <div class="casino-tc">18+ | New players only | T&amp;Cs apply | Play responsibly | <a href="/self-exclusion/">BeGambleAware</a></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="article-wrap">
+  <div class="article-inner">
+    <div class="faq-block" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">What does Hot Slice RTP of 96.05% mean in practice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">It means that over millions of rounds across all players, the game returns €96.05 for every €100 wagered. For an individual session of 100 rounds at €1 bet, the theoretical expected loss is just €3.95. However, high variance means your actual result can be very different — you might win €200 or lose €80 in a single short session. RTP describes the long-run statistical average, not what happens in any specific session.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Is 96.05% a good RTP for an online slot?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes, 96.05% is above the industry average. Most online slots have an RTP between 94% and 96%. High-RTP games are typically 97%–99%. Hot Slice at 96.05% is positioned as a player-friendly game by slot standards, especially for an arcade-style game. For comparison, land-based slot machines often have RTPs as low as 85%–88%.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">What is the variance / volatility of Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice has medium-to-high variance. This means wins are less frequent but larger when they arrive. In a typical session you will experience stretches of small fruit pays (strawberries, lemons) punctuated by occasional high-value hits from golden symbols or jackpots. The jackpot system — Grand 3,000x, Major 2,000x, Minor 1,500x — is the primary driver of the high-variance profile.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Can the RTP change between casinos?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">In theory, Evoplay can offer different RTP configurations to different casino operators. The published 96.05% is the standard configuration. Some casinos may run the game at a slightly lower RTP (e.g. 94% or 95%) if they have licensed a lower-return version. Always check the game's information panel inside the actual casino version you are playing — the paytable will confirm the RTP being used at that specific site.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Do the jackpots count toward the 96.05% RTP?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Yes. The Grand (3,000x), Major (2,000x), and Minor (1,500x) jackpots are included in the 96.05% RTP calculation. This means a portion of the theoretical return comes from jackpot hits, which are rare events. If you strip out jackpot contribution, the base game return on regular fruit slices is slightly below 96.05%. Jackpots are not active in the free demo mode.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Should I use the RTP to decide how much to bet?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Not directly. RTP tells you the expected cost of entertainment over time, not the right bet size. Bet sizing should be based on your session budget and how many rounds you want to play — aim for 50–100 rounds per session as a baseline. For a €50 budget that means bets of €0.50–€1. See our <a href="/strategy/">Strategy &amp; Tips page</a> for a full bankroll management guide.</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Follow us</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Follow us on Facebook" aria-label="Follow us on Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Follow us on X (Twitter)" aria-label="Follow us on X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/twitter-x.webp" alt="X" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Follow us on Instagram" aria-label="Follow us on Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Subscribe on YouTube" aria-label="Subscribe on YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Follow us on LinkedIn" aria-label="Follow us on LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Top Pages</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>PayPal casinos</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Rapid Transfer casinos</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Revolut casinos</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Trending Pages</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Pay by Phone casinos</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Mastercard casinos</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>POLi casinos</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Neosurf casinos</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="/" class="footer-link"><span class="fl-icon">&#127918;</span>Play Demo</a>
+        <a href="/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Play for Real Money</a>
+        <a href="/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Casino Bonuses</a>
+        <a href="/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Free Spins</a>
+        <a href="/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>How to Play</a>
+        <a href="/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategy &amp; Tips</a>
+        <a href="/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP &amp; Variance</a>
+        <a href="/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Mobile Version</a>
+        <a href="/" class="footer-link"><span class="fl-icon">&#11088;</span>Full Review</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">About Us</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>About us</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>History</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Contact</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Terms of use</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Sitemap</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Author</a>
+      </div>
+    </div>
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Free professional educational courses for online casino employees aimed at industry best practices, improving player experience, and fair approach to gambling.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Global Self-Exclusion Initiative</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Self-exclusion<br><span style="font-size:13px;color:#aaa;">initiative</span></span></div>
+        <p class="fp-desc">An initiative we launched with the goal to create a global self-exclusion system, which will allow vulnerable players to block their access to all online gambling opportunities.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">A platform created to showcase all of our efforts aimed at bringing the vision of a safer and more transparent online gambling industry to reality.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;"><div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div><div style="color:#e6a800;font-size:14px;">AWARDS</div></div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">An ambitious project whose goal is to celebrate the greatest and the most responsible companies in iGaming and give them the recognition they deserve.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Subscribe to our newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Insert your e-mail">
+        <button class="btn-newsletter">Subscribe</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> I am at least 18 years old and legally allowed to play in a casino
+      </label>
+    </div>
+    <div class="footer-responsible">
+      <div class="resp-label">Play responsibly and in moderation.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="/img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Created by godzilla-network.com &nbsp;|&nbsp; Mari is an independent source of information about online casinos and online casino games, not controlled by any gambling operator. All our reviews and guides are created honestly, according to the best knowledge and judgement of the members of our independent expert team; however, they are intended for informative purposes only and should not be construed as, nor relied upon as, legal advice. You should always make sure you meet all regulatory requirements before playing in any selected casino. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in other languages</div>
+        <div class="footer-lang-select"><span>&#127760; Select language</span><span>&#8964;</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

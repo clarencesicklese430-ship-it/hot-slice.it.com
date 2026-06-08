@@ -1,0 +1,555 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Casino Complaints — Player Dispute Resolution | Mari</title>
+  <meta name="description" content="Submit a complaint against an online casino. Mari mediates disputes between players and casinos for free. 68% of cases resolved in the player's favour.">
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    /* Hero */
+    .hero-section { background: #1b2128; padding: 36px 0 40px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .hero-top h1 { color: #fff; font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; }
+    .hero-meta { font-size: 12px; color: #888; margin-bottom: 18px; }
+    .hero-meta strong { color: #aaa; }
+    .hero-meta a { color: #5aaa00; }
+    .hero-intro { font-size: 15px; color: #bbb; line-height: 1.75; margin-bottom: 24px; max-width: 820px; }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 32px; }
+    .hero-btn { display: flex; align-items: center; gap: 14px; padding: 14px 24px; text-decoration: none; min-width: 240px; border: 1px solid rgba(255,255,255,0.5); transition: background 0.25s; }
+    .hero-btn-primary { background: linear-gradient(90deg, #2a9e1a 0%, #5fd94a 100%); box-shadow: 0 0 0 2px rgba(90,220,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-primary:hover { background: linear-gradient(90deg, #5fd94a 0%, #2a9e1a 100%); }
+    .hero-btn-secondary { background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%); box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-secondary:hover { background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%); }
+    .hero-btn-icon { font-size: 22px; flex-shrink: 0; color: #fff; }
+    .hero-btn-text { display: flex; flex-direction: column; }
+    .hero-btn-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.2; }
+    .hero-btn-sub { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .facts-grid-wrap { border-top: 1px solid rgba(255,255,255,0.25); padding-top: 24px; }
+    .facts-grid-label { font-size: 10px; font-weight: 900; color: #5aaa00; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    .facts-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.25); }
+    .facts-cell { background: #212b3a; padding: 16px 18px; }
+    .facts-cell-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .facts-cell-value { font-size: 15px; font-weight: 700; color: #fff; }
+    .facts-badge { display: inline-block; background: #5aaa00; color: #fff; font-size: 11px; font-weight: bold; padding: 2px 8px; }
+    /* Process steps */
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid #e0e0e0; margin: 20px 0 28px; }
+    .process-step { padding: 20px 16px; border-right: 1px solid #e0e0e0; position: relative; }
+    .process-step:last-child { border-right: none; }
+    .process-step-num { font-size: 28px; font-weight: 900; color: #e8e8e8; line-height: 1; margin-bottom: 8px; }
+    .process-step-icon { font-size: 22px; margin-bottom: 8px; }
+    .process-step-title { font-size: 13px; font-weight: 800; color: #1b2128; margin-bottom: 5px; }
+    .process-step-desc { font-size: 12px; color: #666; line-height: 1.5; }
+    .process-step-arrow { position: absolute; right: -12px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; background: #5aaa00; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 12px; z-index: 1; }
+    .process-step:last-child .process-step-arrow { display: none; }
+    /* Complaint types */
+    .complaint-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 20px 0 28px; }
+    .complaint-card { background: #fff; border: 1px solid #e0e0e0; border-left: 3px solid #5aaa00; padding: 14px 14px; }
+    .complaint-card-icon { font-size: 20px; margin-bottom: 6px; }
+    .complaint-card-title { font-size: 13px; font-weight: 800; color: #1b2128; margin-bottom: 4px; }
+    .complaint-card-desc { font-size: 12px; color: #666; line-height: 1.45; }
+    /* Warning / info blocks */
+    .warning-block { background: #fff8e6; border: 1px solid #e6c84a; border-left: 4px solid #c07800; padding: 18px 20px; margin: 16px 0 24px; }
+    .warning-block-title { font-size: 14px; font-weight: 800; color: #7a4a00; margin-bottom: 8px; }
+    .warning-block p { font-size: 13px; color: #5a3a00; line-height: 1.65; margin: 0; }
+    .info-block { background: #f0f8e8; border: 1px solid #b8e090; border-left: 4px solid #5aaa00; padding: 18px 20px; margin: 16px 0 24px; }
+    .info-block-title { font-size: 14px; font-weight: 800; color: #1b5a00; margin-bottom: 8px; }
+    .info-block p { font-size: 13px; color: #234a00; line-height: 1.65; margin: 0; }
+    /* Checklist */
+    .checklist { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; line-height: 1.55; }
+    .checklist li .ci { color: #5aaa00; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+    .checklist li strong { color: #1b2128; }
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 20px 0 8px; }
+    .stat-card { background: #fff; border: 1px solid #e0e0e0; border-top: 3px solid #5aaa00; padding: 20px 16px; text-align: center; }
+    .stat-num { font-size: 32px; font-weight: 900; color: #5aaa00; line-height: 1; margin-bottom: 6px; }
+    .stat-label { font-size: 13px; color: #444; font-weight: 600; margin-bottom: 4px; }
+    .stat-sub { font-size: 11px; color: #999; }
+    /* Cannot help */
+    .cannot-list { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+    .cannot-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #444; line-height: 1.55; }
+    .cannot-list li .cx { color: #cc2200; font-size: 15px; flex-shrink: 0; margin-top: 1px; font-weight: 900; }
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #e0e0e0; margin: 20px 0 0; }
+    .faq-item { border-bottom: 1px solid #e0e0e0; padding: 18px 20px; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 15px; font-weight: 800; color: #1b2128; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 10px; }
+    .faq-q-badge { background: #5aaa00; color: #fff; font-size: 11px; font-weight: 900; padding: 2px 7px; flex-shrink: 0; margin-top: 2px; }
+    .faq-a { font-size: 14px; color: #444; line-height: 1.7; padding-left: 32px; }
+    @media (max-width: 1000px) {
+      .facts-grid { grid-template-columns: repeat(3, 1fr); }
+      .process-grid { grid-template-columns: repeat(2, 1fr); }
+      .process-step:nth-child(2) { border-right: none; }
+      .process-step:nth-child(1), .process-step:nth-child(2) { border-bottom: 1px solid #e0e0e0; }
+      .complaint-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-top h1 { font-size: 24px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-step { border-right: none; border-bottom: 1px solid #e0e0e0; }
+      .process-step:last-child { border-bottom: none; }
+      .process-step-arrow { display: none; }
+      .complaint-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/complaints/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/complaints/">
+  <meta property="og:title" content="Casino Complaints — Player Dispute Resolution | Mari">
+  <meta property="og:description" content="Submit a complaint against an online casino. Mari mediates disputes between players and casinos for free. 68% of cases resolved in the player's favour.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Casino Complaints — Player Dispute Resolution | Mari">
+  <meta name="twitter:description" content="Submit a complaint against an online casino. Mari mediates disputes between players and casinos for free. 68% of cases resolved in the player's favour.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<div class="sticky-top">
+<header class="header">
+<div class="header-inner">
+  <a href="/" class="logo">
+    <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text"><span class="brand-name">Mari</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Search for casinos, games, and more">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">EN &nbsp;&#127463;&#127479;</button>
+    <button class="btn-login">Login</button>
+    <button class="btn-signup">Sign up</button>
+  </div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-inner">
+  <a href="/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="/casinos/"><span class="nav-icon">&#127963;</span> Online Casinos</a>
+  <a href="/"><span class="nav-icon">&#127918;</span> Games</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Guide</a>
+  <a href="/complaints/" class="active"><span class="nav-icon">&#9888;</span> Complaints</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="/reviews/"><span class="nav-icon">&#11088;</span> Reviews</a>
+  <a href="/tournaments/"><span class="nav-icon">&#127942;</span> Tournaments</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div>
+</nav>
+</div>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div style="font-size:11px;font-weight:900;color:#5aaa00;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;">&#9888; Player Protection</div>
+      <h1>Casino Complaints — Player Dispute Resolution</h1>
+      <div class="hero-meta"><strong>Last updated:</strong> June 2026 &nbsp;|&nbsp; <strong>Service:</strong> Free &nbsp;|&nbsp; <strong>By:</strong> <a href="/author/juraj/">Juraj, Mari disputes team</a></div>
+      <p class="hero-intro">If a casino refuses to pay your winnings, closes your account unfairly, or applies bonus terms in bad faith — Mari can help. We act as an independent mediator between players and casinos, free of charge. Our track record: 68% of accepted cases resolved in the player's favour.</p>
+      <div class="hero-cta-row">
+        <a href="/contact/" class="hero-btn hero-btn-primary">
+          <span class="hero-btn-icon">&#9888;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Submit a Complaint</span>
+            <span class="hero-btn-sub">Free — response within 48 hours</span>
+          </span>
+        </a>
+        <a href="/guide/" class="hero-btn hero-btn-secondary">
+          <span class="hero-btn-icon">&#128214;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Casino Safety Guide</span>
+            <span class="hero-btn-sub">How to choose a safe casino</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="facts-grid-wrap">
+      <div class="facts-grid-label">&#9675; Service at a glance</div>
+      <div class="facts-grid">
+        <div class="facts-cell">
+          <div class="facts-cell-label">Cases accepted</div>
+          <div class="facts-cell-value">1,200+</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Resolution rate</div>
+          <div class="facts-cell-value"><span class="facts-badge">68%</span></div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Avg response</div>
+          <div class="facts-cell-value">14 days</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Cost to player</div>
+          <div class="facts-cell-value"><span class="facts-badge">Free</span></div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Outcomes published</div>
+          <div class="facts-cell-value">Yes</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Service type</div>
+          <div class="facts-cell-value">ADR / Mediation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div class="article-wrap" id="process">
+  <div class="article-inner">
+    <div class="breadcrumb"><a href="/">Mari</a><span>›</span>Complaints</div>
+    <h2>How the Complaints Process Works</h2>
+    <p>When a casino dispute cannot be resolved through the casino's own support, Mari steps in as an independent mediator. Our process is transparent and documented — every case outcome is published and feeds directly into our casino safety ratings.</p>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <div class="process-step-icon">&#128221;</div>
+        <div class="process-step-title">Submit your complaint</div>
+        <div class="process-step-desc">Fill out the contact form with the casino name, description of the issue, the disputed amount, and all evidence you have gathered.</div>
+        <div class="process-step-arrow">&#8250;</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <div class="process-step-icon">&#128269;</div>
+        <div class="process-step-title">Our team reviews</div>
+        <div class="process-step-desc">Within 48 hours, our disputes team assesses whether your complaint falls within our scope and requests any missing documentation.</div>
+        <div class="process-step-arrow">&#8250;</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <div class="process-step-icon">&#128172;</div>
+        <div class="process-step-title">Casino is contacted</div>
+        <div class="process-step-desc">We contact the casino formally on your behalf, presenting the documented case and requesting a response within a set period.</div>
+        <div class="process-step-arrow">&#8250;</div>
+      </div>
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <div class="process-step-icon">&#9878;</div>
+        <div class="process-step-title">Resolution published</div>
+        <div class="process-step-desc">The outcome — resolved, unresolved, or rejected — is published on the relevant casino review page and affects the casino's safety rating.</div>
+        <div class="process-step-arrow">&#8250;</div>
+      </div>
+    </div>
+
+    <div class="info-block">
+      <div class="info-block-title">&#128200; Impact on casino ratings</div>
+      <p>Casinos that resolve complaints in good faith receive positive notes in their dispute history. Casinos that ignore our outreach, delay unreasonably, or act in bad faith receive rating penalties — and repeat offenders are reviewed for blacklisting. This accountability system is one of the strongest tools we have to protect players.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE HANDLE -->
+<div class="article-wrap" id="types">
+  <div class="article-inner">
+    <h2>What Types of Complaints We Handle</h2>
+    <p>Our service covers the most common and serious categories of casino disputes. If your issue is not listed here, contact us anyway — we will advise on the most appropriate route.</p>
+
+    <div class="complaint-grid">
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#128176;</div>
+        <div class="complaint-card-title">Delayed or refused withdrawals</div>
+        <div class="complaint-card-desc">Casino holds funds without valid reason, delays payment beyond advertised timelines, or reduces payout without explanation.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#128274;</div>
+        <div class="complaint-card-title">Account closure &amp; fund confiscation</div>
+        <div class="complaint-card-desc">Account closed without adequate justification, or funds confiscated citing vague or unsubstantiated terms violations.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#127873;</div>
+        <div class="complaint-card-title">Bonus disputes</div>
+        <div class="complaint-card-desc">Terms applied retroactively or changed without notice, wagering requirements added after deposit, or bonus winnings voided unfairly.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#128196;</div>
+        <div class="complaint-card-title">Misleading terms &amp; promotions</div>
+        <div class="complaint-card-desc">Promotional offer did not match what was shown or communicated, or key restrictions were not disclosed before the player accepted.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#128100;</div>
+        <div class="complaint-card-title">KYC / identity verification issues</div>
+        <div class="complaint-card-desc">Casino requests excessive or unreasonable documents, mishandles submitted ID, or uses verification as a delay tactic for withdrawals.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#128683;</div>
+        <div class="complaint-card-title">Self-exclusion failures</div>
+        <div class="complaint-card-desc">Casino allowed a self-excluded player to deposit and play, or failed to apply a requested self-exclusion within the required timeframe.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#9878;</div>
+        <div class="complaint-card-title">Responsible gambling tool failures</div>
+        <div class="complaint-card-desc">Deposit limits, session limits, or cooling-off periods not applied as requested, or made deliberately difficult to access or activate.</div>
+      </div>
+      <div class="complaint-card">
+        <div class="complaint-card-icon">&#11088;</div>
+        <div class="complaint-card-title">Legitimate winnings not honoured</div>
+        <div class="complaint-card-desc">Casino refuses to pay a jackpot or significant win citing a technical error or undisclosed rule that was not communicated to the player.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHAT WE CANNOT HELP WITH -->
+<div class="article-wrap" id="scope">
+  <div class="article-inner">
+    <h2>What We Cannot Help With</h2>
+    <p>Our mediation service has defined boundaries. In the cases below, we are unable to act as mediator — but we will always advise you on the correct escalation route.</p>
+
+    <ul class="cannot-list">
+      <li><span class="cx">&#10007;</span><div><strong>Unlicensed casinos</strong> — Operators without a licence from a recognised regulator (UKGC, MGA, etc.) have no obligation to cooperate with mediation. We strongly advise against using unlicensed casinos at all.</div></li>
+      <li><span class="cx">&#10007;</span><div><strong>Active legal proceedings</strong> — If you have already commenced litigation against the casino, it would be inappropriate for a third-party mediator to intervene while court proceedings are active.</div></li>
+      <li><span class="cx">&#10007;</span><div><strong>Accepted settlement offers</strong> — If you have already accepted a settlement from the casino, the dispute is considered resolved. We cannot reopen a case after a settlement has been formally accepted.</div></li>
+      <li><span class="cx">&#10007;</span><div><strong>Gambling losses without a specific dispute</strong> — We cannot mediate general gambling losses. Our service is for specific, documentable disputes — not for recovering money lost through normal play.</div></li>
+    </ul>
+
+    <div class="warning-block">
+      <div class="warning-block-title">&#9888; If we can't help — escalate to the regulator</div>
+      <p>If your complaint falls outside our scope or the casino is unresponsive to mediation, escalate directly to the casino's licensing regulator. For UKGC-licensed casinos, use the IBAS ADR service. For MGA-licensed casinos, file a complaint at the MGA portal. Licensed casinos are legally required to cooperate with their regulator's dispute process.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE YOU SUBMIT -->
+<div class="article-wrap" id="prepare">
+  <div class="article-inner">
+    <h2>Before You Submit a Complaint</h2>
+    <p>To submit a complaint through Mari, you must have already contacted the casino directly and received either a final response or no response within a reasonable period (typically 7–14 days). Our mediators need to see evidence of a genuine attempt to resolve the dispute through the casino's own process first.</p>
+
+    <ul class="checklist">
+      <li><span class="ci">&#10003;</span><div><strong>Contact casino support first</strong> — Use the casino's official complaints procedure. This is a requirement before third-party mediation can begin.</div></li>
+      <li><span class="ci">&#10003;</span><div><strong>Wait for a final response or 14 days</strong> — If the casino has not responded within 14 days, that counts as an unresolved complaint and you can proceed.</div></li>
+      <li><span class="ci">&#10003;</span><div><strong>Screenshot everything</strong> — Game rounds, bonus terms, promotional banners, account balance history. Courts and regulators work from documentation, not memory.</div></li>
+      <li><span class="ci">&#10003;</span><div><strong>Save all communication</strong> — Export or screenshot every live chat transcript, email, and support ticket. Include timestamps where possible.</div></li>
+      <li><span class="ci">&#10003;</span><div><strong>Note the exact disputed amount</strong> — State the precise sum in dispute, in the currency the casino uses for your account.</div></li>
+      <li><span class="ci">&#10003;</span><div><strong>Note the casino's licence number</strong> — Found in the casino website footer. This confirms the regulator jurisdiction and which ADR routes are available to you.</div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- SUBMIT -->
+<div class="article-wrap" id="submit">
+  <div class="article-inner">
+    <h2>Submit Your Complaint</h2>
+    <p>Use the contact form below to submit your complaint. Select <strong>"Casino complaint"</strong> as the subject and include: the casino name, a clear description of the issue, the amount in dispute, the casino's licence number (if known), and copies of all relevant documentation.</p>
+
+    <div style="background:#f5f5f0;border:1px solid #ddd;border-left:4px solid #5aaa00;padding:24px 20px;margin:20px 0;">
+      <div style="font-size:15px;font-weight:800;color:#1b2128;margin-bottom:10px;">&#128221; Complaint submission form — coming soon</div>
+      <p style="font-size:14px;color:#444;line-height:1.65;margin-bottom:16px;">We are building a dedicated submission form. In the meantime, please use the contact page and select <strong>Casino complaint</strong> as your subject. Our disputes team reviews all submissions within 48 hours.</p>
+      <a href="/contact/" style="display:inline-flex;align-items:center;gap:8px;background:#5aaa00;color:#fff;font-size:14px;font-weight:900;padding:12px 24px;text-decoration:none;transition:background 0.15s;">&#8594; Go to Contact Page</a>
+    </div>
+  </div>
+</div>
+
+<!-- TRACK RECORD -->
+<div class="article-wrap" id="record">
+  <div class="article-inner">
+    <h2>Our Track Record</h2>
+    <p>Mari has a documented record of successfully mediating casino disputes. All complaint outcomes — resolved, unresolved, or rejected — are published publicly on the relevant casino review pages.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">1,200+</div>
+        <div class="stat-label">Complaints accepted</div>
+        <div class="stat-sub">Since 2020, all documented</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">68%</div>
+        <div class="stat-label">Resolved in player's favour</div>
+        <div class="stat-sub">Full payment or agreed settlement</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">14 days</div>
+        <div class="stat-label">Average resolution time</div>
+        <div class="stat-sub">From acceptance to outcome</div>
+      </div>
+    </div>
+
+    <p>Casinos that cooperate with our process in good faith receive positive complaint resolution notes in their safety profile. Casinos that repeatedly ignore outreach, delay without reason, or engage in bad-faith practices receive rating penalties — and the most serious offenders are reviewed for our blacklist. Every case outcome is published in anonymised form on the relevant casino page, so future players can assess an operator's real dispute history before depositing.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="article-wrap" itemscope itemtype="https://schema.org/FAQPage">
+  <div class="article-inner">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Is the Mari complaints service free?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Yes, completely free for players. Mari does not charge players for complaint submission, mediation, or any part of the dispute resolution process. We are funded independently of the casinos we review.</span>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">How long does the complaints process take?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">Our team reviews submissions within 48 hours. Once accepted, we contact the casino and allow them a set period to respond — typically 7–14 days. If the casino responds and engages constructively, resolution can happen within two to four weeks. Complex cases or unresponsive casinos may take longer. Average resolution time across all accepted cases is 14 days.</span>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">What happens if the casino ignores your mediation?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">If the casino fails to respond or refuses to engage, this outcome is published publicly on the casino's review page and results in a rating penalty. Persistent non-cooperation puts the casino under review for our blacklist. We also advise the player on escalation routes — including filing a complaint directly with the casino's licensing regulator, which is a legal obligation for the operator to respond to.</span>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Can you help with complaints against unlicensed casinos?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">No. Unlicensed casinos have no regulatory obligation to cooperate with mediation services and typically do not respond. We strongly advise against using unlicensed casinos — if you have a dispute with one, your options are severely limited. Always verify a casino's licence before depositing.</span>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">What documents should I prepare before submitting?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">You should prepare: screenshots of the disputed game rounds or transactions, copies of the relevant bonus terms or promotional material, all chat transcripts and email correspondence with the casino (with timestamps), account balance history showing the deposits and withdrawals involved, and the casino's licence number (usually in the website footer). The more complete your evidence, the faster we can assess your case.</span>
+        </div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Does submitting a complaint guarantee I get my money back?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+          <span itemprop="text">No. Mediation is not a guarantee of recovery. We assess cases fairly — if the casino's position is valid under their published terms and applicable regulations, we will say so. Our 68% resolution rate in favour of players reflects cases where the evidence supported the player's claim and the casino cooperated with the mediation process. We publish all outcomes transparently.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Follow us</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Follow us on Facebook" aria-label="Follow us on Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Follow us on X (Twitter)" aria-label="Follow us on X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/twitter-x.webp" alt="X" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Follow us on Instagram" aria-label="Follow us on Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Subscribe on YouTube" aria-label="Subscribe on YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Follow us on LinkedIn" aria-label="Follow us on LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Top Pages</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>PayPal casinos</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Rapid Transfer casinos</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Revolut casinos</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos with craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Trending Pages</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Pay by Phone casinos</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Mastercard casinos</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>POLi casinos</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Neosurf casinos</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="/" class="footer-link"><span class="fl-icon">&#127918;</span>Play Demo</a>
+        <a href="/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Play for Real Money</a>
+        <a href="/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Casino Bonuses</a>
+        <a href="/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Free Spins</a>
+        <a href="/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>How to Play</a>
+        <a href="/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategy &amp; Tips</a>
+        <a href="/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP &amp; Variance</a>
+        <a href="/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Mobile Version</a>
+        <a href="/" class="footer-link"><span class="fl-icon">&#11088;</span>Full Review</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">About Us</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>About us</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>History</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Contact</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Terms of use</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Sitemap</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Author</a>
+      </div>
+    </div>
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Free professional educational courses for online casino employees aimed at industry best practices, improving player experience, and fair approach to gambling.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Global Self-Exclusion Initiative</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Self-exclusion<br><span style="font-size:13px;color:#aaa;">initiative</span></span></div>
+        <p class="fp-desc">An initiative we launched with the goal to create a global self-exclusion system, which will allow vulnerable players to block their access to all online gambling opportunities.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">A platform created to showcase all of our efforts aimed at bringing the vision of a safer and more transparent online gambling industry to reality.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;"><div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div><div style="color:#e6a800;font-size:14px;">AWARDS</div></div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">An ambitious project whose goal is to celebrate the greatest and the most responsible companies in iGaming and give them the recognition they deserve.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Subscribe to our newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Insert your e-mail">
+        <button class="btn-newsletter">Subscribe</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> I am at least 18 years old and legally allowed to play in a casino
+      </label>
+    </div>
+    <div class="footer-responsible">
+      <div class="resp-label">Play responsibly and in moderation.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="/img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Mari is an independent source of information about online casinos and online casino games, not controlled by any gambling operator. All our reviews and guides are created honestly, according to the best knowledge and judgement of the members of our independent expert team; however, they are intended for informative purposes only and should not be construed as, nor relied upon as, legal advice. You should always make sure you meet all regulatory requirements before playing in any selected casino. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in other languages</div>
+        <div class="footer-lang-select"><span>&#127760; Select language</span><span>&#8964;</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
