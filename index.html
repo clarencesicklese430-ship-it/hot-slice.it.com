@@ -2718,57 +2718,85 @@ document.querySelectorAll('.carousel-section').forEach(section => {
   const outer  = section.querySelector('.carousel-outer');
   const track  = section.querySelector('.carousel-track');
   const cards  = track.querySelectorAll('.g-card');
-  const dots   = section.querySelector('.carousel-dots');
+  const dotsEl = section.querySelector('.carousel-dots');
   const arrows = section.querySelectorAll('.c-arrow');
-  const VISIBLE = 5;
   const total  = cards.length;
-  const pages  = Math.ceil(total / VISIBLE);
-  let page     = 0;
+  let cardIndex = 0;
 
-  // Build dots
-  for (let i = 0; i < pages; i++) {
-    const d = document.createElement('div');
-    d.className = 'c-dot' + (i === 0 ? ' active' : '');
-    d.addEventListener('click', () => goTo(i));
-    dots.appendChild(d);
+  function getCardW() {
+    return cards[0].getBoundingClientRect().width + 12;
+  }
+  function getVisible() {
+    const cw = getCardW();
+    return cw > 0 ? Math.max(1, Math.floor(outer.getBoundingClientRect().width / cw)) : 5;
+  }
+  function getMaxIndex() {
+    return Math.max(0, total - getVisible());
   }
 
-  function getCardWidth() {
-    return cards[0].getBoundingClientRect().width + 12; // gap=12
+  function buildDots() {
+    dotsEl.innerHTML = '';
+    const vis = getVisible();
+    const pages = Math.ceil(total / vis);
+    for (let i = 0; i < pages; i++) {
+      const d = document.createElement('div');
+      d.className = 'c-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goToCard(i * vis));
+      dotsEl.appendChild(d);
+    }
   }
 
-  function goTo(p) {
-    page = Math.max(0, Math.min(pages - 1, p));
-    const offset = page * VISIBLE * getCardWidth();
-    track.style.transform = `translateX(-${offset}px)`;
-    dots.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === page));
+  function updateDots() {
+    const vis = getVisible();
+    const page = Math.floor(cardIndex / vis);
+    dotsEl.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === page));
   }
 
-  // Arrow buttons: step by 5 cards (1 page)
+  function goToCard(idx) {
+    cardIndex = Math.max(0, Math.min(getMaxIndex(), idx));
+    track.style.transform = `translateX(-${cardIndex * getCardW()}px)`;
+    updateDots();
+  }
+
+  buildDots();
+
+  // Arrows: step by visible count
   arrows.forEach(btn => {
-    btn.addEventListener('click', () => goTo(page + parseInt(btn.dataset.dir)));
+    btn.addEventListener('click', () => {
+      goToCard(cardIndex + parseInt(btn.dataset.dir) * getVisible());
+    });
   });
 
-  // Drag to scroll freely
-  let isDragging = false, startX = 0, startOffset = 0, currentOffset = 0;
+  // Rebuild on resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => { buildDots(); goToCard(0); }, 150);
+  });
 
-  function getOffset() {
-    const m = track.style.transform.match(/-?([\d.]+)/);
-    return m ? parseFloat(m[0]) : 0;
-  }
+  // Drag / touch
+  let isDragging = false, startX = 0, startY = 0, startOffset = 0, currentOffset = 0, isH = null;
 
-  function dragStart(x) {
-    isDragging = true;
-    startX = x;
-    startOffset = getOffset();
+  function dragStart(x, y) {
+    isDragging = true; isH = null;
+    startX = x; startY = y;
+    startOffset = cardIndex * getCardW();
+    currentOffset = startOffset;
     track.classList.add('no-transition');
     outer.classList.add('dragging');
   }
 
-  function dragMove(x) {
+  function dragMove(x, y) {
     if (!isDragging) return;
+    if (isH === null) {
+      const dx = Math.abs(x - startX), dy = Math.abs(y - startY);
+      if (dx < 4 && dy < 4) return;
+      isH = dx >= dy;
+      if (!isH) { dragEnd(); return; }
+    }
+    if (!isH) return;
     const delta = startX - x;
-    currentOffset = Math.max(0, startOffset + delta);
+    currentOffset = Math.max(0, Math.min(getMaxIndex() * getCardW(), startOffset + delta));
     track.style.transform = `translateX(-${currentOffset}px)`;
   }
 
@@ -2777,19 +2805,20 @@ document.querySelectorAll('.carousel-section').forEach(section => {
     isDragging = false;
     outer.classList.remove('dragging');
     track.classList.remove('no-transition');
-    // Snap to nearest page
-    const w = getCardWidth() * VISIBLE;
-    page = Math.round(currentOffset / w);
-    goTo(page);
+    if (isH) goToCard(Math.round(currentOffset / getCardW()));
   }
 
-  outer.addEventListener('mousedown',  e => dragStart(e.pageX));
-  outer.addEventListener('mousemove',  e => dragMove(e.pageX));
+  outer.addEventListener('mousedown',  e => dragStart(e.pageX, e.pageY));
+  outer.addEventListener('mousemove',  e => dragMove(e.pageX, e.pageY));
   outer.addEventListener('mouseup',    dragEnd);
   outer.addEventListener('mouseleave', dragEnd);
-  outer.addEventListener('touchstart', e => dragStart(e.touches[0].pageX), {passive:true});
-  outer.addEventListener('touchmove',  e => dragMove(e.touches[0].pageX),  {passive:true});
-  outer.addEventListener('touchend',   dragEnd);
+
+  outer.addEventListener('touchstart', e => dragStart(e.touches[0].pageX, e.touches[0].pageY), {passive:true});
+  outer.addEventListener('touchmove',  e => {
+    if (isH) e.preventDefault();
+    dragMove(e.touches[0].pageX, e.touches[0].pageY);
+  }, {passive:false});
+  outer.addEventListener('touchend', dragEnd);
 });
 </script>
 
