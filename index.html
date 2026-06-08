@@ -161,9 +161,10 @@
       margin-left: auto;
     }
     .btn-play-real-title {
-      background: #6b3fa0;
+      background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%);
       color: #fff;
-      border: none;
+      border: 1px solid rgba(255,255,255,0.5);
+      box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15);
       padding: 9px 20px;
       border-radius: 4px;
       font-size: 13px;
@@ -173,9 +174,13 @@
       align-items: center;
       gap: 8px;
       white-space: nowrap;
-      transition: background 0.15s;
+      transition: background 0.15s, box-shadow 0.15s;
+      text-decoration: none;
     }
-    .btn-play-real-title:hover { background: #5a2e90; }
+    .btn-play-real-title:hover {
+      background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%);
+      box-shadow: 0 0 0 3px rgba(140,80,240,0.6), inset 0 1px 0 rgba(255,255,255,0.15);
+    }
     .game-tabs-bar {
       background: #1b2128;
       padding: 0 16px;
