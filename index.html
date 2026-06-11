@@ -1335,6 +1335,16 @@
     .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
     .btn-show-more-casinos:hover { background: #4a9400; }
 
+    /* ===== FAQ SECTION ===== */
+    .faq-section { margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; gap: 6px; }
+    .faq-item { border: 1px solid #e0e0e0; background: #fff; }
+    .faq-item summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; font-size: 15px; font-weight: bold; color: #1b2128; cursor: pointer; gap: 12px; user-select: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 20px; font-weight: 300; color: #5aaa00; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item .faq-body { padding: 0 18px 16px; font-size: 14px; color: #444; line-height: 1.6; }
+
     /* ===== DISCUSSION SECTION ===== */
     .discussion-wrap {
       background: #eef0f3;
@@ -1996,6 +2006,78 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the RTP of Hot Slice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hot Slice has a Return to Player (RTP) of 96.05%, which is above the industry average of around 95%."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play Hot Slice for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The demo version on this page lets you play Hot Slice for free with no registration required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Hot Slice have free spins?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hot Slice does not use a traditional free spins round. It features a slicing mechanic where hitting a Golden Knife or collecting a full stack of slices triggers multiplied payouts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Hot Slice have a progressive jackpot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hot Slice has a three-tier jackpot: Mini, Midi and Grand. The jackpots are triggered randomly during gameplay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the minimum and maximum bets in Hot Slice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum bet per round is €0.10 and the maximum bet is up to €30,000 per Evoplay's official specifications. The actual maximum may vary by casino operator."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Hot Slice available on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hot Slice is fully optimised for mobile play on both iOS and Android with no app download required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I play Hot Slice for real money?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hot Slice is available for real money at all licensed online casinos that carry Evoplay's game catalogue."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who developed Hot Slice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hot Slice was developed by Evoplay and released in March 2025."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body style="background:#161d24;">
 
@@ -2485,6 +2567,54 @@
     <div class="carousel-dots"></div>
   </div>
 
+
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <div class="section-heading"><span class="sh-icon">&#10067;</span> Hot Slice — Frequently Asked Questions</div>
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary>What is the RTP of Hot Slice?</summary>
+        <div class="faq-body">Hot Slice has a Return to Player (RTP) of <strong>96.05%</strong>. This is the theoretical percentage of wagered money returned to players over a large number of spins — it is above the industry average of around 95%.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I play Hot Slice for free?</summary>
+        <div class="faq-body">Yes. The demo version on this page lets you play Hot Slice for free with no registration required. Practice the slicing mechanics, explore the jackpot system and get comfortable before playing for real money.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does Hot Slice have free spins?</summary>
+        <div class="faq-body">Hot Slice does not use a traditional free spins round. Instead, it features a unique slicing mechanic where hitting a Golden Knife or collecting a full stack of slices triggers multiplied payouts — this is the game's main bonus feature.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Does Hot Slice have a progressive jackpot?</summary>
+        <div class="faq-body">Yes. Hot Slice has a three-tier jackpot: <strong>Mini</strong>, <strong>Midi</strong> and <strong>Grand</strong>. The jackpots are triggered randomly during gameplay. The Grand Jackpot is the highest and grows progressively.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What are the minimum and maximum bets?</summary>
+        <div class="faq-body">The minimum bet per round is <strong>€0.10</strong> and the maximum bet is up to <strong>€30,000</strong> (per Evoplay's official specifications). The actual maximum may vary depending on the casino operator.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Is Hot Slice available on mobile?</summary>
+        <div class="faq-body">Yes. Hot Slice is fully optimised for mobile play on both iOS and Android. The touch controls match the tap-and-slice mechanic perfectly — no app download is required, it runs directly in your mobile browser.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Can I play Hot Slice for real money?</summary>
+        <div class="faq-body">Yes. Hot Slice is available for real money at all licensed online casinos that carry Evoplay's game catalogue. See the recommended casinos listed on this page — all are verified and accept players in multiple countries.</div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Who developed Hot Slice?</summary>
+        <div class="faq-body">Hot Slice was developed by <strong>Evoplay</strong>, a game studio known for its innovative instant-game format and arcade-style mechanics. The game was released in <strong>March 2025</strong>.</div>
+      </details>
+
+    </div>
+  </div>
 
   <!-- TOP CASINOS -->
   <div class="casinos-section" id="casinos">

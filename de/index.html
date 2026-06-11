@@ -1335,6 +1335,16 @@
     .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
     .btn-show-more-casinos:hover { background: #4a9400; }
 
+    /* ===== FAQ SECTION ===== */
+    .faq-section { margin-bottom: 36px; }
+    .faq-list { display: flex; flex-direction: column; gap: 6px; }
+    .faq-item { border: 1px solid #e0e0e0; background: #fff; }
+    .faq-item summary { list-style: none; display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; font-size: 15px; font-weight: bold; color: #1b2128; cursor: pointer; gap: 12px; user-select: none; }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 20px; font-weight: 300; color: #5aaa00; flex-shrink: 0; transition: transform 0.2s; }
+    .faq-item[open] summary::after { content: '\u2212'; }
+    .faq-item .faq-body { padding: 0 18px 16px; font-size: 14px; color: #444; line-height: 1.6; }
+
     /* ===== DISCUSSION SECTION ===== */
     .discussion-wrap {
       background: #eef0f3;
@@ -1996,6 +2006,22 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Wie hoch ist der RTP von Hot Slice?","acceptedAnswer":{"@type":"Answer","text":"Hot Slice hat einen Return to Player (RTP) von 96,05 %, was über dem Branchendurchschnitt von ca. 95 % liegt."}},
+      {"@type":"Question","name":"Kann ich Hot Slice kostenlos spielen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Die Demo auf dieser Seite ermöglicht kostenloses Spielen ohne Registrierung."}},
+      {"@type":"Question","name":"Hat Hot Slice Freispiele?","acceptedAnswer":{"@type":"Answer","text":"Hot Slice hat keine klassischen Freispiele. Das Spielprinzip basiert auf einer Schneidemechanik mit dem Goldenen Messer und Multiplikatoren."}},
+      {"@type":"Question","name":"Hat Hot Slice einen progressiven Jackpot?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hot Slice verfügt über drei Jackpot-Stufen: Mini, Midi und Grand. Sie werden zufällig während des Spiels ausgelöst."}},
+      {"@type":"Question","name":"Was sind Mindest- und Höchsteinsatz bei Hot Slice?","acceptedAnswer":{"@type":"Answer","text":"Der Mindesteinsatz beträgt €0,10, der Höchsteinsatz laut Evoplay bis zu €30.000. Der tatsächliche Maximalwert kann je nach Casino-Betreiber variieren."}},
+      {"@type":"Question","name":"Ist Hot Slice auf Mobilgeräten verfügbar?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hot Slice ist vollständig für iOS und Android optimiert und läuft direkt im Browser."}},
+      {"@type":"Question","name":"Kann ich Hot Slice um echtes Geld spielen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Hot Slice ist in allen lizenzierten Online-Casinos mit Evoplay-Spielen um echtes Geld verfügbar."}},
+      {"@type":"Question","name":"Wer hat Hot Slice entwickelt?","acceptedAnswer":{"@type":"Answer","text":"Hot Slice wurde von Evoplay entwickelt und im März 2025 veröffentlicht."}}
+    ]
+  }
+  </script>
 </head>
 <body style="background:#161d24;">
 
@@ -2486,8 +2512,22 @@
   </div>
 
 
+  <!-- FAQ -->
+  <div class="faq-section" id="faq">
+    <div class="section-heading"><span class="sh-icon">&#10067;</span> Hot Slice — Häufige Fragen</div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Wie hoch ist der RTP von Hot Slice?</summary><div class="faq-body">Hot Slice hat einen Return to Player (RTP) von <strong>96,05 %</strong>. Dieser Wert liegt über dem Branchendurchschnitt von etwa 95 %.</div></details>
+      <details class="faq-item"><summary>Kann ich Hot Slice kostenlos spielen?</summary><div class="faq-body">Ja. Die Demo-Version auf dieser Seite ermöglicht kostenloses Spielen ohne Registrierung. Übe die Schneidemechanik und erkunde das Jackpot-System, bevor du um echtes Geld spielst.</div></details>
+      <details class="faq-item"><summary>Hat Hot Slice Freispiele?</summary><div class="faq-body">Hot Slice verfügt über keine klassische Freispielrunde. Stattdessen bietet das Spiel eine einzigartige Schneidemechanik: Das Goldene Messer und vollständige Scheiben-Stacks lösen Multiplikator-Auszahlungen aus.</div></details>
+      <details class="faq-item"><summary>Hat Hot Slice einen progressiven Jackpot?</summary><div class="faq-body">Ja. Hot Slice hat drei Jackpot-Stufen: <strong>Mini</strong>, <strong>Midi</strong> und <strong>Grand</strong>. Sie werden zufällig während des Spiels ausgelöst, wobei der Grand Jackpot progressiv anwächst.</div></details>
+      <details class="faq-item"><summary>Was sind Mindest- und Höchsteinsatz?</summary><div class="faq-body">Der Mindesteinsatz beträgt <strong>€0,10</strong>, der Höchsteinsatz laut den offiziellen Evoplay-Angaben bis zu <strong>€30.000</strong>. Der tatsächliche Maximalwert kann je nach Casino-Betreiber variieren.</div></details>
+      <details class="faq-item"><summary>Ist Hot Slice auf Mobilgeräten verfügbar?</summary><div class="faq-body">Ja. Hot Slice ist vollständig für iOS und Android optimiert. Die Touch-Steuerung passt perfekt zur Schneidemechanik — kein App-Download erforderlich, das Spiel läuft direkt im Mobilbrowser.</div></details>
+      <details class="faq-item"><summary>Kann ich Hot Slice um echtes Geld spielen?</summary><div class="faq-body">Ja. Hot Slice ist bei allen lizenzierten Online-Casinos mit Evoplay-Spielen um echtes Geld verfügbar. Alle auf dieser Seite empfohlenen Casinos sind verifiziert.</div></details>
+      <details class="faq-item"><summary>Wer hat Hot Slice entwickelt?</summary><div class="faq-body">Hot Slice wurde von <strong>Evoplay</strong> entwickelt — einem Spielestudio, das für sein innovatives Instant-Game-Format bekannt ist. Das Spiel erschien im <strong>März 2025</strong>.</div></details>
+    </div>
+  </div>
+
   <!-- TOP CASINOS -->
-  <div class="casinos-section" id="casinos">
     <div class="section-heading"><span class="sh-icon-green">&#9881;</span> Top real money casinos with Hot Slice</div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
