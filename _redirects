@@ -1,5 +1,22 @@
-# Casino affiliate outbound
-/go/                     /    302
+# Casino affiliate outbound — EN
+/go/                     https://keitar.link/XYG7ch?sub_id_1=hot-slice.it.com          302
+/go/sgcasino             https://trackgeo.link/3KHmR4?sub_id_1=hot-slice.it.com        302
+/go/legiano              https://keitar.link/ykjKqx?sub_id_1=hot-slice.it.com          302
+/go/robocat              https://keitar.link/PLfktj?sub_id_1=hot-slice.it.com          302
+/go/dragonia             https://keitar.link/BY2d3q35?sub_id_1=hot-slice.it.com        302
+/go/slotrave             https://keitar.link/DtGgnGcw?sub_id_1=hot-slice.it.com        302
+/go/granawin             https://keitar.link/Rzgw8dgQ?sub_id_1=hot-slice.it.com        302
+/go/dragonslots          https://keitar.link/L9BJ73gK?sub_id_1=hot-slice.it.com        302
+
+# Casino affiliate outbound — DE
+/de/go/granawin          https://keitar.link/gZPL6Bbm?sub_id_1=hot-slice.it.com        302
+/de/go/slotrave          https://keitar.link/przXMbjt?sub_id_1=hot-slice.it.com        302
+/de/go/dragonslots       https://keitar.link/F1dgMZP6?sub_id_1=hot-slice.it.com        302
+
+# Casino affiliate outbound — ES
+/es/go/granawin          https://keitar.link/KWp2yVSW?sub_id_1=hot-slice.it.com        302
+/es/go/slotrave          https://keitar.link/Jt3wnZ8J?sub_id_1=hot-slice.it.com        302
+/es/go/dragonslots       https://keitar.link/M1YJRX45?sub_id_1=hot-slice.it.com        302
 
 # Hot Slice content pages (live — redirects removed)
 # /real-money/             /    302
@@ -17,7 +34,7 @@
 # /de/ /it/ /es/ are real pages — no redirects needed
 
 # Other site pages (future)
-/casinos/                /    302
+# /casinos/ — live page, no redirect needed
 /reviews/                /    302
 /tournaments/            /    302
 
