@@ -13,6 +13,9 @@
 # Author pages (live — redirects removed)
 # /author/juraj/           /    302
 
+# Language pages (live)
+# /de/ /it/ /es/ are real pages — no redirects needed
+
 # Other site pages (future)
 /casinos/                /    302
 /reviews/                /    302
