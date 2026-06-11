@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/hot-slice-icon.webp" type="image/webp">
+  <meta name="robots" content="index, follow">
+  <title>Hot Slice um Echtgeld spielen — Beste Casinos 2026 - Mari</title>
+  <meta name="description" content="Hot Slice um Echtgeld bei lizenzierten Online-Casinos spielen. Vergleiche Willkommensboni, Mindesteinzahlungen, Auszahlungsgeschwindigkeiten und Sicherheitsbewertungen, bevor du einzahlst.">
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    /* Casino list */
+    .casino-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .casino-card { background: #fff; display: flex; align-items: center; gap: 0; overflow: hidden; border: 1px solid #ddd; }
+    .casino-logo-box { width: 138px; min-width: 138px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 10px; text-align: center; }
+    .casino-body { flex: 1; padding: 12px 16px; min-width: 0; }
+    .casino-name-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .casino-name-text { font-size: 16px; font-weight: bold; color: #1b2128; }
+    .casino-verified { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #5aaa00; border-radius: 50% !important; color: #fff; font-size: 9px; font-weight: bold; flex-shrink: 0; }
+    .casino-tags { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .casino-tag { font-size: 11px; color: #5aaa00; font-weight: bold; letter-spacing: 0.5px; display: flex; align-items: center; gap: 3px; }
+    .casino-tag.show-all { color: #5aaa00; text-decoration: underline; cursor: pointer; }
+    .casino-meta { text-align: center; padding: 0 20px; flex-shrink: 0; }
+    .safety-label { font-size: 10px; color: #777; margin-bottom: 4px; }
+    .safety-badge { background: #5aaa00; color: #fff; font-size: 22px; font-weight: 900; width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; }
+    .safety-level { font-size: 11px; color: #333; font-weight: bold; }
+    .casino-actions { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
+    .btn-quick-info { background: transparent; border: 1px solid #ccc; color: #333; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-quick-info:hover { background: #f5f5f5; }
+    .btn-play-casino { background: #5aaa00; border: none; color: #fff; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-play-casino:hover { background: #4a9400; }
+    .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .btn-show-more-casinos:hover { background: #4a9400; }
+    .extra-sections { background: #1b2128; padding: 24px 0 30px; }
+    .extra-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .section-heading { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 16px; }
+    .section-heading .sh-icon-green { color: #5aaa00; font-size: 17px; }
+    .casino-tc { font-size: 10px; color: #888; margin-top: 8px; text-align: center; }
+    .casino-tc a { color: #5aaa00; }
+
+    /* Registration steps */
+    .reg-steps { margin: 0; }
+    .reg-steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .reg-step { background: #212b3a; padding: 20px 18px 16px; border: 1px solid rgba(255,255,255,0.08); position: relative; }
+    .reg-step-num { width: 30px; height: 30px; background: #5aaa00; color: #fff; font-size: 13px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; }
+    .reg-step-title { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .reg-step-desc { font-size: 13px; color: #aaa; line-height: 1.6; }
+    .reg-step-img { width: 100%; height: 220px; background: #12181e; display: flex; align-items: center; justify-content: center; margin-top: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,0.06); }
+    .reg-step-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .reg-step-img-placeholder { font-size: 11px; color: #555; text-align: center; padding: 12px; }
+    @media (max-width: 767px) {
+      .reg-steps { overflow: hidden; }
+      .reg-steps-grid { display: flex; flex-wrap: nowrap; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; gap: 12px; padding-bottom: 8px; }
+      .reg-steps-grid::-webkit-scrollbar { display: none; }
+      .reg-steps-grid { scrollbar-width: none; }
+      .reg-step { flex: 0 0 72%; scroll-snap-align: start; }
+    }
+
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/de/real-money/">
+  <link rel="alternate" hreflang="en" href="https://hot-slice.it.com/real-money/">
+  <link rel="alternate" hreflang="de" href="https://hot-slice.it.com/de/real-money/">
+  <link rel="alternate" hreflang="it" href="https://hot-slice.it.com/it/real-money/">
+  <link rel="alternate" hreflang="es" href="https://hot-slice.it.com/es/real-money/">
+  <link rel="alternate" hreflang="x-default" href="https://hot-slice.it.com/real-money/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/de/real-money/">
+  <meta property="og:title" content="Hot Slice um Echtgeld spielen — Beste Casinos 2026 - Mari">
+  <meta property="og:description" content="Hot Slice um Echtgeld bei lizenzierten Online-Casinos spielen. Vergleiche Willkommensboni, Mindesteinzahlungen, Auszahlungsgeschwindigkeiten und Sicherheitsbewertungen, bevor du einzahlst.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hot Slice um Echtgeld spielen — Beste Casinos 2026 - Mari">
+  <meta name="twitter:description" content="Hot Slice um Echtgeld bei lizenzierten Online-Casinos spielen. Vergleiche Willkommensboni, Mindesteinzahlungen, Auszahlungsgeschwindigkeiten und Sicherheitsbewertungen, bevor du einzahlst.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<div class="sticky-top">
+<header class="header">
+<div class="header-inner">
+  <a href="/de/" class="logo">
+    <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text"><span class="brand-name">Mari</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Casinos, Spiele und mehr suchen">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">DE &nbsp;&#127465;&#127466;</button>
+    <button class="btn-login">Anmelden</button>
+    <button class="btn-signup">Registrieren</button>
+  </div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-inner">
+  <a href="/de/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="/casinos/"><span class="nav-icon">&#127963;</span> Online Casinos</a>
+  <a href="/de/" class="active"><span class="nav-icon">&#127918;</span> Spiele</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Ratgeber</a>
+  <a href="/complaints/"><span class="nav-icon">&#9888;</span> Beschwerden</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="/reviews/"><span class="nav-icon">&#11088;</span> Bewertungen</a>
+  <a href="/tournaments/"><span class="nav-icon">&#127942;</span> Turniere</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div>
+</nav>
+</div>
+
+<div class="extra-sections" id="casinos">
+  <div class="extra-inner">
+    <div class="breadcrumb" style="color:#888;margin-bottom:16px;">
+      <a href="/de/">Mari</a><span>&#8250;</span><a href="/de/">Spiele</a><span>&#8250;</span><a href="/de/">Hot Slice</a><span>&#8250;</span><span style="color:#aaa;">Hot Slice um Echtgeld spielen — Beste Casinos 2026</span>
+    </div>
+    <h1 style="color:#fff;font-size:28px;font-weight:900;margin-bottom:8px;line-height:1.3;">Hot Slice um Echtgeld spielen</h1>
+    <p style="font-size:12px;color:#888;margin-bottom:24px;"><strong style="color:#aaa;">Zuletzt aktualisiert:</strong> Juni 2026 &nbsp;|&nbsp; <strong style="color:#aaa;">Von:</strong> <a href="/author/juraj/" style="color:#5aaa00;">Juraj</a>, Casino-Spielspezialist</p>
+    <div class="section-heading"><span class="sh-icon-green">&#9881;</span> Top Echtgeld-Casinos mit Hot Slice</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;">
+      <a href="/de/bonus/" style="background:#6b3fa0;display:flex;align-items:center;gap:14px;padding:14px 18px;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#5a2e90'" onmouseout="this.style.background='#6b3fa0'">
+        <span style="font-size:28px;">&#127873;</span>
+        <div>
+          <div style="color:#fff;font-weight:bold;font-size:14px;margin-bottom:2px;">Casino-Boni</div>
+          <div style="color:#c9a0f0;font-size:12px;">Beste Boni für Hot Slice</div>
+        </div>
+        <span style="margin-left:auto;color:#c9a0f0;font-size:18px;">&#8250;</span>
+      </a>
+      <a href="/de/free-spins/" style="background:#1a6b2a;display:flex;align-items:center;gap:14px;padding:14px 18px;text-decoration:none;transition:background 0.15s;" onmouseover="this.style.background='#145520'" onmouseout="this.style.background='#1a6b2a'">
+        <span style="font-size:28px;">&#127920;</span>
+        <div>
+          <div style="color:#fff;font-weight:bold;font-size:14px;margin-bottom:2px;">Freispiele</div>
+          <div style="color:#90d4a0;font-size:12px;">Freispiele ohne Einzahlung für Hot Slice</div>
+        </div>
+        <span style="margin-left:auto;color:#90d4a0;font-size:18px;">&#8250;</span>
+      </a>
+    </div>
+        <div class="casino-list">
+      <!-- #1 Dragonslots Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0d0d1a;"><img src="/img/casinos/dragonslots.webp" alt="Dragonslots Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonslots Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 225% up to €2,250 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">9.8</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonslots/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/de/go/dragonslots" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #2 Robocat Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0a0f1e;"><img src="/img/casinos/robocat.webp" alt="Robocat Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Robocat Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">9.5</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/robocat/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/go/robocat" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #3 Slotrave Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0e0e14;"><img src="/img/casinos/slotrave.webp" alt="Slotrave Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Slotrave Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 100 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">9.2</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/slotrave/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/de/go/slotrave" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #4 SGCasino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#111;"><img src="/img/casinos/sgcasino.webp" alt="SGCasino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">SGCasino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">9.0</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/sgcasino/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/go/sgcasino" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #5 Legiano Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0a0f0a;"><img src="/img/casinos/legiano.webp" alt="Legiano Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Legiano Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">8.8</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/legiano/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/go/legiano" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #6 Dragonia Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#1a0a0a;"><img src="/img/casinos/dragonia.webp" alt="Dragonia Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonia Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">8.7</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonia/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/go/dragonia" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+      <!-- #7 Granawin Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0f1a0a;"><img src="/img/casinos/granawin.webp" alt="Granawin Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Granawin Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOTS</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 150% up to €220 + 170 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Sicherheitsindex</div><div class="safety-badge">8.5</div><div class="safety-level">Hoch</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/granawin/" class="btn-quick-info">&#8964; Mehr erfahren</a>
+          <a href="/de/go/granawin" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Jetzt spielen</a>
+        </div>
+      </div>
+    </div>
+    <button class="btn-show-more-casinos" onclick="document.querySelectorAll('.casino-extra').forEach(el=>el.style.display='flex');this.style.display='none';">&#8964; Alle 7 Casinos anzeigen</button>
+    <div class="casino-tc">18+ | Nur für Neukunden | Es gelten AGB | Spiel verantwortungsbewusst | <a href="/self-exclusion/">BeGambleAware</a></div>
+
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <h2>Warum um Echtgeld spielen?</h2>
+    <p>Die Demo-Version von Hot Slice eignet sich hervorragend zum Üben, aber das Echtgeldspiel fügt echte Spannung hinzu, die das Erlebnis grundlegend verändert. Jeder Schnitt trägt echten Einsatz — ein Treffer mit der goldenen Traube fühlt sich anders an, wenn er eine tatsächliche Barauszahlung darstellt, und jede Runde auf der Bestenliste bedeutet etwas Handfestes. Das Echtgeldspiel schaltet auch Zugang zum vollständigen Jackpot-System frei, bei dem der GRAND-Jackpot bis zu x3000 deines Einsatzes auszahlen kann.</p>
+    <p>Es gibt noch weitere Vorteile, die ausschließlich beim Echtgeldspiel verfügbar sind:</p>
+    <ul>
+      <li>Teilnahmeberechtigung für Casino-Willkommensboni und laufende Aktionen</li>
+      <li>Zugang zur Live-Bestenliste mit echten Geldranglisten</li>
+      <li>Volle Jackpot-Teilnahme — alle drei Stufen sind nur im Echtgeldmodus aktiv</li>
+      <li>Die psychologische und unterhaltende Dimension des echten Einsatzspiels</li>
+    </ul>
+
+    <h2>Ein sicheres Casino wählen</h2>
+    <p>Spiele Hot Slice immer bei einem lizenzierten Online-Casino. Eine gültige Glücksspiellizenz ist das wichtigste Kriterium bei der Auswahl, wo du Echtgeld einzahlst. Achte auf Lizenzen der folgenden Regulierungsbehörden, die zu den angesehensten der Branche gehören:</p>
+    <ul>
+      <li><strong>Malta Gaming Authority (MGA):</strong> Weltweit anerkannt als Gold-Standard-iGaming-Regulierungsbehörde. MGA-lizenzierte Casinos müssen zertifizierte Zufallszahlengeneratoren verwenden, Spielergelder getrennt halten und Streitigkeiten durch unabhängige Schlichtung lösen.</li>
+      <li><strong>UK Gambling Commission (UKGC):</strong> Die strengste Verbraucherschutzbehörde der Branche. UKGC-Lizenzen sind für alle Betreiber erforderlich, die UK-Spieler bedienen.</li>
+      <li><strong>Gibraltar Regulatory Authority:</strong> Eine angesehene europäische Lizenz, die viele große Casino-Marken abdeckt.</li>
+      <li><strong>Curacao eGaming:</strong> Weit verbreitet für internationale Betreiber. Bietet weniger Schutz als MGA oder UKGC, schafft aber dennoch einen rechtlichen Rahmen für den Betrieb.</li>
+    </ul>
+    <p>Lizenzierte Casinos sind verpflichtet, zertifizierte Zufallszahlengeneratoren zu verwenden, Auszahlungsanfragen innerhalb festgelegter Fristen zu bearbeiten und Zugang zu Werkzeugen für verantwortungsvolles Glücksspiel bereitzustellen. Vermeide nicht lizenzierte Betreiber vollständig — sie haben keine regulatorische Rechenschaftspflicht.</p>
+
+    <h2>Mindesteinzahlungen</h2>
+    <p>Die meisten Casinos, die Hot Slice anbieten, akzeptieren Einzahlungen ab 10 bis 20&nbsp;&euro; über Standardzahlungsmethoden wie Kreditkarten und Banküberweisungen. Einige Betreiber akzeptieren Einzahlungen ab 5&nbsp;&euro; über E-Wallets wie Skrill, Neteller oder MuchBetter. Eine kleine Ersteinzahlung ist ein effektiver Weg, die Plattform des Casinos, die Auszahlungsgeschwindigkeit und den Kundensupport zu testen, bevor du einen größeren Betrag einzahlst.</p>
+    <p>Gängige Einzahlungsmethoden und ihre typischen Mindestbeträge bei Hot Slice-Casinos:</p>
+    <ul>
+      <li><strong>Visa / Mastercard:</strong> 10–20&nbsp;&euro; Mindesteinzahlung</li>
+      <li><strong>Skrill / Neteller:</strong> 5–10&nbsp;&euro; Mindesteinzahlung</li>
+      <li><strong>Banküberweisung:</strong> 20–50&nbsp;&euro; Mindesteinzahlung</li>
+      <li><strong>Kryptowährung (wo akzeptiert):</strong> Variiert — oft äquivalent zu 10–20&nbsp;&euro;</li>
+      <li><strong>PayPal (wo verfügbar):</strong> 10&nbsp;&euro; Mindesteinzahlung bei den meisten Casinos</li>
+    </ul>
+
+  </div>
+</div>
+
+<div class="extra-sections">
+  <div class="extra-inner">
+    <div class="section-heading"><span class="sh-icon-green">&#128214;</span> So fängst du an zu spielen</div>
+    <p style="color:#aaa;font-size:14px;margin-bottom:20px;">Der Einstieg in Hot Slice um Echtgeld ist unkompliziert. Folge diesen sechs Schritten, um von der Registrierung bis zur ersten bezahlten Runde zu gelangen.</p>
+    <div class="reg-steps">
+      <div class="reg-steps-grid">
+        <div class="reg-step">
+          <div class="reg-step-num">1</div>
+          <div class="reg-step-title">Casino auswählen</div>
+          <div class="reg-step-desc">Wähle ein lizenziertes Casino aus unserer obigen Liste, das Evoplay-Spiele in seinem Portfolio führt.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-1.webp" alt="Casino für Hot Slice auswählen" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">2</div>
+          <div class="reg-step-title">Konto erstellen</div>
+          <div class="reg-step-desc">Fülle das Registrierungsformular aus — Name, E-Mail, Geburtsdatum und Adresse. Dauert weniger als 2 Minuten.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-2.webp" alt="Casino-Konto erstellen" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">3</div>
+          <div class="reg-step-title">Identität verifizieren</div>
+          <div class="reg-step-desc">Lade einen Lichtbildausweis und einen Adressnachweis hoch (KYC). Bei allen lizenzierten Casinos vor der ersten Auszahlung erforderlich.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-2.webp" alt="Identität beim Casino verifizieren" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">4</div>
+          <div class="reg-step-title">Einzahlung vornehmen</div>
+          <div class="reg-step-desc">Wähle deine Zahlungsmethode und tätige deine erste Einzahlung. Gib zu diesem Zeitpunkt einen Bonuscode ein, um das Willkommensangebot zu beanspruchen.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-4.webp" alt="Einzahlung für Hot Slice vornehmen" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">5</div>
+          <div class="reg-step-title">Hot Slice finden</div>
+          <div class="reg-step-desc">Gehe zum Slots-Bereich und suche nach „Hot Slice" oder „Evoplay". Klicke auf das Spiel, um es zu öffnen.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-5.webp" alt="Hot Slice in der Casino-Lobby finden" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+        <div class="reg-step">
+          <div class="reg-step-num">6</div>
+          <div class="reg-step-title">Einsatz festlegen &amp; spielen</div>
+          <div class="reg-step-desc">Verwende die BET-Taste, um deinen Einsatz festzulegen. Beginne bei 0,50–1&nbsp;&euro;, um dich einzufinden, und passe ihn dann nach Bedarf an.</div>
+          <div class="reg-step-img">
+            <img src="/img/screenshots/reg-step-6.webp" alt="Einsatz in Hot Slice festlegen und spielen" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+            <div class="reg-step-img-placeholder" style="display:flex;">Screenshot-Platzhalter</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <h2>Boni für Echtgeldspieler</h2>
+    <p>Neue Echtgeldspieler in den meisten Casinos qualifizieren sich automatisch für Willkommensboni. Einzahlungs-Match-Angebote — zum Beispiel 100% bis zu 200&nbsp;&euro; — verdoppeln effektiv dein Startguthaben und geben dir doppelt so viele Runden, um hochwertige Treffer und Jackpots zu finden. Folgendes solltest du bei der Bewertung eines Willkommensbonus für Hot Slice beachten:</p>
+    <ul>
+      <li><strong>Umsatzbedingung von 35x oder weniger:</strong> Je niedriger, desto besser. Dies ist die Anzahl der Male, die du den Bonus setzen musst, bevor du Gewinne auszahlen kannst.</li>
+      <li><strong>Hot Slice als berechtigtes Spiel gelistet:</strong> Bestätige dies vor der Einzahlung, um sicherzustellen, dass dein Bonusguthaben speziell für Hot Slice verwendet werden kann.</li>
+      <li><strong>Maximaler Einsatz während der Umsatzbedingungen von mindestens 5&nbsp;&euro;:</strong> Einige Boni beschränken Einsätze während der Umsatzbedingungen auf 2–3&nbsp;&euro;, was deine Möglichkeit einschränkt, zu Standardeinsätzen zu spielen.</li>
+      <li><strong>Gültigkeitszeitraum von mindestens 30 Tagen:</strong> Gibt dir ausreichend Zeit, die Umsatzbedingungen ohne Druck zu erfüllen.</li>
+    </ul>
+    <p>Nach Abschluss deines Willkommensbonus achte auf Reload-Boni, Cashback-Angebote und VIP-Treueprämien, die laufende Echtgeldspieler typischerweise erhalten, wenn sie ihre Beziehung zu einem Casino aufbauen.</p>
+
+    <h2>Verantwortungsvolles Glücksspiel</h2>
+    <p>Echtgeldglücksspiele sollten immer als Unterhaltung betrachtet werden — niemals als Weg zur Einkommensgenerierung oder zur Bewältigung finanzieller Schwierigkeiten. Wende vor dem Start einer Echtgeldsitzung diese Grundsätze des verantwortungsvollen Glücksspiels an:</p>
+    <ul>
+      <li><strong>Sitzungsbudget festlegen:</strong> Entscheide vor dem Start, wie viel du dir leisten kannst zu verlieren, und betrachte dies als absolutes Maximum.</li>
+      <li><strong>Einzahlungslimits nutzen:</strong> Alle lizenzierten Casinos sind verpflichtet, tägliche, wöchentliche und monatliche Einzahlungslimits anzubieten. Stelle diese in deinen Kontoeinstellungen ein, um Ausgaben zu vermeiden.</li>
+      <li><strong>Sitzungszeithinweise aktivieren:</strong> Die meisten lizenzierten Casino-Plattformen ermöglichen es dir, eine Spielzeiterinnerung einzustellen, die dich nach einer festgelegten Dauer benachrichtigt.</li>
+      <li><strong>Verluste niemals nachjagen:</strong> Wenn du dein Sitzungsbudget erreicht hast, höre auf. Einsätze zu erhöhen, um Verluste wettzumachen, ist eines der häufigsten und schädlichsten Glücksspielverhalten.</li>
+      <li><strong>Selbstausschluss-Tools:</strong> Wenn das Spielen keinen Spaß mehr macht, nutze die Selbstausschluss-Tools, die bei allen lizenzierten Casinos verfügbar sind. Diese können dein Konto für einen festgelegten Zeitraum oder dauerhaft sperren.</li>
+    </ul>
+    <p>Ressourcen für verantwortungsvolles Glücksspiel stehen zur Verfügung, wenn du Unterstützung benötigst. GamCare (gamcare.org.uk) bietet eine 24/7-Hotline und Live-Chat. BeGambleAware (begambleaware.org) bietet Informationen, Beratung und Zugang zu Behandlungsdiensten. Beide sind kostenlos und vertraulich.</p>
+
+    <div class="faq-block" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Häufig gestellte Fragen</h2>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Kann ich Hot Slice um Echtgeld auf dem Handy spielen?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja. Hot Slice von Evoplay ist vollständig für das Spielen auf iOS und Android optimiert. Das Spiel lädt in deinem mobilen Browser ohne App-Download — sieh dir unseren <a href="/de/mobile/">Mobil-Leitfaden</a> für Einrichtungstipps an. Alle Echtgeld-Features, Jackpots und Bestenlisten funktionieren auf dem Handy identisch.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Was ist der Mindesteinsatz bei Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Der Mindesteinsatz bei Hot Slice beträgt 0,10&nbsp;$ pro Runde. Der Höchsteinsatz liegt bei 20.000&nbsp;$ pro Runde. Die meisten Spieler beginnen bei 0,20–1&nbsp;&euro; pro Runde, um Unterhaltung und Bankroll-Management in Einklang zu bringen.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Hat Hot Slice einen Jackpot im Echtgeldmodus?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja. Hot Slice verfügt über einen dreiteiligen Jackpot — GRAND (x3000), MAJOR (x2000) und MINOR (x1500) — die alle nur im Echtgeldmodus aktiv sind. Jackpots werden zufällig ausgelöst und der Multiplikator wird auf deinen aktiven Einsatz zum Zeitpunkt der Auslösung angewendet.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Welche Casinos bieten Hot Slice von Evoplay an?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice ist bei allen Online-Casinos verfügbar, die Evoplays Spielportfolio führen. Die oben auf dieser Seite aufgelisteten Casinos wurden verifiziert, dass sie das Spiel anbieten. Klicke bei einem der Einträge auf „Jetzt spielen", um direkt in die Spiellobby zu gelangen.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Kann ich einen Casino-Bonus nutzen, um Hot Slice zu spielen?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja, sofern die Bonusbedingungen Hot Slice oder Evoplay-Slots als berechtigte Spiele aufführen. Überprüfe immer die Bedingungen vor der Einzahlung. Slots tragen in der Regel 100% zu den Umsatzbedingungen bei, aber einige Boni schließen bestimmte Anbieter aus — bestätige dies, bevor du ein Angebot annimmst.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Wie hoch ist der RTP von Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice hat einen RTP (Return to Player) von 96%. Das bedeutet, dass das Spiel über eine große Anzahl von Runden im Durchschnitt 96&nbsp;&euro; für jeden eingesetzten 100&nbsp;&euro; zurückgibt. Der RTP ist ein statistisches Langzeitmaß und sagt keine Ergebnisse in einzelnen Sitzungen voraus. Sieh dir unsere <a href="/de/rtp/">RTP &amp; Varianz-Seite</a> für eine vollständige Erklärung an.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">F</span><span itemprop="name">Ist es sicher, Echtgeld bei einem Online-Casino einzuzahlen?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Ja — bei einem ordnungsgemäß lizenzierten Casino. Verifiziere immer, dass das Casino eine gültige Lizenz der MGA, UKGC oder einer anderen seriösen Regulierungsbehörde besitzt, bevor du einzahlst. Lizenzierte Casinos sind verpflichtet, SSL-Verschlüsselung zu verwenden, Spielergelder getrennt zu halten und Streitigkeiten über unabhängige Kanäle zu lösen.</span></div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Bereit, Hot Slice zu spielen?</h3>
+      <p>Probiere die kostenlose Demo oder spiele um Echtgeld bei unseren empfohlenen Casinos.</p>
+      <a href="/go/" class="cta-btn">Um Echtgeld spielen &#8594;</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/de/" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Folge uns</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Folge uns auf Facebook" aria-label="Folge uns auf Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Folge uns auf X (Twitter)" aria-label="Folge uns auf X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/twitter-x.webp" alt="X" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Folge uns auf Instagram" aria-label="Folge uns auf Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Abonniere uns auf YouTube" aria-label="Abonniere uns auf YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Folge uns auf LinkedIn" aria-label="Folge uns auf LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Top-Seiten</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>PayPal Casinos</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Rapid Transfer Casinos</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Revolut Casinos</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos mit Blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinos mit Craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Beliebte Seiten</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Pay by Phone Casinos</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Mastercard Casinos</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>POLi Casinos</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Neosurf Casinos</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="/de/" class="footer-link"><span class="fl-icon">&#127918;</span>Demo spielen</a>
+        <a href="/de/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Um Echtgeld spielen</a>
+        <a href="/de/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Casino-Boni</a>
+        <a href="/de/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Freispiele</a>
+        <a href="/de/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>Spielanleitung</a>
+        <a href="/de/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategie &amp; Tipps</a>
+        <a href="/de/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP &amp; Varianz</a>
+        <a href="/de/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Mobile Version</a>
+        <a href="/de/" class="footer-link"><span class="fl-icon">&#11088;</span>Vollständige Rezension</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Über uns</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>Über uns</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>Geschichte</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Kontakt</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Nutzungsbedingungen</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Sitemap</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Autor</a>
+      </div>
+    </div>
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Kostenlose professionelle Bildungskurse für Online-Casino-Mitarbeiter, die sich auf Best Practices der Branche, Verbesserung des Spielererlebnisses und einen fairen Umgang mit Glücksspielen konzentrieren.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Globale Selbstausschluss-Initiative</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Selbstausschluss<br><span style="font-size:13px;color:#aaa;">Initiative</span></span></div>
+        <p class="fp-desc">Eine Initiative, die wir mit dem Ziel gestartet haben, ein globales Selbstausschlusssystem zu schaffen, das gefährdeten Spielern ermöglicht, ihren Zugang zu allen Online-Glücksspielangeboten zu sperren.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">Eine Plattform, die geschaffen wurde, um all unsere Bemühungen zu präsentieren, die darauf abzielen, die Vision einer sichereren und transparenteren Online-Glücksspielbranche zu verwirklichen.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;"><div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div><div style="color:#e6a800;font-size:14px;">AWARDS</div></div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">Ein ambitioniertes Projekt, dessen Ziel es ist, die besten und verantwortungsvollsten Unternehmen im iGaming zu würdigen und ihnen die Anerkennung zu geben, die sie verdienen.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Abonniere unseren Newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Deine E-Mail-Adresse eingeben">
+        <button class="btn-newsletter">Abonnieren</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> Ich bin mindestens 18 Jahre alt und darf legal in einem Casino spielen
+      </label>
+    </div>
+    <div class="footer-responsible">
+      <div class="resp-label">Spiele verantwortungsbewusst und in Maßen.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="/img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Created by godzilla-network.com &nbsp;|&nbsp; Mari ist eine unabhängige Informationsquelle über Online-Casinos und Online-Casino-Spiele, die von keinem Glücksspiel-Betreiber kontrolliert wird. Alle unsere Rezensionen und Ratgeber werden ehrlich und nach bestem Wissen und Gewissen der Mitglieder unseres unabhängigen Expertenteams erstellt; sie dienen jedoch nur zu Informationszwecken und sollten nicht als Rechtsberatung aufgefasst oder darauf vertraut werden. Stelle immer sicher, dass du alle regulatorischen Anforderungen erfüllst, bevor du in einem ausgewählten Casino spielst. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in anderen Sprachen</div>
+        <div class="footer-lang-select"><span>&#127760; Sprache wählen</span><span>&#8964;</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

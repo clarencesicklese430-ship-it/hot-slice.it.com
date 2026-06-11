@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/hot-slice-icon.webp" type="image/webp">
+  <meta name="robots" content="index, follow">
+  <title>Hot Slice su Mobile 2026 — Guida Completa iOS e Android | Mari</title>
+  <meta name="description" content="Gioca a Hot Slice su mobile. Guida completa per iOS e Android: controlli touch, modalit&#224; orizzontale, suggerimenti sulle prestazioni, confronto browser vs app e bonus mobile.">
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    .hero-section { background: #1b2128; padding: 36px 0 40px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .hero-top h1 { color: #fff; font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; }
+    .hero-meta { font-size: 12px; color: #888; margin-bottom: 18px; }
+    .hero-meta strong { color: #aaa; }
+    .hero-meta a { color: #5aaa00; }
+    .hero-intro { font-size: 15px; color: #bbb; line-height: 1.75; margin-bottom: 24px; max-width: 820px; }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btn { display: flex; align-items: center; gap: 14px; padding: 14px 24px; text-decoration: none; min-width: 240px; border: 1px solid rgba(255,255,255,0.5); transition: background 0.25s; }
+    .hero-btn-primary { background: linear-gradient(90deg, #2a9e1a 0%, #5fd94a 100%); box-shadow: 0 0 0 2px rgba(90,220,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-primary:hover { background: linear-gradient(90deg, #5fd94a 0%, #2a9e1a 100%); }
+    .hero-btn-secondary { background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%); box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-secondary:hover { background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%); }
+    .hero-btn-icon { font-size: 22px; flex-shrink: 0; color: #fff; }
+    .hero-btn-text { display: flex; flex-direction: column; }
+    .hero-btn-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.2; }
+    .hero-btn-sub { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .facts-grid-wrap { border-top: 1px solid rgba(255,255,255,0.25); padding-top: 24px; margin-top: 8px; }
+    .facts-grid-label { font-size: 10px; font-weight: 900; color: #5aaa00; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    .facts-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.25); }
+    .facts-cell { background: #212b3a; padding: 16px 18px; }
+    .facts-cell-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .facts-cell-value { font-size: 15px; font-weight: 700; color: #fff; }
+    .facts-badge { display: inline-block; background: #5aaa00; color: #fff; font-size: 11px; font-weight: bold; padding: 2px 8px; }
+    .facts-badge-warn { background: #c07800; }
+    .extra-sections { background: #1b2128; padding: 24px 0 30px; }
+    .extra-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .casino-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .casino-card { background: #fff; display: flex; align-items: center; overflow: hidden; border: 1px solid #ddd; }
+    .casino-logo-box { width: 138px; min-width: 138px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 10px; text-align: center; }
+    .casino-body { flex: 1; padding: 12px 16px; min-width: 0; }
+    .casino-name-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .casino-name-text { font-size: 16px; font-weight: bold; color: #1b2128; }
+    .casino-verified { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #5aaa00; border-radius: 50% !important; color: #fff; font-size: 9px; font-weight: bold; flex-shrink: 0; }
+    .casino-tags { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .casino-tag { font-size: 11px; color: #5aaa00; font-weight: bold; letter-spacing: 0.5px; display: flex; align-items: center; gap: 3px; }
+    .casino-tag.show-all { text-decoration: underline; cursor: pointer; }
+    .casino-meta { text-align: center; padding: 0 20px; flex-shrink: 0; }
+    .safety-label { font-size: 10px; color: #777; margin-bottom: 4px; }
+    .safety-badge { background: #5aaa00; color: #fff; font-size: 22px; font-weight: 900; width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; }
+    .safety-level { font-size: 11px; color: #333; font-weight: bold; }
+    .casino-actions { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
+    .btn-quick-info { background: transparent; border: 1px solid #ccc; color: #333; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-quick-info:hover { background: #f5f5f5; }
+    .btn-play-casino { background: #5aaa00; border: none; color: #fff; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; text-decoration: none; }
+    .btn-play-casino:hover { background: #4a9400; }
+    .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .btn-show-more-casinos:hover { background: #4a9400; }
+    .casino-section-heading { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 16px; }
+    .casino-section-heading .sh-icon { color: #5aaa00; }
+    .casino-tc { font-size: 10px; color: #888; margin-top: 8px; text-align: center; }
+    .casino-tc a { color: #5aaa00; }
+    .article-img-block { margin: 24px 0; }
+    .article-img-block img { width: 100%; height: auto; display: block; }
+    .article-img-placeholder { background: #e8e8e8; border: 2px dashed #ccc; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 40px 20px; text-align: center; }
+    .article-img-placeholder-icon { font-size: 40px; opacity: 0.4; }
+    .article-img-placeholder-label { font-size: 11px; color: #999; letter-spacing: 0.5px; }
+    .article-img-caption { font-size: 12px; color: #888; margin-top: 6px; text-align: center; font-style: italic; }
+    @media (max-width: 1000px) { .facts-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .facts-grid { grid-template-columns: repeat(2, 1fr); } .hero-top h1 { font-size: 24px; } }
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/it/mobile/">
+  <link rel="alternate" hreflang="en" href="https://hot-slice.it.com/mobile/">
+  <link rel="alternate" hreflang="de" href="https://hot-slice.it.com/de/mobile/">
+  <link rel="alternate" hreflang="it" href="https://hot-slice.it.com/it/mobile/">
+  <link rel="alternate" hreflang="es" href="https://hot-slice.it.com/es/mobile/">
+  <link rel="alternate" hreflang="x-default" href="https://hot-slice.it.com/mobile/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/it/mobile/">
+  <meta property="og:title" content="Hot Slice su Mobile 2026 — Guida Completa iOS e Android | Mari">
+  <meta property="og:description" content="Gioca a Hot Slice su mobile. Guida completa per iOS e Android: controlli touch, modalit&#224; orizzontale, suggerimenti sulle prestazioni, confronto browser vs app e bonus mobile.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hot Slice su Mobile 2026 — Guida Completa iOS e Android | Mari">
+  <meta name="twitter:description" content="Gioca a Hot Slice su mobile. Guida completa per iOS e Android: controlli touch, modalit&#224; orizzontale, suggerimenti sulle prestazioni, confronto browser vs app e bonus mobile.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<div class="sticky-top">
+<header class="header">
+<div class="header-inner">
+  <a href="/it/" class="logo">
+    <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text"><span class="brand-name">Mari</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Cerca casin&#242;, giochi e altro">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">IT &nbsp;&#127470;&#127481;</button>
+    <button class="btn-login">Accedi</button>
+    <button class="btn-signup">Registrati</button>
+  </div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-inner">
+  <a href="/it/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="/casinos/"><span class="nav-icon">&#127963;</span> Casin&#242; Online</a>
+  <a href="/it/" class="active"><span class="nav-icon">&#127918;</span> Giochi</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Guida</a>
+  <a href="/complaints/"><span class="nav-icon">&#9888;</span> Reclami</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="/reviews/"><span class="nav-icon">&#11088;</span> Recensioni</a>
+  <a href="/tournaments/"><span class="nav-icon">&#127942;</span> Tornei</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div>
+</nav>
+</div>
+
+<!-- HERO -->
+<div class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="breadcrumb" style="color:#888;margin-bottom:14px;"><a href="/it/" style="color:#5aaa00;">Mari</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/it/" style="color:#5aaa00;">Giochi</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/it/" style="color:#5aaa00;">Hot Slice</a><span style="color:#555;margin:0 5px;">&#8250;</span><span style="color:#777;">Versione Mobile</span></div>
+      <h1>Hot Slice su Mobile — Guida Completa iOS e Android 2026</h1>
+      <p class="hero-meta"><strong>Ultimo aggiornamento:</strong> giugno 2026 &nbsp;|&nbsp; <strong>Di:</strong> <a href="/author/juraj/">Juraj</a>, Specialista di Giochi da Casin&#242;</p>
+      <p class="hero-intro">Hot Slice di Evoplay &egrave; completamente ottimizzato per i dispositivi mobili. La meccanica del taglio della frutta &egrave; in realt&agrave; pi&ugrave; naturale su un touchscreen che su desktop — i gesti di scorrimento rispecchiano da vicino l&#39;azione fisica di tagliare la frutta. Questa guida copre la compatibilit&agrave; con iOS e Android, i controlli touch, la modalit&agrave; orizzontale vs verticale, le prestazioni su diversi dispositivi e i bonus esclusivi per mobile.</p>
+      <div class="hero-cta-row">
+        <a href="/it/" class="hero-btn hero-btn-primary">
+          <span class="hero-btn-icon">&#128241;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Gioca su Mobile</span>
+            <span class="hero-btn-sub">Nessun download richiesto</span>
+          </span>
+        </a>
+        <a href="/go/" class="hero-btn hero-btn-secondary" rel="nofollow noopener noreferrer" target="_blank">
+          <span class="hero-btn-icon">&#127919;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Trova Casin&#242; Mobile</span>
+            <span class="hero-btn-sub">Autorizzato &amp; ottimizzato per mobile</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="facts-grid-wrap">
+      <div class="facts-grid-label">&#9675; Dati Mobile — Hot Slice di Evoplay</div>
+      <div class="facts-grid">
+        <div class="facts-cell"><div class="facts-cell-label">Piattaforme</div><div class="facts-cell-value">iOS e Android</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Tecnologia</div><div class="facts-cell-value">HTML5</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Controlli</div><div class="facts-cell-value">Touch / Swipe</div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Modalit&#224; Migliore</div><div class="facts-cell-value"><span class="facts-badge">Orizzontale</span></div></div>
+        <div class="facts-cell"><div class="facts-cell-label">App Richiesta</div><div class="facts-cell-value"><span class="facts-badge facts-badge-warn">No</span></div></div>
+        <div class="facts-cell"><div class="facts-cell-label">Compatibilit&#224;</div><div class="facts-cell-value">Tutti i dispositivi</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <h2>Compatibilit&#224; Mobile</h2>
+    <p>Hot Slice di Evoplay &egrave; completamente ottimizzato per i dispositivi mobili. Il gioco funziona direttamente nel tuo browser mobile — non &egrave; richiesto il download di un&#39;app. Funziona su iOS (Safari) e Android (Chrome, Firefox) e si adatta automaticamente alle dimensioni dello schermo, garantendo che l&#39;intera arena di gioco venga visualizzata correttamente indipendentemente dalla risoluzione del dispositivo.</p>
+    <p>Evoplay ha costruito Hot Slice utilizzando la moderna tecnologia HTML5, il che significa che &egrave; compatibile con tutti i sistemi operativi mobili contemporanei. Che tu stia usando un iPhone, iPad, Samsung Galaxy, Google Pixel o qualsiasi altro popolare dispositivo Android, il gioco dovrebbe caricarsi senza plugin aggiuntivi o passaggi di configurazione.</p>
+
+    <h2>Controlli Touch</h2>
+    <p>Su mobile, tagli la frutta toccando o scorrendo su di essa con il dito. La risposta touch &egrave; veloce e precisa, progettata per corrispondere alla velocit&agrave; richiesta per colpire bersagli in rapido movimento. Ecco cosa puoi fare con i controlli touch in Hot Slice:</p>
+    <ul>
+      <li><strong>Tocco singolo:</strong> Taglia istantaneamente un singolo frutto nel punto di contatto.</li>
+      <li><strong>Gesto di scorrimento:</strong> Uno scorrimento rapido sullo schermo pu&ograve; tagliare pi&ugrave; frutti in un unico movimento — molto efficiente quando appaiono pi&ugrave; bersagli contemporaneamente.</li>
+      <li><strong>Multi-touch:</strong> Gli scorrimenti a due dita e il multi-touch sono supportati, consentendo due percorsi di taglio simultanei per la massima copertura.</li>
+    </ul>
+    <p>Il gioco mobile pu&ograve; sembrare pi&ugrave; naturale del desktop per Hot Slice, perch&eacute; il gesto di scorrimento rispecchia da vicino l&#39;azione fisica del taglio. Molti giocatori trovano che i loro tempi di reazione migliorano su mobile una volta che si adattano ai controlli touch dopo alcune sessioni.</p>
+
+    <div class="article-img-block">
+      <img src="/img/screenshots/mobile-gameplay.webp" alt="Gameplay di Hot Slice su iPhone — controlli swipe" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" style="display:block;">
+      <div class="article-img-placeholder" style="display:none;">
+        <div class="article-img-placeholder-icon">&#128241;</div>
+        <div class="article-img-placeholder-label">mobile-gameplay.webp</div>
+      </div>
+      <p class="article-img-caption">Hot Slice in esecuzione in Safari su iPhone — scorri per tagliare i frutti che volano sullo schermo</p>
+    </div>
+
+    <h2>Modalit&#224; Orizzontale vs Verticale</h2>
+    <p>Per la migliore esperienza di Hot Slice su mobile, gioca in orientamento orizzontale. In modalit&agrave; orizzontale, l&#39;intera arena &egrave; visibile e il pannello della classifica non si sovrappone all&#39;area di azione. Il campo visivo pi&ugrave; ampio ti d&agrave; pi&ugrave; tempo per reagire ai frutti in arrivo dai bordi dello schermo.</p>
+    <p>La modalit&agrave; verticale funziona ma l&#39;arena appare compressa verticalmente, rendendo pi&ugrave; difficile reagire rapidamente ai frutti che appaiono agli estremi superiore e inferiore del campo di gioco. Se hai solo una mano libera, la modalit&agrave; verticale &egrave; un&#39;opzione praticabile, ma prevedi prestazioni leggermente ridotte finch&eacute; non ti adatti. La maggior parte dei telefoni moderni si blocca automaticamente in orizzontale quando il gioco &egrave; in modalit&agrave; a schermo intero.</p>
+
+    <h2>Prestazioni su Diversi Dispositivi</h2>
+    <p>Hot Slice &egrave; leggero e funziona senza problemi sui telefoni di fascia media dal 2019 o pi&ugrave; recenti. Il gioco utilizza WebGL per il rendering, che la maggior parte dei browser mobili moderni supporta nativamente. Ecco alcuni suggerimenti per garantire prestazioni fluide su diverse categorie di dispositivi:</p>
+    <ul>
+      <li><strong>Telefoni di fascia alta (iPhone 13+, Samsung S21+):</strong> Il gioco funziona alla frequenza fotogrammi massima senza alcuna regolazione necessaria.</li>
+      <li><strong>Telefoni di fascia media (2020–2023):</strong> Le prestazioni sono fluide. Chiudi le app in background per liberare RAM prima di iniziare una sessione.</li>
+      <li><strong>Dispositivi pi&#249; vecchi (pre-2019):</strong> Sono possibili frequenze fotogrammi pi&#249; basse. Usa Chrome con l&#39;accelerazione hardware abilitata per i migliori risultati. Evita di giocare con un segnale dati mobile debole.</li>
+    </ul>
+    <p>Se si verificano rallentamenti o scatti, prova a passare a una connessione Wi-Fi 5 GHz invece dei dati mobile. La latenza di rete pu&ograve; occasionalmente causare brevi blocchi quando il gioco sincronizza i dati della classifica con il server.</p>
+
+    <h2>Browser vs App Dedicata del Casin&#242;</h2>
+    <p>La maggior parte dei casin&#242; online non ha app native dedicate per i giochi di slot, ma i loro siti web mobili offrono la stessa esperienza di Hot Slice tramite un browser mobile ben ottimizzato. Ci sono alcune differenze che vale la pena capire:</p>
+    <ul>
+      <li><strong>Browser mobile:</strong> Non richiede download, utilizza sempre la versione pi&ugrave; recente del gioco, funziona su tutte le piattaforme casino. La scelta standard per la maggior parte dei giocatori.</li>
+      <li><strong>App casino nativa (dove disponibile):</strong> Pu&ograve; offrire tempi di caricamento pi&ugrave; rapidi, prestazioni pi&ugrave; fluide tramite ottimizzazione nativa e notifiche push per gli avvisi bonus. Alcuni casin&#242; includono anche promozioni esclusive in-app.</li>
+    </ul>
+    <p>Se il tuo casin&#242; ha un&#39;app nativa disponibile nell&#39;App Store o su Google Play, vale la pena scaricarla per vedere se le prestazioni migliorano per il tuo dispositivo specifico. Altrimenti, un browser mobile ben ottimizzato &egrave; del tutto sufficiente per giocare a Hot Slice al massimo livello.</p>
+
+    <h2>Bonus Mobile</h2>
+    <p>Alcuni casin&#242; offrono bonus mobile esclusivi per i giocatori che depositano tramite il loro sito mobile o app. Queste promozioni sono progettate per incoraggiare l&#39;adozione del mobile e possono fornire un valore extra genuino per i giocatori di Hot Slice. I tipi comuni di offerte specifiche per mobile includono:</p>
+    <ul>
+      <li><strong>Bonus di corrispondenza al deposito mobile:</strong> Una percentuale di corrispondenza sul tuo deposito quando effettuato tramite il sito mobile o app.</li>
+      <li><strong>Giri gratuiti o credito bonus mobile:</strong> Un importo definito di credito bonus accreditato specificamente per il gioco mobile sui giochi Evoplay idonei.</li>
+      <li><strong>Offerte tramite notifiche push:</strong> Codici bonus esclusivi inviati tramite notifica push agli utenti dell&#39;app casino che non vengono pubblicizzati altrove.</li>
+    </ul>
+    <p>Controlla regolarmente la sezione promozioni del tuo casin&#242; per offerte specifiche per mobile. Iscriviti alle notifiche via email e push dal tuo casin&#242; per assicurarti di non perdere eventi bonus mobile a tempo limitato. I bonus esclusivi per mobile sono uno dei modi migliori per estendere le sessioni di Hot Slice senza costi aggiuntivi. Combinali con le offerte dei casin&#242; sulla nostra <a href="/it/real-money/">pagina di gioco per soldi veri</a> per il massimo valore.</p>
+
+  </div>
+</div>
+
+<!-- CASINO BLOCK -->
+<div class="extra-sections">
+  <div class="extra-inner">
+    <div class="casino-section-heading"><span class="sh-icon">&#9881;</span> Migliori Casinò per Giocare a Hot Slice</div>
+    <div class="casino-list">
+      <!-- #1 Dragonslots Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0d0d1a;"><img src="/img/casinos/dragonslots.webp" alt="Dragonslots Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonslots Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 225% up to €2,250 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.8</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonslots/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/dragonslots" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #2 Robocat Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0a0f1e;"><img src="/img/casinos/robocat.webp" alt="Robocat Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Robocat Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.5</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/robocat/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/robocat" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #3 Slotrave Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0e0e14;"><img src="/img/casinos/slotrave.webp" alt="Slotrave Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Slotrave Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 100 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.2</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/slotrave/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/slotrave" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #4 SGCasino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#111;"><img src="/img/casinos/sgcasino.webp" alt="SGCasino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">SGCasino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.0</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/sgcasino/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/sgcasino" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #5 Legiano Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0a0f0a;"><img src="/img/casinos/legiano.webp" alt="Legiano Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Legiano Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.8</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/legiano/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/legiano" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #6 Dragonia Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#1a0a0a;"><img src="/img/casinos/dragonia.webp" alt="Dragonia Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonia Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.7</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonia/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/dragonia" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #7 Granawin Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0f1a0a;"><img src="/img/casinos/granawin.webp" alt="Granawin Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Granawin Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 150% up to €220 + 170 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.5</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/granawin/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/granawin" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+    </div>
+    <button class="btn-show-more-casinos" onclick="document.querySelectorAll('.casino-extra').forEach(el=>el.style.display='flex');this.style.display='none';">&#8964; Mostra tutti i 7 casinò</button>
+    <div class="casino-tc">18+ | Solo per nuovi giocatori | Si applicano T&amp;C | Gioca responsabilmente | <a href="/self-exclusion/">BeGambleAware</a></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="article-wrap">
+  <div class="article-inner">
+    <div class="faq-block" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Domande Frequenti</h2>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Devo scaricare un&#39;app per giocare a Hot Slice su mobile?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">No. Hot Slice funziona direttamente nel tuo browser mobile utilizzando la tecnologia HTML5. Apri il sito web del tuo casin&#242; in Safari (iOS) o Chrome/Firefox (Android), accedi, trova il gioco e gioca — nessun download, nessuna installazione, nessun plugin. La versione browser &egrave; identica alla versione desktop in termini di gameplay e funzionalit&#224;.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Hot Slice &egrave; disponibile su iPhone (iOS)?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">S&#236;. Hot Slice funziona su tutti gli iPhone con iOS 14 o versioni successive tramite Safari. Funziona anche in Chrome per iOS. Il gioco &egrave; completamente touch-responsive e la meccanica di scorrimento per tagliare funziona senza problemi su tutti i moderni modelli di iPhone e iPad. Per le migliori prestazioni su iPhone, gioca in modalit&#224; orizzontale con una connessione Wi-Fi stabile.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">La modalit&#224; verticale funziona su mobile?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">S&#236;, la modalit&#224; verticale funziona ma non &egrave; ideale. L&#39;arena di gioco appare compressa verticalmente, il che riduce il tempo che hai per reagire ai frutti che entrano dall&#39;alto e dal basso. L&#39;orientamento orizzontale ti d&#224; l&#39;intera larghezza dell&#39;arena ed &egrave; la modalit&#224; consigliata per il gioco competitivo. La maggior parte dei telefoni si blocca automaticamente in orizzontale quando il gioco entra in modalit&#224; a schermo intero.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Quali gesti touch supporta Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice supporta tre interazioni touch: tocco singolo (taglia un frutto nel punto di contatto), gesto di scorrimento (taglia pi&#249; frutti in un unico movimento se sono allineati lungo il percorso di scorrimento) e multi-touch (due percorsi di scorrimento simultanei per la massima copertura quando i frutti sono distribuiti sullo schermo). I gesti di scorrimento sono la tecnica pi&#249; efficiente una volta sviluppata l&#39;accuratezza.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Ci sono bonus mobile esclusivi per Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Alcuni casin&#242; offrono bonus di corrispondenza al deposito mobile, credito bonus mobile o codici bonus esclusivi tramite notifica push per i giocatori che depositano tramite il loro sito mobile o app. Queste promozioni variano per casin&#242; e cambiano frequentemente. Controlla la pagina delle promozioni del tuo casin&#242; autorizzato e abilita le notifiche push per non perdere eventi bonus mobile esclusivi. I nostri casin&#242; raccomandati qui sopra hanno tutti siti ottimizzati per mobile con programmi bonus attivi.</span></div>
+      </div>
+
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Cosa devo fare se Hot Slice rallenta sul mio telefono?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Prima di tutto, chiudi tutte le altre app in esecuzione in background per liberare RAM. In secondo luogo, passa a una connessione Wi-Fi 5 GHz invece dei dati mobile — la latenza di rete &egrave; la causa pi&#249; comune di brevi blocchi durante la sincronizzazione della classifica. In terzo luogo, prova a svuotare la cache del browser. Se sei su un dispositivo pi&#249; vecchio (pre-2019), abilita l&#39;accelerazione hardware nelle impostazioni di Chrome. Sui dispositivi molto vecchi, considera di usare un browser pi&#249; leggero come Samsung Internet che gestisce WebGL in modo pi&#249; efficiente.</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/it/" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Seguici</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Seguici su Facebook" aria-label="Seguici su Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Seguici su X (Twitter)" aria-label="Seguici su X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/twitter-x.webp" alt="X" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Seguici su Instagram" aria-label="Seguici su Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Iscriviti su YouTube" aria-label="Iscriviti su YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Seguici su LinkedIn" aria-label="Seguici su LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Pagine Principali</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; PayPal</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; Rapid Transfer</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; Revolut</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; con blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; con craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Pagine di Tendenza</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; Pay by Phone</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; Mastercard</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; POLi</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casin&#242; Neosurf</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="/it/" class="footer-link"><span class="fl-icon">&#127918;</span>Gioca in Demo</a>
+        <a href="/it/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Gioca per Soldi Veri</a>
+        <a href="/it/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Bonus Casin&#242;</a>
+        <a href="/it/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Giri Gratuiti</a>
+        <a href="/it/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>Come Giocare</a>
+        <a href="/it/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategia e Consigli</a>
+        <a href="/it/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP e Varianza</a>
+        <a href="/it/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Versione Mobile</a>
+        <a href="/it/" class="footer-link"><span class="fl-icon">&#11088;</span>Recensione Completa</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Chi Siamo</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>Chi siamo</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>Storia</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Contatti</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Termini di utilizzo</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Mappa del sito</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Autore</a>
+      </div>
+    </div>
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Corsi formativi professionali gratuiti per i dipendenti dei casin&#242; online, incentrati sulle migliori pratiche del settore, sul miglioramento dell&#39;esperienza del giocatore e su un approccio equo al gioco.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Iniziativa Globale di Autoesclusione</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Self-exclusion<br><span style="font-size:13px;color:#aaa;">initiative</span></span></div>
+        <p class="fp-desc">Un&#39;iniziativa lanciata con l&#39;obiettivo di creare un sistema globale di autoesclusione, che consenta ai giocatori vulnerabili di bloccare il proprio accesso a tutte le opportunit&#224; di gioco online.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">Una piattaforma creata per mostrare tutti i nostri sforzi volti a realizzare la visione di un settore del gioco online pi&#249; sicuro e trasparente.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;"><div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div><div style="color:#e6a800;font-size:14px;">AWARDS</div></div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">Un progetto ambizioso il cui obiettivo &egrave; celebrare le aziende pi&ugrave; grandi e responsabili nel settore iGaming e riconoscere i loro meriti.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Iscriviti alla nostra newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Inserisci la tua e-mail">
+        <button class="btn-newsletter">Iscriviti</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> Ho almeno 18 anni e sono legalmente autorizzato a giocare in un casin&#242;
+      </label>
+    </div>
+    <div class="footer-responsible">
+      <div class="resp-label">Gioca in modo responsabile e moderato.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="/img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Created by godzilla-network.com &nbsp;|&nbsp; Mari &egrave; una fonte indipendente di informazioni sui casin&#242; online e sui giochi da casin&#242; online, non controllata da alcun operatore di gioco. Tutte le nostre recensioni e guide sono create onestamente, secondo le migliori conoscenze e il giudizio dei membri del nostro team di esperti indipendenti; tuttavia, sono intese solo a scopo informativo e non devono essere interpretate come, n&#233; ci si deve fare affidamento come, consulenza legale. Dovresti sempre assicurarti di soddisfare tutti i requisiti normativi prima di giocare in qualsiasi casin&#242; selezionato. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in altre lingue</div>
+        <div class="footer-lang-select"><span>&#127760; Seleziona lingua</span><span>&#8964;</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

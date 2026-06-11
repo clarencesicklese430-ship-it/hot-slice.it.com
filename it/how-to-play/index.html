@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/img/hot-slice-icon.webp" type="image/webp">
+  <meta name="robots" content="index, follow">
+  <title>Come Giocare a Hot Slice — Guida Completa | Mari</title>
+  <meta name="description" content="Guida completa su come giocare a Hot Slice di Evoplay. Impara la meccanica di taglio della frutta, i simboli, i jackpot, le impostazioni delle puntate e come iniziare presso un casinò con licenza.">
+  <link rel="stylesheet" href="/shared.css">
+  <style>
+    .extra-sections { background: #1b2128; padding: 24px 0 30px; }
+    .extra-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .hero-section { background: #1b2128; padding: 36px 0 40px; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .hero-top { margin-bottom: 32px; }
+    .hero-top h1 { color: #fff; font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; }
+    .hero-meta { font-size: 12px; color: #888; margin-bottom: 18px; }
+    .hero-meta strong { color: #aaa; }
+    .hero-meta a { color: #5aaa00; }
+    .hero-intro { font-size: 15px; color: #bbb; line-height: 1.75; margin-bottom: 24px; max-width: 820px; }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-btn { display: flex; align-items: center; gap: 14px; padding: 14px 24px; text-decoration: none; min-width: 240px; border: 1px solid rgba(255,255,255,0.5); transition: background 0.25s; }
+    .hero-btn-primary { background: linear-gradient(90deg, #2a9e1a 0%, #5fd94a 100%); box-shadow: 0 0 0 2px rgba(90,220,60,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-primary:hover { background: linear-gradient(90deg, #5fd94a 0%, #2a9e1a 100%); }
+    .hero-btn-secondary { background: linear-gradient(90deg, #5a1ec0 0%, #9c5cf0 100%); box-shadow: 0 0 0 2px rgba(140,80,240,0.45), inset 0 1px 0 rgba(255,255,255,0.15); }
+    .hero-btn-secondary:hover { background: linear-gradient(90deg, #9c5cf0 0%, #5a1ec0 100%); }
+    .hero-btn-icon { font-size: 22px; flex-shrink: 0; color: #fff; }
+    .hero-btn-text { display: flex; flex-direction: column; }
+    .hero-btn-title { font-size: 15px; font-weight: 900; color: #fff; line-height: 1.2; }
+    .hero-btn-sub { font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 2px; }
+    .facts-grid-wrap { border-top: 1px solid rgba(255,255,255,0.25); padding-top: 24px; }
+    .facts-grid-label { font-size: 10px; font-weight: 900; color: #5aaa00; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 14px; }
+    .facts-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px; background: rgba(255,255,255,0.25); border: 1px solid rgba(255,255,255,0.25); }
+    .facts-cell { background: #212b3a; padding: 16px 18px; }
+    .facts-cell-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 6px; }
+    .facts-cell-value { font-size: 15px; font-weight: 700; color: #fff; }
+    .facts-badge { display: inline-block; background: #5aaa00; color: #fff; font-size: 11px; font-weight: bold; padding: 2px 8px; }
+    .facts-badge-warn { background: #c07800; }
+    .steps-section { background: #1b2128; padding: 32px 0 40px; }
+    .steps-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+    .steps-heading { font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+    .steps-sub { font-size: 14px; color: #888; margin-bottom: 24px; }
+    .steps-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .step-card { background: #212b3a; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; }
+    .step-img { width: 100%; height: 160px; background: #12181e; overflow: hidden; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .step-img-icon { font-size: 36px; }
+    .step-body { padding: 14px 14px 16px; }
+    .step-num { width: 26px; height: 26px; background: #5aaa00; color: #fff; font-size: 12px; font-weight: 900; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+    .step-title { font-size: 13px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+    .step-desc { font-size: 12px; color: #888; line-height: 1.55; }
+    .symbols-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; }
+    .symbols-table th { background: #1b2128; color: #fff; font-size: 12px; font-weight: 700; padding: 10px 14px; text-align: left; }
+    .symbols-table td { padding: 10px 14px; font-size: 14px; border-bottom: 1px solid #eee; }
+    .symbols-table tr:last-child td { border-bottom: none; }
+    .symbols-table tr:nth-child(even) td { background: #f8f8f8; }
+    .sym-mult { font-weight: 800; color: #1b7a00; }
+    .sym-icon { font-size: 18px; }
+    .jackpot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 16px 0 24px; }
+    .jackpot-card { border: 2px solid #ddd; padding: 20px 16px; text-align: center; }
+    .jackpot-label { font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px; }
+    .jackpot-mult { font-size: 32px; font-weight: 900; margin-bottom: 4px; line-height: 1; }
+    .jackpot-example { font-size: 12px; color: #888; }
+    .jk-grand { border-color: #c07800; }
+    .jk-grand .jackpot-label { color: #c07800; }
+    .jk-grand .jackpot-mult { color: #c07800; }
+    .jk-major { border-color: #aaa; }
+    .jk-major .jackpot-label { color: #777; }
+    .jk-major .jackpot-mult { color: #555; }
+    .jk-minor { border-color: #5aaa00; }
+    .jk-minor .jackpot-label { color: #5aaa00; }
+    .jk-minor .jackpot-mult { color: #5aaa00; }
+    .casino-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .casino-card { background: #fff; display: flex; align-items: center; overflow: hidden; border: 1px solid #ddd; }
+    .casino-logo-box { width: 138px; min-width: 138px; height: 90px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 13px; font-weight: 900; letter-spacing: 1px; text-transform: uppercase; padding: 10px; text-align: center; }
+    .casino-body { flex: 1; padding: 12px 16px; min-width: 0; }
+    .casino-name-row { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+    .casino-name-text { font-size: 16px; font-weight: bold; color: #1b2128; }
+    .casino-verified { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; background: #5aaa00; border-radius: 50% !important; color: #fff; font-size: 9px; font-weight: bold; flex-shrink: 0; }
+    .casino-tags { display: flex; flex-wrap: wrap; gap: 6px 14px; }
+    .casino-tag { font-size: 11px; color: #5aaa00; font-weight: bold; letter-spacing: 0.5px; display: flex; align-items: center; gap: 3px; }
+    .casino-tag.show-all { text-decoration: underline; cursor: pointer; }
+    .casino-meta { text-align: center; padding: 0 20px; flex-shrink: 0; }
+    .safety-label { font-size: 10px; color: #777; margin-bottom: 4px; }
+    .safety-badge { background: #5aaa00; color: #fff; font-size: 22px; font-weight: 900; width: 52px; height: 38px; display: flex; align-items: center; justify-content: center; margin: 0 auto 4px; }
+    .safety-level { font-size: 11px; color: #333; font-weight: bold; }
+    .casino-actions { display: flex; gap: 8px; padding: 0 16px; flex-shrink: 0; }
+    .btn-quick-info { background: transparent; border: 1px solid #ccc; color: #333; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
+    .btn-quick-info:hover { background: #f5f5f5; }
+    .btn-play-casino { background: #5aaa00; border: none; color: #fff; padding: 10px 18px; font-size: 13px; font-weight: bold; cursor: pointer; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; text-decoration: none; }
+    .btn-play-casino:hover { background: #4a9400; }
+    .btn-show-more-casinos { display: block; width: 100%; max-width: 340px; margin: 0 auto; background: #5aaa00; color: #fff; border: none; padding: 13px 24px; font-size: 14px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.15s; }
+    .btn-show-more-casinos:hover { background: #4a9400; }
+    .casino-section-heading { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 16px; }
+    .casino-section-heading .sh-icon { color: #5aaa00; }
+    .casino-tc { font-size: 10px; color: #888; margin-top: 8px; text-align: center; }
+    .casino-tc a { color: #5aaa00; }
+    @media (max-width: 1000px) {
+      .facts-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .facts-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
+      .steps-grid::-webkit-scrollbar { display: none; }
+      .step-card { flex: 0 0 72%; scroll-snap-align: start; }
+      .hero-top h1 { font-size: 24px; }
+      .jackpot-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <link rel="canonical" href="https://hot-slice.it.com/it/how-to-play/">
+  <link rel="alternate" hreflang="en" href="https://hot-slice.it.com/how-to-play/">
+  <link rel="alternate" hreflang="de" href="https://hot-slice.it.com/de/how-to-play/">
+  <link rel="alternate" hreflang="it" href="https://hot-slice.it.com/it/how-to-play/">
+  <link rel="alternate" hreflang="es" href="https://hot-slice.it.com/es/how-to-play/">
+  <link rel="alternate" hreflang="x-default" href="https://hot-slice.it.com/how-to-play/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hot-slice.it.com/it/how-to-play/">
+  <meta property="og:title" content="Come Giocare a Hot Slice — Guida Completa | Mari">
+  <meta property="og:description" content="Guida completa su come giocare a Hot Slice di Evoplay. Impara la meccanica di taglio della frutta, i simboli, i jackpot, le impostazioni delle puntate e come iniziare presso un casinò con licenza.">
+  <meta property="og:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+  <meta property="og:site_name" content="Mari">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Come Giocare a Hot Slice — Guida Completa | Mari">
+  <meta name="twitter:description" content="Guida completa su come giocare a Hot Slice di Evoplay. Impara la meccanica di taglio della frutta, i simboli, i jackpot, le impostazioni delle puntate e come iniziare presso un casinò con licenza.">
+  <meta name="twitter:image" content="https://hot-slice.it.com/img/og-hot-slice.webp">
+</head>
+<body style="background:#161d24;">
+
+<div class="sticky-top">
+<header class="header">
+<div class="header-inner">
+  <a href="/it/" class="logo">
+    <div class="logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+    <div class="logo-text"><span class="brand-name">Mari</span></div>
+  </a>
+  <div class="search-bar">
+    <input type="text" placeholder="Cerca casinò, giochi e altro">
+    <button>&#128269;</button>
+  </div>
+  <div class="header-right">
+    <button class="lang-btn">IT &nbsp;&#127470;&#127481;</button>
+    <button class="btn-login">Accedi</button>
+    <button class="btn-signup">Registrati</button>
+  </div>
+</div>
+</header>
+<nav class="main-nav">
+<div class="nav-inner">
+  <a href="/it/"><span class="nav-icon">&#127968;</span> Home</a>
+  <a href="/casinos/"><span class="nav-icon">&#127963;</span> Casinò Online</a>
+  <a href="/it/" class="active"><span class="nav-icon">&#127918;</span> Giochi</a>
+  <a href="/guide/"><span class="nav-icon">&#128214;</span> Guida</a>
+  <a href="/complaints/"><span class="nav-icon">&#9888;</span> Reclami</a>
+  <a href="/forum/"><span class="nav-icon">&#128172;</span> Forum</a>
+  <a href="/reviews/"><span class="nav-icon">&#11088;</span> Recensioni</a>
+  <a href="/tournaments/"><span class="nav-icon">&#127942;</span> Tornei</a>
+  <a href="/news/"><span class="nav-icon">&#128240;</span> News</a>
+</div>
+</nav>
+</div>
+
+<!-- HERO -->
+<div class="hero-section">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <div class="breadcrumb" style="color:#888;margin-bottom:14px;"><a href="/it/" style="color:#5aaa00;">Mari</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/it/" style="color:#5aaa00;">Giochi</a><span style="color:#555;margin:0 5px;">&#8250;</span><a href="/it/" style="color:#5aaa00;">Hot Slice</a><span style="color:#555;margin:0 5px;">&#8250;</span><span style="color:#777;">Come Giocare</span></div>
+      <h1>Come Giocare a Hot Slice — Guida Completa 2026</h1>
+      <p class="hero-meta"><strong>Ultimo aggiornamento:</strong> giugno 2026 &nbsp;|&nbsp; <strong>A cura di:</strong> <a href="/author/juraj/">Juraj</a>, Specialista in Giochi da Casinò</p>
+      <p class="hero-intro">Hot Slice di Evoplay non è una slot machine tradizionale né un crash game — è un gioco arcade di taglio della frutta. Pensa a Fruit Ninja: i simboli volano verso l'alto sullo schermo e tu tocchi o scorri per tagliarli. Ogni frutto si apre per rivelare un moltiplicatore in denaro applicato alla tua puntata. Non ci sono rulli rotanti, nessuna linea di pagamento e nessun pulsante di giro. Solo riflessi veloci, intensità crescente e tre livelli di jackpot in cima a tutto.</p>
+      <div class="hero-cta-row">
+        <a href="/it/" class="hero-btn hero-btn-primary">
+          <span class="hero-btn-icon">&#9654;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Gioca Gratis</span>
+            <span class="hero-btn-sub">Senza registrazione / Senza limiti</span>
+          </span>
+        </a>
+        <a href="/go/" class="hero-btn hero-btn-secondary" rel="nofollow noopener noreferrer" target="_blank">
+          <span class="hero-btn-icon">&#127920;</span>
+          <span class="hero-btn-text">
+            <span class="hero-btn-title">Gioca per Soldi Veri</span>
+            <span class="hero-btn-sub">Richiedi il tuo bonus di benvenuto</span>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="facts-grid-wrap">
+      <div class="facts-grid-label">&#9881; Dati Rapidi — Hot Slice</div>
+      <div class="facts-grid">
+        <div class="facts-cell">
+          <div class="facts-cell-label">Provider</div>
+          <div class="facts-cell-value">Evoplay</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">RTP</div>
+          <div class="facts-cell-value">96.05%</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Volatilità</div>
+          <div class="facts-cell-value"><span class="facts-badge facts-badge-warn">Alta</span></div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Puntata Min.</div>
+          <div class="facts-cell-value">$0.10</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Vincita Max.</div>
+          <div class="facts-cell-value">3.000x</div>
+        </div>
+        <div class="facts-cell">
+          <div class="facts-cell-label">Jackpot</div>
+          <div class="facts-cell-value"><span class="facts-badge">3 livelli</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- STEPS -->
+<div class="steps-section">
+  <div class="steps-inner">
+    <div class="steps-heading">Come Iniziare a Giocare in 5 Passi</div>
+    <div class="steps-sub">Per giocare a soldi veri presso un casinò con licenza — segui questi passi dalla registrazione al primo taglio.</div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-img">
+          <img src="/img/screenshots/reg-step-1.webp" alt="Passo 1 — Scegli un casinò con licenza per Hot Slice" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="step-img-icon" style="display:none;">&#127963;</div>
+        </div>
+        <div class="step-body">
+          <div class="step-num">1</div>
+          <div class="step-title">Scegli un Casinò</div>
+          <div class="step-desc">Scegli un casinò con licenza dal nostro elenco sottostante che offre giochi Evoplay e ha Hot Slice nel suo portfolio.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-img">
+          <img src="/img/screenshots/reg-step-2.webp" alt="Passo 2 — Registra il tuo conto casinò" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="step-img-icon" style="display:none;">&#128101;</div>
+        </div>
+        <div class="step-body">
+          <div class="step-num">2</div>
+          <div class="step-title">Registra un Conto</div>
+          <div class="step-desc">Iscriviti con la tua email, crea una password e verifica la tua identità. Il processo richiede meno di 3 minuti nella maggior parte dei casinò.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-img">
+          <img src="/img/screenshots/reg-step-3.webp" alt="Passo 3 — Deposita e richiedi il bonus di benvenuto" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="step-img-icon" style="display:none;">&#128176;</div>
+        </div>
+        <div class="step-body">
+          <div class="step-num">3</div>
+          <div class="step-title">Deposita e Richiedi il Bonus</div>
+          <div class="step-desc">Effettua il primo deposito e attiva il bonus di benvenuto — una percentuale di corrispondenza più giri gratuiti. Conferma che Evoplay sia idoneo.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-img">
+          <img src="/img/screenshots/reg-step-4.webp" alt="Passo 4 — Trova Hot Slice nella ricerca giochi" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="step-img-icon" style="display:none;">&#128269;</div>
+        </div>
+        <div class="step-body">
+          <div class="step-num">4</div>
+          <div class="step-title">Trova Hot Slice</div>
+          <div class="step-desc">Vai nella lobby del casinò, apri la barra di ricerca, digita "Hot Slice" e avvia il gioco. Si carica istantaneamente nel browser.</div>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-img">
+          <img src="/img/screenshots/reg-step-5.webp" alt="Passo 5 — Imposta la puntata e inizia a tagliare la frutta" onerror="this.style.display='none';this.nextSibling.style.display='flex'">
+          <div class="step-img-icon" style="display:none;">&#127819;</div>
+        </div>
+        <div class="step-body">
+          <div class="step-num">5</div>
+          <div class="step-title">Imposta la Puntata e Taglia</div>
+          <div class="step-desc">Imposta l'importo della puntata usando il pulsante PUNTATA, poi tocca o scorri per tagliare la frutta mentre vola sullo schermo. Ogni taglio viene pagato immediatamente.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MECHANICS ARTICLE -->
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <h2>Cosa Rende Hot Slice Diverso dalle Altre Slot?</h2>
+    <p>La maggior parte delle slot da casinò ti chiede di premere un pulsante e guardare i rulli girare. Hot Slice ti chiede di reagire. I simboli di frutta appaiono in fondo allo schermo e volano verso l'alto — uva, limoni, arance, angurie, ciliegie, prugne e simboli speciali del casinò. Il tuo compito è toccare o scorrere su di essi prima che volino via dalla parte superiore dello schermo. Ogni frutto che tagli si apre e rivela immediatamente un moltiplicatore in denaro applicato alla tua puntata corrente.</p>
+    <p>Questo è lo stesso concetto di base di Fruit Ninja, il gioco mobile, ma con poste in denaro reale. Il gioco è classificato da Evoplay come "gioco istantaneo" piuttosto che come slot tradizionale, il che riflette la distinzione chiave: non c'è un pulsante di giro RNG, nessuna struttura a linee di pagamento e nessuna attesa che i rulli si fermino. L'esito di ogni round è determinato da quali frutti appaiono e dai moltiplicatori che portano — ma la tua velocità e precisione determinano se li raccogli effettivamente prima che scappino.</p>
+
+    <h2>Come Funziona la Meccanica di Taglio</h2>
+    <p>All'inizio di ogni round, imposti la tua puntata. I frutti iniziano quindi ad apparire dal basso dello schermo e si muovono verso l'alto. Interagisci con il gioco in uno dei due modi a seconda del dispositivo:</p>
+    <ul>
+      <li><strong>Mobile (touch screen):</strong> Scorri il dito sui frutti per tagliarli. Un singolo gesto di scorrimento può tagliare più frutti in un solo passaggio se sono allineati.</li>
+      <li><strong>Desktop (mouse/trackpad):</strong> Clicca direttamente su ogni frutto per tagliarlo. Puoi anche cliccare e trascinare su più frutti.</li>
+    </ul>
+    <p>Ogni frutto tagliato con successo rivela immediatamente il suo moltiplicatore e il credito corrispondente viene aggiunto al tuo saldo. I frutti che raggiungono la cima dello schermo senza essere tagliati vengono persi — non pagano nulla. Man mano che il round avanza, la velocità e il volume dei frutti aumentano, rendendo più difficile catturare ogni simbolo. La prioritizzazione dei frutti ad alto valore è l'abilità chiave.</p>
+    <p>I round sono brevi — tipicamente 15–30 secondi — il che rende il gioco estremamente rapido. Non c'è "attesa" tra gli esiti come avviene con l'animazione di giro di una slot machine. L'azione è continua dal momento in cui inizi.</p>
+
+    <h2>Simboli di Frutta e Moltiplicatori</h2>
+    <p>Ogni tipo di frutta porta un moltiplicatore fisso applicato alla tua puntata corrente quando viene tagliata. La gerarchia dal valore più alto al più basso:</p>
+    <table class="symbols-table">
+      <thead>
+        <tr><th>Simbolo</th><th>Moltiplicatore</th><th>Esempio di pagamento a €1 di puntata</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="sym-icon">&#127815;</span> Uva Dorata</td><td class="sym-mult">30x</td><td>€30.00</td></tr>
+        <tr><td><span class="sym-icon">&#127817;</span> Anguria</td><td class="sym-mult">15x</td><td>€15.00</td></tr>
+        <tr><td><span class="sym-icon">&#127818;</span> Arancia</td><td class="sym-mult">8x</td><td>€8.00</td></tr>
+        <tr><td><span class="sym-icon">&#127826;</span> Ciliegia</td><td class="sym-mult">5x</td><td>€5.00</td></tr>
+        <tr><td><span class="sym-icon">&#127819;</span> Limone</td><td class="sym-mult">3x</td><td>€3.00</td></tr>
+        <tr><td><span class="sym-icon">&#127827;</span> Fragola</td><td class="sym-mult">1.5x</td><td>€1.50</td></tr>
+      </tbody>
+    </table>
+    <p>Tutti i moltiplicatori vengono applicati alla tua puntata attiva al momento del taglio. Se stai puntando €5 e tagli un'Uva Dorata, raccogli €150 immediatamente. Quando più frutti appaiono contemporaneamente, punta sempre prima al moltiplicatore più alto — una singola Uva Dorata supera in pagamento cinque fragole.</p>
+
+    <h2>Il Simbolo Dorato — Funzione Speciale</h2>
+    <p>Occasionalmente sullo schermo appare una versione Dorata di un simbolo — visivamente distinta con un bagliore dorato. Il Simbolo Dorato è più prezioso della sua controparte standard e porta una ricompensa garantita, ma non si apre facilmente. A differenza dei frutti normali che si aprono in un singolo tocco, il Simbolo Dorato richiede più tocchi o scorrimenti per aprirsi. Il numero esatto necessario viene randomizzato ogni volta.</p>
+    <p>Questo crea un momento ad alta pressione: devi continuare a toccare ripetutamente il Simbolo Dorato mentre altri frutti continuano a passare. La decisione di concentrarsi interamente sul Simbolo Dorato o dividere l'attenzione tra esso e altri frutti ad alto valore che passano contemporaneamente è la decisione più impegnativa e gratificante che il gioco presenta. Aprire con successo un Simbolo Dorato prima che scappi offre un pagamento notevolmente più grande rispetto a qualsiasi frutto standard.</p>
+
+    <h2>Sistema di Jackpot</h2>
+    <p>Hot Slice presenta un sistema di jackpot a tre livelli. I jackpot vengono attivati in modo casuale durante il gioco — non c'è una combinazione specifica o un simbolo che devi ottenere. Sono indipendenti da quali frutti tagli e si applicano direttamente alla tua puntata corrente:</p>
+    <div class="jackpot-grid">
+      <div class="jackpot-card jk-grand">
+        <div class="jackpot-label">&#127942; Grand Jackpot</div>
+        <div class="jackpot-mult">3.000x</div>
+        <div class="jackpot-example">€1 puntata → €3.000 &nbsp;|&nbsp; €10 puntata → €30.000</div>
+      </div>
+      <div class="jackpot-card jk-major">
+        <div class="jackpot-label">&#11088; Major Jackpot</div>
+        <div class="jackpot-mult">2.000x</div>
+        <div class="jackpot-example">€1 puntata → €2.000 &nbsp;|&nbsp; €10 puntata → €20.000</div>
+      </div>
+      <div class="jackpot-card jk-minor">
+        <div class="jackpot-label">&#127807; Minor Jackpot</div>
+        <div class="jackpot-mult">1.500x</div>
+        <div class="jackpot-example">€1 puntata → €1.500 &nbsp;|&nbsp; €10 puntata → €15.000</div>
+      </div>
+    </div>
+    <p>Poiché i jackpot sono casuali e proporzionali alla puntata, puntate più alte producono pagamenti assoluti notevolmente più grandi quando uno si attiva. Tuttavia, la dimensione della puntata non modifica la probabilità statistica di attivare un jackpot. I jackpot sono attivi solo in modalità a soldi veri — non si attivano nella versione demo gratuita.</p>
+
+    <h2>Impostazioni delle Puntate</h2>
+    <p>Usa il pulsante PUNTATA in fondo alla schermata di gioco per impostare la tua posta prima di ogni round. Hot Slice supporta un intervallo di puntate eccezionalmente ampio:</p>
+    <ul>
+      <li><strong>Puntata minima:</strong> $0.10 per round</li>
+      <li><strong>Puntata massima:</strong> $20.000 per round</li>
+    </ul>
+    <p>Per i nuovi giocatori, iniziare con $0.20–$0.50 è ragionevole. Ti permette di imparare i pattern di comparsa della frutta e di praticare la prioritizzazione degli obiettivi senza un rischio finanziario significativo. Una volta che la meccanica sembra naturale e riesci a catturare in modo affidabile Uve Dorate e Angurie, puoi adeguare la tua posta in base al budget della sessione.</p>
+
+    <h2>Controlli e Interfaccia</h2>
+    <p>L'interfaccia di Hot Slice è minimale per design — l'area di gioco è mantenuta libera per darti la massima concentrazione sui frutti in arrivo. Elementi chiave dell'interfaccia:</p>
+    <ul>
+      <li><strong>Display jackpot (in alto):</strong> Mostra i moltiplicatori attuali di GRAND, MAJOR e MINOR jackpot in tempo reale.</li>
+      <li><strong>Classifica (pannello sinistro):</strong> Classifica in tempo reale dei migliori giocatori per vincite, commutabile tra le viste Giornaliera e Mensile.</li>
+      <li><strong>Pulsante PUNTATA (in basso):</strong> Regola la tua posta prima dell'inizio del round.</li>
+      <li><strong>Display saldo (in basso):</strong> Mostra il tuo saldo conto attuale.</li>
+      <li><strong>Impostazioni (&#9776;):</strong> Controlli audio e configurazione del gioco automatico.</li>
+    </ul>
+
+    <h2>La Classifica</h2>
+    <p>Una classifica in tempo reale traccia i migliori giocatori per vincite totali, aggiornata in tempo reale durante il giorno. Ha due viste — Giornaliera (si azzera ogni 24 ore) e Mensile (classifiche cumulative nel mese di calendario). Puoi filtrare la classifica per livello minimo di puntata per confrontarti con giocatori che operano a una posta simile.</p>
+    <p>La classifica aggiunge una dimensione sociale competitiva assente nella maggior parte delle slot da casinò. Alcuni casinò organizzano ulteriori tornei di classifica con montepremi per i giocatori meglio classificati oltre ai pagamenti standard del gioco — controlla la pagina delle promozioni del tuo casinò per eventuali eventi torneo Hot Slice in corso.</p>
+
+  </div>
+</div>
+
+<!-- CASINO BLOCK -->
+<div class="extra-sections">
+  <div class="extra-inner">
+    <div class="casino-section-heading"><span class="sh-icon">&#9881;</span> Migliori Casinò per Giocare a Hot Slice</div>
+    <div class="casino-list">
+      <!-- #1 Dragonslots Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0d0d1a;"><img src="/img/casinos/dragonslots.webp" alt="Dragonslots Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonslots Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 225% up to €2,250 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.8</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonslots/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/dragonslots" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #2 Robocat Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0a0f1e;"><img src="/img/casinos/robocat.webp" alt="Robocat Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Robocat Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.5</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/robocat/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/robocat" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #3 Slotrave Casino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#0e0e14;"><img src="/img/casinos/slotrave.webp" alt="Slotrave Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Slotrave Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 100 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.2</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/slotrave/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/slotrave" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #4 SGCasino -->
+      <div class="casino-card">
+        <div class="casino-logo-box" style="background:#111;"><img src="/img/casinos/sgcasino.webp" alt="SGCasino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">SGCasino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">9.0</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/sgcasino/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/sgcasino" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #5 Legiano Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0a0f0a;"><img src="/img/casinos/legiano.webp" alt="Legiano Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Legiano Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.8</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/legiano/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/legiano" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #6 Dragonia Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#1a0a0a;"><img src="/img/casinos/dragonia.webp" alt="Dragonia Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Dragonia Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 100% up to €500 + 200 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.7</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/dragonia/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/dragonia" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+      <!-- #7 Granawin Casino -->
+      <div class="casino-card casino-extra" style="display:none;">
+        <div class="casino-logo-box" style="background:#0f1a0a;"><img src="/img/casinos/granawin.webp" alt="Granawin Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-body">
+          <div class="casino-name-row"><span class="casino-name-text">Granawin Casino</span><span class="casino-verified">&#10003;</span></div>
+          <div class="casino-tags">
+            <span class="casino-tag">&#127918; SLOT</span>
+            <span class="casino-tag">&#127922; LIVE CASINO</span>
+            <span class="casino-tag">&#127873; 150% up to €220 + 170 FS</span>
+          </div>
+        </div>
+        <div class="casino-meta"><div class="safety-label">Indice di Sicurezza</div><div class="safety-badge">8.5</div><div class="safety-level">Alto</div></div>
+        <div class="casino-actions">
+          <a href="/casinos/granawin/" class="btn-quick-info">&#8964; Più Informazioni</a>
+          <a href="/go/granawin" class="btn-play-casino" rel="nofollow noopener noreferrer">&#8594; Gioca Ora</a>
+        </div>
+      </div>
+    </div>
+    <button class="btn-show-more-casinos" onclick="document.querySelectorAll('.casino-extra').forEach(el=>el.style.display='flex');this.style.display='none';">&#8964; Mostra tutti i 7 casinò</button>
+    <div class="casino-tc">18+ | Solo per nuovi giocatori | Si applicano T&amp;C | Gioca responsabilmente | <a href="/self-exclusion/">BeGambleAware</a></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="article-wrap">
+  <div class="article-inner">
+
+    <div class="faq-block" itemscope itemtype="https://schema.org/FAQPage">
+      <h2>Domande Frequenti</h2>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Che tipo di gioco è Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice è un gioco arcade di taglio della frutta di Evoplay — non una slot machine tradizionale. Ispirato a Fruit Ninja, presenta frutti che volano sullo schermo che puoi toccare o scorrere per tagliare. Ogni frutto rivela un moltiplicatore in denaro applicato alla tua puntata. Non ci sono rulli rotanti, nessuna linea di pagamento e nessun pulsante di giro.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Come si tagliano i frutti in Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Su mobile, scorri il dito sui frutti mentre volano verso l'alto. Un singolo gesto di scorrimento può tagliare più frutti in un solo passaggio se sono allineati. Su desktop, clicca direttamente su ogni frutto o clicca e trascina su diversi. I frutti che raggiungono la cima dello schermo senza essere tagliati non pagano nulla.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Cos'è il Simbolo Dorato in Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Il Simbolo Dorato è una rara versione luminosa di un frutto che garantisce una ricompensa maggiore. A differenza dei frutti normali che si tagliano con un tocco, il Simbolo Dorato richiede più tocchi o scorrimenti per aprirsi — il numero esatto viene randomizzato. Aprirlo con successo prima che scappi offre uno dei pagamenti standard più grandi del gioco.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Quali sono i jackpot in Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice ha tre jackpot: Grand (3.000x puntata), Major (2.000x puntata) e Minor (1.500x puntata). Si attivano casualmente durante il gioco a soldi veri — non è richiesta nessuna combinazione specifica di simboli. I jackpot sono proporzionali alla tua puntata, quindi una posta di €10 con il Grand jackpot paga €30.000. Non sono attivi nella demo gratuita.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Posso giocare a Hot Slice gratis?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Sì. La demo gratuita è disponibile direttamente su questa pagina senza registrazione, senza download e senza deposito. La demo è meccanicamente identica alla versione a soldi veri — stessi frutti, stessi moltiplicatori, stessa escalation della velocità — con l'eccezione che i jackpot non sono attivi e non sono coinvolti soldi veri.</span></div>
+      </div>
+      <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+        <div class="faq-q"><span class="faq-q-badge">Q</span><span itemprop="name">Qual è l'RTP e la volatilità di Hot Slice?</span></div>
+        <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><span itemprop="text">Hot Slice ha un RTP (Return to Player) del 96.05% e alta volatilità. L'alta volatilità significa che le vincite sono meno frequenti ma più grandi quando arrivano. Il 96.05% di RTP è la media statistica a lungo termine — le singole sessioni possono variare significativamente al di sopra o al di sotto di questa cifra. Consulta la nostra <a href="/rtp/">pagina RTP e Varianza</a> per una spiegazione completa.</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <a href="/it/" class="footer-logo">
+        <div class="footer-logo-mascot"><img src="/img/mascot.webp" alt="Mari" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;"></div>
+        <div class="footer-logo-text">
+          <span class="fl-casino">casino</span>
+          <span class="fl-brand">Mari</span>
+        </div>
+      </a>
+      <div class="footer-follow">
+        <span class="footer-follow-lbl">Seguici</span>
+        <div class="social-icons">
+          <a href="/social/facebook/" class="social-icon si-fb" title="Seguici su Facebook" aria-label="Seguici su Facebook" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/facebook.png" alt="Facebook" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/twitter/" class="social-icon si-tw" title="Seguici su X (Twitter)" aria-label="Seguici su X (Twitter)" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/twitter-x.webp" alt="X" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/instagram/" class="social-icon si-ig" title="Seguici su Instagram" aria-label="Seguici su Instagram" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/instagram.png" alt="Instagram" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/youtube/" class="social-icon si-yt" title="Iscriviti su YouTube" aria-label="Iscriviti su YouTube" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/youtube.webp" alt="YouTube" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+          <a href="/social/linkedin/" class="social-icon si-li" title="Seguici su LinkedIn" aria-label="Seguici su LinkedIn" rel="nofollow noopener noreferrer" target="_blank"><img src="/img/social/linkedin.png" alt="LinkedIn" style="width:28px;height:28px;object-fit:contain;display:block;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-grid">
+      <div class="footer-links-col">
+        <div class="footer-col-title">Pagine Principali</div>
+        <a href="/paypal-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò PayPal</a>
+        <a href="/rapid-transfer-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò Rapid Transfer</a>
+        <a href="/revolut-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò Revolut</a>
+        <a href="/blackjack-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò con blackjack</a>
+        <a href="/craps-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò con craps</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Pagine di Tendenza</div>
+        <a href="/pay-by-phone-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò Pay by Phone</a>
+        <a href="/mastercard-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò Mastercard</a>
+        <a href="/poli-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò POLi</a>
+        <a href="/neosurf-casinos/" class="footer-link"><span class="fl-icon">&#9672;</span>Casinò Neosurf</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Hot Slice</div>
+        <a href="/it/" class="footer-link"><span class="fl-icon">&#127918;</span>Gioca in Demo</a>
+        <a href="/real-money/" class="footer-link"><span class="fl-icon">&#128176;</span>Gioca per Soldi Veri</a>
+        <a href="/bonus/" class="footer-link"><span class="fl-icon">&#127873;</span>Bonus Casinò</a>
+        <a href="/free-spins/" class="footer-link"><span class="fl-icon">&#127920;</span>Giri Gratuiti</a>
+        <a href="/how-to-play/" class="footer-link"><span class="fl-icon">&#128214;</span>Come Giocare</a>
+        <a href="/strategy/" class="footer-link"><span class="fl-icon">&#127919;</span>Strategia &amp; Consigli</a>
+        <a href="/rtp/" class="footer-link"><span class="fl-icon">&#8617;</span>RTP &amp; Varianza</a>
+        <a href="/mobile/" class="footer-link"><span class="fl-icon">&#128241;</span>Versione Mobile</a>
+        <a href="/it/" class="footer-link"><span class="fl-icon">&#11088;</span>Recensione Completa</a>
+      </div>
+      <div class="footer-links-col">
+        <div class="footer-col-title">Chi Siamo</div>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#127968;</span>Chi siamo</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128214;</span>Storia</a>
+        <a href="/about/" class="footer-link"><span class="fl-icon">&#128101;</span>Team</a>
+        <a href="/contact/" class="footer-link"><span class="fl-icon">&#128231;</span>Contatti</a>
+        <a href="/terms/" class="footer-link"><span class="fl-icon">&#128196;</span>Termini di utilizzo</a>
+        <a href="/sitemap/" class="footer-link"><span class="fl-icon">&#128204;</span>Mappa del sito</a>
+        <a href="/author/juraj/" class="footer-link"><span class="fl-icon">&#128100;</span>Juraj &#8212; Autore</a>
+      </div>
+    </div>
+    <div class="footer-promo-grid">
+      <a href="/academy/" class="footer-promo-block">
+        <div class="fp-label">Mari Academy</div>
+        <div class="fp-logo"><span class="fp-badge">ACADEMY</span> <span style="color:#8bc34a;">MARI</span></div>
+        <p class="fp-desc">Corsi professionali formativi gratuiti per dipendenti di casinò online, dedicati alle migliori pratiche del settore, al miglioramento dell'esperienza del giocatore e a un approccio responsabile al gioco.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/self-exclusion/" class="footer-promo-block">
+        <div class="fp-label">Iniziativa Globale di Autoesclusione</div>
+        <div class="fp-logo"><span class="fp-global-badge">GLOBAL</span> <span>Autoesclusione<br><span style="font-size:13px;color:#aaa;">iniziativa</span></span></div>
+        <p class="fp-desc">Un'iniziativa avviata con l'obiettivo di creare un sistema globale di autoesclusione che consenta ai giocatori vulnerabili di bloccare il proprio accesso a tutte le opportunità di gioco online.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/gamtegrity/" class="footer-promo-block">
+        <div class="fp-label">Gamtegrity</div>
+        <div class="fp-logo" style="font-size:18px;letter-spacing:2px;">GAMTEGRITY</div>
+        <p class="fp-desc">Una piattaforma creata per mostrare tutti i nostri sforzi volti a realizzare la visione di un settore del gioco online più sicuro e trasparente.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+      <a href="/awards/" class="footer-promo-block">
+        <div class="fp-label">Mari Awards</div>
+        <div class="fp-logo fp-awards-logo">
+          <div class="fp-awards-text" style="line-height:1.2;"><div><span class="aw1">CASINO </span><span class="aw2">MARI</span></div><div style="color:#e6a800;font-size:14px;">AWARDS</div></div>
+          <span style="font-size:22px;color:#e6a800;">&#127942;</span>
+        </div>
+        <p class="fp-desc">Un progetto ambizioso il cui obiettivo è celebrare le aziende più grandi e responsabili del settore iGaming e dare loro il riconoscimento che meritano.</p>
+        <span class="fp-arrow">&#8250;</span>
+      </a>
+    </div>
+    <div class="footer-newsletter">
+      <div class="newsletter-label">Iscriviti alla nostra newsletter</div>
+      <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Inserisci la tua email">
+        <button class="btn-newsletter">Iscriviti</button>
+      </div>
+      <label class="newsletter-check">
+        <input type="checkbox"> Ho almeno 18 anni e sono legalmente autorizzato a giocare in un casinò
+      </label>
+    </div>
+    <div class="footer-responsible">
+      <div class="resp-label">Gioca responsabilmente e con moderazione.</div>
+      <div class="resp-logos">
+        <span class="resp-badge"><img src="/img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="/img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-disclaimer">
+        Creato da godzilla-network.com &nbsp;|&nbsp; Mari è una fonte di informazioni indipendente sui casinò online e sui giochi da casinò online, non controllata da alcun operatore di gioco. Tutte le nostre recensioni e guide sono create onestamente, secondo le migliori conoscenze e il giudizio dei membri del nostro team di esperti indipendenti; tuttavia, sono destinate esclusivamente a scopi informativi e non devono essere interpretate come consulenza legale, né ci si deve fare affidamento su di esse. Assicurati sempre di soddisfare tutti i requisiti normativi prima di giocare in qualsiasi casinò selezionato. Copyright &copy;2026
+      </div>
+      <div class="footer-lang-col">
+        <div class="footer-lang-title">Mari in altre lingue</div>
+        <div class="footer-lang-select"><span>&#127760; Seleziona lingua</span><span>&#8964;</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
