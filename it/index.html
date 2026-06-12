@@ -1179,16 +1179,18 @@ document.querySelectorAll('.carousel-section').forEach(section => {
     }
   }
 
-  function updateDots() {
-    const vis = getVisible();
+  function updateDots(vis) {
+    if (vis === undefined) vis = getVisible();
     const page = Math.floor(cardIndex / vis);
     dotsEl.querySelectorAll('.c-dot').forEach((d, i) => d.classList.toggle('active', i === page));
   }
 
   function goToCard(idx) {
-    cardIndex = Math.max(0, Math.min(getMaxIndex(), idx));
-    track.style.transform = `translateX(-${cardIndex * getCardW()}px)`;
-    updateDots();
+    const vis = getVisible();
+    const cw  = getCardW();
+    cardIndex  = Math.max(0, Math.min(Math.max(0, total - vis), idx));
+    track.style.transform = `translateX(-${cardIndex * cw}px)`;
+    updateDots(vis);
   }
 
   requestAnimationFrame(() => { buildDots(); });
