@@ -82,7 +82,8 @@
     wrapper.classList.remove('open');
   });
 
-  // Update footer lang-select links dynamically
+  // Update footer lang-select links dynamically (same style as homepage)
+  var fullNames = { en: 'English', de: 'Deutsch', it: 'Italiano', es: 'Español' };
   var footerSelect = document.querySelector('.footer-lang-select');
   if (footerSelect) {
     var footerHTML = '';
@@ -90,9 +91,9 @@
       var m = meta[code];
       var href = code === 'en' ? targetPath : ('/' + code + targetPath);
       var style = code === currentLang
-        ? 'color:#5aaa00;font-weight:bold;'
-        : 'color:#ccc;';
-      footerHTML += '<a href="' + href + '" style="' + style + 'margin-right:8px;">' + m.flag + ' ' + m.label + '</a>';
+        ? 'color:#5aaa00;font-weight:bold;text-decoration:none;'
+        : 'color:inherit;text-decoration:none;';
+      footerHTML += '<a href="' + href + '" style="' + style + '">' + m.flag + ' ' + fullNames[code] + '</a>';
     });
     footerSelect.innerHTML = footerHTML;
   }
