@@ -16,6 +16,29 @@
     }
   });
 
+  // Pages that exist in all 4 language versions
+  var multilingualPaths = [
+    '/',
+    '/casinos/',
+    '/casinos/dragonslots/',
+    '/casinos/robocat/',
+    '/casinos/slotrave/',
+    '/casinos/sgcasino/',
+    '/casinos/legiano/',
+    '/casinos/dragonia/',
+    '/casinos/granawin/',
+    '/bonus/',
+    '/free-spins/',
+    '/how-to-play/',
+    '/strategy/',
+    '/rtp/',
+    '/mobile/',
+    '/real-money/',
+  ];
+
+  // If current page has no language version, switch to homepage of that language
+  var targetPath = multilingualPaths.indexOf(basePath) !== -1 ? basePath : '/';
+
   var meta = {
     en: { label: 'EN', flag: '&#127468;&#127463;' },  // 🇬🇧
     de: { label: 'DE', flag: '&#127465;&#127466;' },  // 🇩🇪
@@ -38,7 +61,7 @@
     if (code === currentLang) return;
     var m = meta[code];
     var a = document.createElement('a');
-    a.href = code === 'en' ? basePath : ('/' + code + basePath);
+    a.href = code === 'en' ? targetPath : ('/' + code + targetPath);
     a.className = 'lang-option';
     a.innerHTML = m.label + ' &nbsp;' + m.flag;
     menu.appendChild(a);
