@@ -23,13 +23,13 @@ img { max-width: 100%; height: auto; }
 .lang-option { display: block; padding: 9px 14px; color: #ccc; text-decoration: none; font-size: 12px; white-space: nowrap; }
 .lang-option:hover { background: #2a2a40; color: #fff; }
 .btn-login { background: transparent; color: #fff; border: 1px solid #777; padding: 6px 18px; cursor: pointer; font-size: 13px; font-weight: 700; min-height: 44px; }
-.btn-signup { background: #5fb300; color: #fff; border: none; padding: 6px 18px; cursor: pointer; font-size: 13px; font-weight: 800; min-height: 44px; }
-.btn-signup:hover { background: #4ea000; }
+.btn-signup { background: #3d7000; color: #fff; border: none; padding: 6px 18px; cursor: pointer; font-size: 13px; font-weight: 800; min-height: 44px; }
+.btn-signup:hover { background: #2d5500; }
 .main-nav { background: #212b3a; display: flex; padding: 0; border-bottom: 1px solid rgba(255,255,255,0.18); overflow-x: auto; }
 .main-nav a { color: #fff; text-decoration: none; padding: 10px 13px; font-size: 12.5px; font-weight: 600; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.15s; }
 .main-nav a .nav-icon { color: #6abf00; font-size: 13px; }
 .main-nav a:hover { background: #2a2a3e; }
-.main-nav a.active { background: #5fb300; color: #fff; font-weight: bold; }
+.main-nav a.active { background: #3d7000; color: #fff; font-weight: bold; }
 .main-nav a.active .nav-icon { color: #fff; }
 .site-footer { background: #161d24; color: #ccc; font-size: 13px; }
 .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
@@ -48,7 +48,7 @@ img { max-width: 100%; height: auto; }
 .footer-links-col:last-child { border-right: none; padding-right: 0; }
 .footer-links-col:not(:first-child) { padding-left: 16px; }
 .footer-col-title { font-size: 11px; font-weight: bold; color: #888; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
-.footer-link { display: flex; align-items: center; gap: 6px; color: #ccc; text-decoration: none; font-size: 12px; padding: 3px 0; transition: color 0.15s; }
+.footer-link { display: flex; align-items: center; gap: 6px; color: #ccc; text-decoration: none; font-size: 12px; padding: 8px 0; min-height: 44px; transition: color 0.15s; }
 .footer-link:hover { color: #fff; }
 .footer-link .fl-icon { color: #5aaa00; font-size: 12px; }
 .footer-promo-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.18); }
