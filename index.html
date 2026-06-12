@@ -3124,8 +3124,8 @@ document.querySelectorAll('.carousel-section').forEach(section => {
   }
 
   function buildDots() {
-    dotsEl.innerHTML = '';
     const vis = getVisible();
+    dotsEl.innerHTML = '';
     const pages = Math.ceil(total / vis);
     for (let i = 0; i < pages; i++) {
       const d = document.createElement('div');
