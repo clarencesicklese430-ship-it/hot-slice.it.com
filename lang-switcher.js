@@ -34,6 +34,10 @@
     '/rtp/',
     '/mobile/',
     '/real-money/',
+    '/news/',
+    '/forum/',
+    '/guide/',
+    '/complaints/',
   ];
 
   // If current page has no language version, switch to homepage of that language
