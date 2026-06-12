@@ -790,7 +790,7 @@
       font-size: 62px;
     }
     .verdict-score { font-size: 32px; font-weight: 900; color: #fff; line-height: 1; }
-    .verdict-score-lbl { font-size: 9px; color: #888; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; }
+    .verdict-score-lbl { font-size: 9px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 3px; }
     .verdict-right { flex: 1; }
     .verdict-title { font-size: 16px; font-weight: bold; color: #fff; margin-bottom: 8px; }
     .verdict-text { font-size: 13px; color: #ccc; line-height: 1.6; margin-bottom: 14px; }
@@ -917,7 +917,7 @@
     }
     .hl  { color: #5aaa00; font-weight: bold; }
     .hlb { font-weight: bold; }
-    .hll { color: #5aaa00; text-decoration: underline; cursor: pointer; }
+    .hll { color: #3d7000; text-decoration: underline; cursor: pointer; }
     .hlr { color: #e53935; font-weight: bold; }
 
     .review-inner ul {
@@ -1006,7 +1006,7 @@
     .rs-lbl { color: #666; font-size: 8px; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
     .r-caption {
       text-align: center;
-      color: #5aaa00;
+      color: #3d7000;
       font-size: 11px;
       margin: 5px 0 14px;
     }
@@ -2151,7 +2151,7 @@
 <!-- GAME FRAME -->
 <div class="game-outer" id="game">
   <div class="game-cover" id="game-cover">
-    <img src="img/screenshots/hot-slice-gameplay-fruit-ninja-evoplay.png" alt="Hot Slice — play free demo by Evoplay">
+    <img src="img/screenshots/hot-slice-gameplay-fruit-ninja-evoplay.png" alt="Hot Slice — play free demo by Evoplay" fetchpriority="high" loading="eager">
     <div class="game-cover-overlay">
       <a href="/play/" class="gcov-btn gcov-btn-free">
         <div class="gcov-btn-icon">&#9654;</div>
@@ -2314,7 +2314,7 @@
     <!-- Provider block -->
     <div class="provider-block">
       <div class="prov-logo-img">
-        <img src="/img/evoplay-logo.webp" alt="Evoplay" style="max-width:90px;height:auto;display:block;">
+        <img src="/img/evoplay-logo.webp" alt="Evoplay" width="90" height="40" style="max-width:90px;height:auto;display:block;">
       </div>
       <div class="prov-content">
         <span class="prov-name">Evoplay</span>
@@ -2655,7 +2655,7 @@
 
       <!-- Casino 1: Dragonslots -->
       <div class="casino-card">
-        <div class="casino-logo-box" style="background:#0d0d1a;"><img src="/img/casinos/dragonslots.webp" alt="Dragonslots Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#0d0d1a;"><img src="/img/casinos/dragonslots.webp" alt="Dragonslots Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Dragonslots Casino</span>
@@ -2680,7 +2680,7 @@
 
       <!-- Casino 2: Robocat -->
       <div class="casino-card">
-        <div class="casino-logo-box" style="background:#0a0f1e;"><img src="/img/casinos/robocat.webp" alt="Robocat Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#0a0f1e;"><img src="/img/casinos/robocat.webp" alt="Robocat Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Robocat Casino</span>
@@ -2705,7 +2705,7 @@
 
       <!-- Casino 3: Slotrave -->
       <div class="casino-card">
-        <div class="casino-logo-box" style="background:#0e0e14;"><img src="/img/casinos/slotrave.webp" alt="Slotrave Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#0e0e14;"><img src="/img/casinos/slotrave.webp" alt="Slotrave Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Slotrave Casino</span>
@@ -2730,7 +2730,7 @@
 
       <!-- Casino 4: SGcasino -->
       <div class="casino-card">
-        <div class="casino-logo-box" style="background:#111;"><img src="/img/casinos/sgcasino.webp" alt="SGCasino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#111;"><img src="/img/casinos/sgcasino.webp" alt="SGCasino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">SGCasino</span>
@@ -2755,7 +2755,7 @@
 
       <!-- Casino 5: Legiano (hidden by default) -->
       <div class="casino-card casino-extra" style="display:none;">
-        <div class="casino-logo-box" style="background:#0a0f0a;"><img src="/img/casinos/legiano.webp" alt="Legiano Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#0a0f0a;"><img src="/img/casinos/legiano.webp" alt="Legiano Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Legiano Casino</span>
@@ -2780,7 +2780,7 @@
 
       <!-- Casino 6: Dragonia (hidden by default) -->
       <div class="casino-card casino-extra" style="display:none;">
-        <div class="casino-logo-box" style="background:#1a0a0a;"><img src="/img/casinos/dragonia.webp" alt="Dragonia Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#1a0a0a;"><img src="/img/casinos/dragonia.webp" alt="Dragonia Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Dragonia Casino</span>
@@ -2805,7 +2805,7 @@
 
       <!-- Casino 7: Granawin (hidden by default) -->
       <div class="casino-card casino-extra" style="display:none;">
-        <div class="casino-logo-box" style="background:#0f1a0a;"><img src="/img/casinos/granawin.webp" alt="Granawin Casino logo" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
+        <div class="casino-logo-box" style="background:#0f1a0a;"><img src="/img/casinos/granawin.webp" alt="Granawin Casino logo" width="110" height="60" style="max-width:110px;max-height:60px;object-fit:contain;"></div>
         <div class="casino-body">
           <div class="casino-name-row">
             <span class="casino-name-text">Granawin Casino</span>
@@ -3004,14 +3004,14 @@
     <div class="footer-responsible">
       <div class="resp-label">Play responsibly and in moderation.</div>
       <div class="resp-logos">
-        <span class="resp-badge"><img src="img/18.png" alt="18+" style="height:40px;width:auto;display:block;"></span>
-        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamble_Aware.png" alt="GambleAware" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GamCare.svg" alt="GamCare" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GordonMoody.svg" alt="Gordon Moody" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamban.svg" alt="Gamban" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Betblocker_new-2x.png" alt="BetBlocker" style="height:36px;width:auto;display:block;"></a>
-        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GameCheck.svg" alt="GameCheck" style="height:36px;width:auto;display:block;"></a>
+        <span class="resp-badge"><img src="img/18.png" alt="18+" width="40" height="40" style="height:40px;width:auto;display:block;"></span>
+        <a href="https://www.gpwa.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GPWA-casino-guru.gif" alt="GPWA Approved Portal" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gambleaware.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamble_Aware.png" alt="GambleAware" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamcare.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GamCare.svg" alt="GamCare" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gordonmoody.org.uk/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GordonMoody.svg" alt="Gordon Moody" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://gamban.com/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Gamban.svg" alt="Gamban" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://betblocker.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/Betblocker_new-2x.png" alt="BetBlocker" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
+        <a href="https://www.gamecheck.org/" target="_blank" rel="nofollow noopener noreferrer" class="resp-badge"><img src="img/GameCheck.svg" alt="GameCheck" width="auto" height="36" style="height:36px;width:auto;display:block;"></a>
       </div>
     </div>
 
@@ -3145,7 +3145,7 @@ document.querySelectorAll('.carousel-section').forEach(section => {
     updateDots();
   }
 
-  buildDots();
+  requestAnimationFrame(() => { buildDots(); });
 
   // Arrows: step by visible count
   arrows.forEach(btn => {
@@ -3209,6 +3209,6 @@ document.querySelectorAll('.carousel-section').forEach(section => {
 });
 </script>
 
-<script src="/lang-switcher.js"></script>
+<script src="/lang-switcher.js" defer></script>
 </body>
 </html>
