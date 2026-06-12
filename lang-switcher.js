@@ -81,4 +81,19 @@
   document.addEventListener('click', function () {
     wrapper.classList.remove('open');
   });
+
+  // Update footer lang-select links dynamically
+  var footerSelect = document.querySelector('.footer-lang-select');
+  if (footerSelect) {
+    var footerHTML = '';
+    ['en', 'de', 'it', 'es'].forEach(function (code) {
+      var m = meta[code];
+      var href = code === 'en' ? targetPath : ('/' + code + targetPath);
+      var style = code === currentLang
+        ? 'color:#5aaa00;font-weight:bold;'
+        : 'color:#ccc;';
+      footerHTML += '<a href="' + href + '" style="' + style + 'margin-right:8px;">' + m.flag + ' ' + m.label + '</a>';
+    });
+    footerSelect.innerHTML = footerHTML;
+  }
 })();
